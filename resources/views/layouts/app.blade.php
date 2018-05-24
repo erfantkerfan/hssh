@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ config('app.name') }}</title>
+
+    <!-- Fonts -->
+    <link rel="icon" href="/img/icon.gif" type="image/gif">
+    <link href="{{ asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+
+    <style type="text/css">
+        @font-face {
+            font-family:'Font';
+            src: url( {{asset('fonts/'.config('app.font'))}} );
+        }
+        @font-face {
+            font-family: 'IranNastaliq';
+            src: url('{{asset('fonts/IranNastaliq.eot?#')}}') format('eot'),
+            url('{{asset('fonts/IranNastaliq.ttf')}}') format('truetype'),
+            url('{{asset('fonts/IranNastaliq.woff')}}') format('woff');
+        }
+        .iran{
+            font-family:IranNastaliq,'IranNastaliq',tahoma;
+            font-size:12px;
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: dimgrey;
+            color: white;
+            text-align: center;
+        }
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .bg {
+            background-image: url("/img/bg.png");
+            height: 100%;
+            background-position: center;
+            background-repeat: repeat-y;
+            background-size: cover;
+        }
+        .carousel {
+            border-radius: 20px 20px 20px 20px;
+            overflow: hidden;
+        }
+        li.different{
+            border:none;
+            position: relative;
+        }
+        li.different:hover{
+            border: none;
+        }
+        li:hover {
+            border-bottom: 5px solid #FFFFFF;
+        }
+        .different::after{
+            content: '';
+            position: absolute;
+            width: 0px;
+            height: 5px;
+            left: 50%;
+            bottom:0;
+            background-color: darkblue;
+            transition: all ease-in-out .2s;
+        }
+        .different:hover::after{
+            width: 100%;
+            left: 0;
+        }
+    </style>
+    <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+</head>
+<body class="bg" style="font-family:'Font'">
+
+    <nav class="navbar navbar-default"></nav>
+    <nav class="navbar topnav navbar-bg-primary navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!-- Branding Image -->
+                {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
+                    {{--<img src="{{ asset('img/icon.gif') }}">--}}
+                {{--</a>--}}
+            </div>
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="different"><a href="{{ route('contactus') }}">تماس با ما</a></li>
+
+                    <li class="dropdown different">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                             درباره ما<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li class="text-center">
+
+                                <a href="{{ route('about_goals') }}">اهداف</a>
+
+                                <a href="{{ route('about_chart') }}">ساختار</a>
+
+                                <a href="{{ route('about_staff') }}">کادر اجرایی</a>
+
+                                <a href="{{ route('about_dep') }}">کادر آموزشی</a>
+
+                                <a href="{{ route('about_assets') }}">امکانات مدرسه</a>
+
+                            </li>
+                        </ul>
+
+                    <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام</a></li>
+                    <li class="different"><a href="{{ route('home') }}">صفحه اصلی</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+
+    <div class="flex-center">
+        <div class="content">
+            <div class="title">
+                <div class="iran">
+                    <h2>
+                    دبیرستان حضرت سید الشهداعلیه السلام منطقه ۲ - دوره دوم
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @yield('content')
+
+    {{--<footer class="footer">--}}
+        {{--<strong style="color:white">--}}
+            {{--آدرس--}}
+            {{--:--}}
+            {{--بزرگراه شیخ فضل الله نوری، بلوار شهید تیموری، خیابان شهید درویش وند، پلاک 30--}}
+        {{--</strong>--}}
+    {{--</footer>--}}
+
+</div>
+</body>
+</html>
