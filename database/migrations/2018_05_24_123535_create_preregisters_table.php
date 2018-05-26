@@ -19,8 +19,8 @@ class CreatePreregistersTable extends Migration
             $table->string('l_name');
             $table->string('grade');
             $table->string('field');
-            $table->string('phone');
-            $table->string('mobile');
+            $table->string('phone')->unique();
+            $table->string('mobile')->unique();
             $table->timestamps();
         });
     }

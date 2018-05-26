@@ -136,7 +136,7 @@
 
                                 <a href="{{ route('about_dep') }}">کادر آموزشی</a>
 
-                                <a href="{{ route('about_assets') }}">امکانات مدرسه</a>
+                                <a href="{{ route('about_assets') }}">ویژگی ها</a>
 
                             </li>
                         </ul>
