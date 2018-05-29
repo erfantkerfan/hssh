@@ -10,7 +10,7 @@ class RegisterController extends Controller
     public function qwertyuiop()
     {
         $users = Preregister::all();
-        return view('qwertyuiop')->with(['ss'=>$users]);
+        return view('qwertyuiop')->with(['users'=>$users]);
     }
 
     public function form()

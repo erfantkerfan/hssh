@@ -91,7 +91,7 @@
 </head>
 <body class="bg" style="font-family:'Font'">
 
-    <nav class="navbar navbar-default"></nav>
+    <nav class="navbar navbar-default justify-content-md-center"></nav>
     <nav class="navbar topnav navbar-bg-primary navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -105,9 +105,9 @@
                 </button>
 
                 <!-- Branding Image -->
-                {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
-                    {{--<img src="{{ asset('img/icon.gif') }}">--}}
-                {{--</a>--}}
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    <img style="width:11%" src="{{ asset('img/icon.gif') }}">
+                </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -118,7 +118,7 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="different"><a href="{{ route('contactus') }}">تماس با ما</a></li>
+                    <li class="different"><a href="{{ route('contactus') }}">تماس با ما <span style="color: red" class="glyphicon glyphicon-earphone" aria-hidden="true"></span></a></li>
 
                     <li class="dropdown different">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -128,21 +128,21 @@
 
                             <li class="text-center">
 
-                                <a href="{{ route('about_goals') }}">اهداف</a>
+                                <a href="{{ route('about_goals') }}">اهداف <span style="color:green" class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
 
-                                <a href="{{ route('about_chart') }}">ساختار</a>
+                                <a href="{{ route('about_chart') }}">ساختار <span style="color:firebrick" class="glyphicon glyphicon-th" aria-hidden="true"></span></a>
 
-                                <a href="{{ route('about_staff') }}">کادر اجرایی</a>
+                                <a href="{{ route('about_staff') }}">کادر اجرایی <span style="color:brown" class="glyphicon glyphicon-briefcase" aria-hidden="true"></span></a>
 
-                                <a href="{{ route('about_dep') }}">کادر آموزشی</a>
+                                <a href="{{ route('about_dep') }}">کادر آموزشی <span style="color:black" class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
 
-                                <a href="{{ route('about_assets') }}">ویژگی ها</a>
+                                <a href="{{ route('about_assets') }}">ویژگی ها <span style="color:yellow" class="glyphicon glyphicon-star" aria-hidden="true"></span></a>
 
                             </li>
                         </ul>
 
-                    <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام</a></li>
-                    <li class="different"><a href="{{ route('home') }}">صفحه اصلی</a></li>
+                    <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+                    <li class="different"><a href="{{ route('home') }}">صفحه اصلی <span style="color: black" class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
                 </ul>
             </div>
         </div>

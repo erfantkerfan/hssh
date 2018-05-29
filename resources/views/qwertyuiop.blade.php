@@ -7,7 +7,7 @@
             <table class="table table-striped">
                 <thead>
                 <tr class="bg-info">
-                    <th class="text-center">شماره ردیف</th>
+                    <th class="text-center">شماره ردیف دیتابیس</th>
                     <th class="text-center">نام</th>
                     <th class="text-center">نام خانوادگی</th>
                     <th class="text-center">پایه</th>
@@ -15,13 +15,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($ss as $s)
+                @foreach($users as $user)
                 <tr>
-                    <th class="text-center">{{$s->id}}</th>
-                    <th class="text-center">{{$s->f_name}}</th>
-                    <th class="text-center">{{$s->l_name}}</th>
-                    <th class="text-center">{{$s->grade}}</th>
-                    <th class="text-center">{{$s->field}}</th>
+                    <th class="text-center">{{$user->id}}</th>
+                    <th class="text-center">{{$user->f_name}}</th>
+                    <th class="text-center">{{$user->l_name}}</th>
+                    <th class="text-center">{{$user->grade}}</th>
+                    <th class="text-center">{{$user->field}}</th>
                 </tr>
                 @endforeach
                 </tbody>

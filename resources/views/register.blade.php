@@ -106,6 +106,13 @@
                             @endif
                         </div>
                     </div>
+
+                </div>
+
+                <div class="text-center col-md-6 col-md-offset-2 text-danger">
+                    در صورت ثبت نام موفق به صفحه اصلی باز خواهید گشت و از ثبت نام مجدد خودداری کنید.
+                    <br>
+                    <br>
                 </div>
 
                 <div class="form-group  col-md-12">
