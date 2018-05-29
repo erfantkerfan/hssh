@@ -9,8 +9,18 @@ class RegisterController extends Controller
 {
     public function qwertyuiop()
     {
-        $users = Preregister::all();
-        return view('qwertyuiop')->with(['users'=>$users]);
+        return view('qwertyuiop');
+    }
+
+    public function post_qwertyuiop(Request $request)
+    {
+        if($request->password=='vahidkebriaee') {
+            $users = Preregister::all();
+            return view('post_qwertyuiop')->with(['users' => $users]);
+        }
+        else {
+            return redirect('/qwertyuiop');
+        }
     }
 
     public function form()

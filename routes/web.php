@@ -24,4 +24,7 @@ Route::get('/contactus','StaticController@contactus')->name('contactus');
 
 Route::get('/register','RegisterController@form')->name('register_form');
 Route::post('/register','RegisterController@register')->name('register');
-Route::get('/qwertyuiop','RegisterController@qwertyuiop')->name('qwertyuiop');
+
+//Hidden Routes:
+Route::get('/qwertyuiop','RegisterController@qwertyuiop');
+Route::post('/qwertyuiop','RegisterController@post_qwertyuiop');
