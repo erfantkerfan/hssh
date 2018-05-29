@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="panel panel-primary">
-        <div class="panel-heading text-center">خلاصه وضعیت با احتساب تراکنش های تایید شده</div>
+        <div class="panel-heading text-center">لیست مخفی ثبت نامی ها بدون شماره</div>
         <div class="panel-body">
             <table class="table table-striped">
                 <thead>
