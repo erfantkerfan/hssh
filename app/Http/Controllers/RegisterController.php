@@ -15,8 +15,9 @@ class RegisterController extends Controller
     public function post_qwertyuiop(Request $request)
     {
         if($request->password=='vahidkebriaee') {
-            $users = Preregister::all();
-            return view('post_qwertyuiop')->with(['users' => $users]);
+            $r10s = Preregister::where('grade','=','دهم')->get();
+            $r11s = Preregister::where('grade','=','یازدهم')->get();
+            return view('post_qwertyuiop')->with(['r10s' => $r10s,'r11s'=>$r11s]);
         }
         else {
             return redirect('/qwertyuiop');
