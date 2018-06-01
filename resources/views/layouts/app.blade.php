@@ -91,8 +91,7 @@
 </head>
 <body class="bg" style="font-family:'Font'">
 
-    <nav class="navbar navbar-default justify-content-md-center"></nav>
-    <nav class="navbar topnav navbar-bg-primary navbar-fixed-top">
+    <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
 
@@ -106,7 +105,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img style="width:11%" src="{{ asset('img/icon.gif') }}">
+                    <img style="width:12%" src="{{ asset('img/icon.gif') }}">
                 </a>
             </div>
 
@@ -153,7 +152,7 @@
     <div class="flex-center">
         <div class="content">
             <div class="title">
-                <div class="iran">
+                <div class="iran text-center">
                     <h2>
                     دبیرستان حضرت سید الشهداعلیه السلام منطقه ۲ - دوره دوم
                     </h2>
