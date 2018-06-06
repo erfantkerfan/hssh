@@ -33,7 +33,7 @@
         </div>
 
         <div class="col-md-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.6768727373114!2d51.344748839711585!3d35.709568444749266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQyJzM0LjQiTiA1McKwMjAnNDcuNCJF!5e0!3m2!1sen!2s!4v1527149713061" width="500" height="450" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5448.433547933377!2d51.34381956176717!3d35.710033505694604!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7ef61f3805d2abef!2z2K_YqNuM2LHYs9iq2KfZhiDYrdi22LHYqiDYs9uM2K8g2KfZhNi02YfYr9in2LnZhNuM2Ycg2KfZhNiz2YTYp9mFIC0g2K_ZiNix2Ycg2K_ZiNmF!5e0!3m2!1sen!2s!4v1528272564110" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
         </div>
 
     </div>

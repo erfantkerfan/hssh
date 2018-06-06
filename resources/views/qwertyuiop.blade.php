@@ -1,35 +1,11 @@
-<html>
-<head>
-    <title>{{ trans("privat::ui.page_title") }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@extends('layouts.app')
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #c7ced4;
-            color: #738492;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-weight: 100;
-            font-size:19px;
-        }
-        .container {
-            height: 100%;
-            display: table;
-            text-align: center;
-            margin: 0 auto;
-            padding: 0 1em;
-        }
-        .content {
-            display: table-cell;
-            vertical-align: middle;
-            margin: 1em;
-        }
+@section('content')
+    <style type="text/css">
         .title {
             font-size: 24px;
             margin-bottom: 20px;
+            margin-top: 20px;
         }
         input[type=password] {
             padding:10px;
@@ -42,13 +18,9 @@
             border-radius: 3px;
         }
     </style>
-</head>
-<body>
-<div class="container">
-    <div class="content">
+<div class="container text-center">
+    <div class="content text-center col-md-3 col-md-offset-4">
         <div class="title">پسور را وارد کنید</div>
-
-
         <form action="{{ url("qwertyuiop") }}" method="post">
             {{ csrf_field() }}
 
@@ -58,5 +30,4 @@
 
     </div>
 </div>
-</body>
-</html>
+@endsection
