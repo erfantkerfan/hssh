@@ -20,11 +20,11 @@
     </style>
 <div class="container text-center">
     <div class="content text-center col-md-3 col-md-offset-4">
-        <div class="title">پسور را وارد کنید</div>
+        <div class="title">پسورد را وارد کنید</div>
         <form action="{{ url("qwertyuiop") }}" method="post">
             {{ csrf_field() }}
 
-            <input type="password" name="password">
+            <input type="password" name="password" autofocus>
 
         </form>
 
