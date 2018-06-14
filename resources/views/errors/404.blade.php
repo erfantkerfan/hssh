@@ -14,7 +14,7 @@
     <style>
         @font-face {
             font-family:'Font';
-            src: url( {{asset('fonts/'.config('app.font'))}} );
+            src: url( {{secure_asset('fonts/'.config('app.font'))}} );
         }
         html, body {
             background-color: #fff;

@@ -8,23 +8,23 @@
 
     <!-- Fonts -->
     <link rel="icon" href="/img/icon.gif" type="image/gif">
-    <link href="{{ asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ secure_asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{secure_asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/font-awesome.min.css')}}">
 
     <style type="text/css">
         @font-face {
             font-family:'Font';
-            src: url( {{asset('fonts/'.config('app.font'))}} );
+            src: url( {{secure_asset('fonts/'.config('app.font'))}} );
         }
         @font-face {
             font-family: 'IranNastaliq';
-            src: url('{{asset('fonts/IranNastaliq.eot?#')}}') format('eot'),
-            url('{{asset('fonts/IranNastaliq.ttf')}}') format('truetype'),
-            url('{{asset('fonts/IranNastaliq.woff')}}') format('woff');
+            src: url('{{secure_asset('fonts/IranNastaliq.eot?#')}}') format('eot'),
+            url('{{secure_asset('fonts/IranNastaliq.ttf')}}') format('truetype'),
+            url('{{secure_asset('fonts/IranNastaliq.woff')}}') format('woff');
         }
         .iran{
             font-family:IranNastaliq,'IranNastaliq',tahoma;
@@ -84,10 +84,10 @@
             left: 0;
         }
     </style>
-    <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ secure_asset('js/jquery-1.11.0.min.js') }}"></script>
+    <script src="{{ secure_asset('js/app.js') }}"></script>
+    <script src="{{secure_asset('js/jquery.min.js')}}"></script>
+    <script src="{{secure_asset('js/bootstrap.min.js')}}"></script>
 </head>
 <body class="bg" style="font-family:'Font'">
 
@@ -105,7 +105,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img style="width:12%" src="{{ asset('img/icon.gif') }}">
+                    <img style="width:12%" src="{{ secure_asset('img/icon.gif') }}">
                 </a>
             </div>
 
