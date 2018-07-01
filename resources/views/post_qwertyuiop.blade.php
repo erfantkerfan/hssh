@@ -20,7 +20,7 @@
                 @foreach($r10s as $r10)
                 <tr>
                     <th class="text-center">{{$r10->id}}</th>
-                    <th class="text-center">{{Verta($r10->created_at)}}</th>
+                    <th class="text-center">{{str_replace(' ','   ',str_replace('-','/',Verta($r10->created_at)))}}</th>
                     <th class="text-center">{{$r10->f_name}}</th>
                     <th class="text-center">{{$r10->l_name}}</th>
                     <th class="text-center">{{$r10->field}}</th>
@@ -52,7 +52,7 @@
                 @foreach($r11s as $r11)
                     <tr>
                         <th class="text-center">{{$r11->id}}</th>
-                        <th class="text-center">{{Verta($r11->created_at)}}</th>
+                        <th class="text-center">{{str_replace(' ','   ',str_replace('-','/',Verta($r11->created_at)))}}</th>
                         <th class="text-center">{{$r11->f_name}}</th>
                         <th class="text-center">{{$r11->l_name}}</th>
                         <th class="text-center">{{$r11->field}}</th>
