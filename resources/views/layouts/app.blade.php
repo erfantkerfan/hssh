@@ -8,23 +8,41 @@
 
     <!-- Fonts -->
     <link rel="icon" href="/img/icon.gif" type="image/gif">
-    <link href="{{ secure_asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
+    @if(env('secure_asset',1))
+        <link href="{{ secure_asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
+    @else
+        <link href="{{ asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
+    @endif
 
     <!-- Styles -->
-    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+    @if(env('secure_asset',1))
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+    @else
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @endif
     <link rel="stylesheet" href="{{secure_asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{secure_asset('css/font-awesome.min.css')}}">
 
     <style type="text/css">
         @font-face {
             font-family:'Font';
-            src: url( {{secure_asset('fonts/'.config('app.font'))}} );
+            @if(env('secure_asset',1))
+                src: url( {{ secure_asset('fonts/'.config('app.font'))}} );
+            @else
+                src: url( {{ asset('fonts/'.config('app.font'))}} );
+            @endif
         }
         @font-face {
             font-family: 'IranNastaliq';
-            src: url('{{secure_asset('fonts/IranNastaliq.eot?#')}}') format('eot'),
-            url('{{secure_asset('fonts/IranNastaliq.ttf')}}') format('truetype'),
-            url('{{secure_asset('fonts/IranNastaliq.woff')}}') format('woff');
+            @if(env('secure_asset',1))
+                src: url('{{secure_asset('fonts/IranNastaliq.eot?#')}}') format('eot'),
+                url('{{secure_asset('fonts/IranNastaliq.ttf')}}') format('truetype'),
+                url('{{secure_asset('fonts/IranNastaliq.woff')}}') format('woff');
+            @else
+                src: url('{{ asset('fonts/IranNastaliq.eot?#')}}') format('eot'),
+                url('{{ asset('fonts/IranNastaliq.ttf')}}') format('truetype'),
+                url('{{ asset('fonts/IranNastaliq.woff')}}') format('woff');
+            @endif
         }
         .iran{
             font-family:IranNastaliq,'IranNastaliq',tahoma;
@@ -84,10 +102,17 @@
             left: 0;
         }
     </style>
-    <script src="{{ secure_asset('js/jquery-1.11.0.min.js') }}"></script>
-    <script src="{{ secure_asset('js/app.js') }}"></script>
-    <script src="{{secure_asset('js/jquery.min.js')}}"></script>
-    <script src="{{secure_asset('js/bootstrap.min.js')}}"></script>
+    @if(env('secure_asset',1))
+        <script src="{{ secure_asset('js/jquery-1.11.0.min.js') }}"></script>
+        <script src="{{ secure_asset('js/app.js') }}"></script>
+        <script src="{{ secure_asset('js/jquery.min.js')}}"></script>
+        <script src="{{ secure_asset('js/bootstrap.min.js')}}"></script>
+    @else
+        <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
+        <script src="{{ asset('js/jquery.min.js')}}"></script>
+        <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    @endif
 </head>
 <body class="bg" style="font-family:'Font'">
 
@@ -105,7 +130,11 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img style="width:12%" src="{{ secure_asset('img/icon.gif') }}">
+                    @if(env('secure_asset',1))
+                        <img style="width:12%" src="{{ secure_asset('img/icon.gif') }}">
+                    @else
+                        <img style="width:12%" src="{{ asset('img/icon.gif') }}">
+                    @endif
                 </a>
             </div>
 
@@ -147,7 +176,6 @@
         </div>
     </nav>
 
-<div class="container">
 
     <div class="flex-center">
         <div class="content">
@@ -170,7 +198,5 @@
             {{--بزرگراه شیخ فضل الله نوری، بلوار شهید تیموری، خیابان شهید درویش وند، پلاک 30--}}
         {{--</strong>--}}
     {{--</footer>--}}
-
-</div>
 </body>
 </html>
