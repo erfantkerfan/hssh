@@ -77,7 +77,7 @@
     <div class="content">
         <img class="col-md-6" src="{{asset('img/maintenance boy.gif')}}">
         <div dir="rtl" class="title m-b-md">
-            سایت در حال بروزرسانی یا تعمیر میباشد.
+            این صفحه در حال بروزرسانی میباشد.
         </div>
         <div class="number font-red"> 503 </div>
     </div>
