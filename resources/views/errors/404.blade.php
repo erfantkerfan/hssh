@@ -14,7 +14,7 @@
     <style>
         @font-face {
             font-family:'Font';
-            src: url( {{secure_asset('fonts/BTITRBOLD.ttf'}} );
+            src: url('/fonts/BTITRBOLD.ttf');
         }
         html, body {
             background-color: #fff;

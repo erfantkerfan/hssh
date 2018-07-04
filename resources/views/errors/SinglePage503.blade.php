@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     <title>{{config('app.name')}}</title>
 
@@ -16,7 +16,7 @@
     <style>
         @font-face {
             font-family:'Font';
-            src: url( {{secure_asset('fonts/BTITRBOLD.ttf'}} );
+            src: url('/fonts/BTITRBOLD.ttf');
         }
         html, body {
             background-color: #fff;
@@ -75,7 +75,7 @@
 <div class="flex-center position-ref full-height">
 
     <div class="content">
-        <img class="col-md-6" src="img/maintenance boy.gif">
+        <img class="col-md-6" src="/img/maintenance boy.gif">
         <div dir="rtl" class="title m-b-md">
             این صفحه در حال بروزرسانی میباشد.
         </div>

@@ -8,23 +8,23 @@
 
     <!-- Fonts -->
     <link rel="icon" href="/img/icon.gif" type="image/gif">
-    <link href="css/googleapis.css" rel="stylesheet" type="text/css">
+    <link href="/css/googleapis.css" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{secure_asset('css/bootstrap.min.css)}}">
-    <link rel="stylesheet" href="{{secure_asset('css/font-awesome.min.css)}}">
+    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <style type="text/css">
         @font-face {
             font-family:'Font';
-            src: url( {{secure_asset('fonts/BTITRBOLD.ttf'}} );
+            src: url('/fonts/BTITRBOLD.ttf');
         }
         @font-face {
             font-family: 'IranNastaliq';
-            src: url('fonts/IranNastaliq.eot?#') format('eot'),
-            url('fonts/IranNastaliq.ttf') format('truetype'),
-            url(fonts/IranNastaliq.woff) format('woff');
+            src: url('/fonts/IranNastaliq.eot?#') format('eot'),
+            url('/fonts/IranNastaliq.ttf') format('truetype'),
+            url('/fonts/IranNastaliq.woff') format('woff');
         }
         .iran{
             font-family:IranNastaliq,'IranNastaliq',tahoma;
@@ -84,10 +84,10 @@
             left: 0;
         }
     </style>
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </head>
 <body class="bg" style="font-family:'Font'">
 
@@ -105,7 +105,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                        <img style="width:12%" src="img/icon.gif">
+                        <img style="width:12%" src="/img/icon.gif">
                 </a>
             </div>
 
