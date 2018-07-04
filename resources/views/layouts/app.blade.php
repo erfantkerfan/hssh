@@ -8,41 +8,23 @@
 
     <!-- Fonts -->
     <link rel="icon" href="/img/icon.gif" type="image/gif">
-    @if (Request::secure())
-        <link href="{{ secure_asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
-    @else
-        <link href="{{ asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
-    @endif
+    <link href="css/googleapis.css'" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    @if (Request::secure())
-        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-    @else
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @endif
+    <link href="css/app.css'" rel="stylesheet">
     <link rel="stylesheet" href="{{secure_asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{secure_asset('css/font-awesome.min.css')}}">
 
     <style type="text/css">
         @font-face {
             font-family:'Font';
-            @if (Request::secure())
                 src: url( {{ secure_asset('fonts/'.config('app.font'))}} );
-            @else
-                src: url( {{ asset('fonts/'.config('app.font'))}} );
-            @endif
         }
         @font-face {
             font-family: 'IranNastaliq';
-            @if (Request::secure())
-                src: url('{{secure_asset('fonts/IranNastaliq.eot?#')}}') format('eot'),
-                url('{{secure_asset('fonts/IranNastaliq.ttf')}}') format('truetype'),
-                url('{{secure_asset('fonts/IranNastaliq.woff')}}') format('woff');
-            @else
-                src: url('{{ asset('fonts/IranNastaliq.eot?#')}}') format('eot'),
-                url('{{ asset('fonts/IranNastaliq.ttf')}}') format('truetype'),
-                url('{{ asset('fonts/IranNastaliq.woff')}}') format('woff');
-            @endif
+            src: url('fonts/IranNastaliq.eot?#') format('eot'),
+            url('fonts/IranNastaliq.ttf') format('truetype'),
+            url(fonts/IranNastaliq.woff) format('woff');
         }
         .iran{
             font-family:IranNastaliq,'IranNastaliq',tahoma;
@@ -102,17 +84,10 @@
             left: 0;
         }
     </style>
-    @if (Request::secure())
-        <script src="{{ secure_asset('js/jquery-1.11.0.min.js') }}"></script>
-        <script src="{{ secure_asset('js/app.js') }}"></script>
-        <script src="{{ secure_asset('js/jquery.min.js')}}"></script>
-        <script src="{{ secure_asset('js/bootstrap.min.js')}}"></script>
-    @else
-        <script src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
-        <script src="{{ asset('js/app.js') }}"></script>
-        <script src="{{ asset('js/jquery.min.js')}}"></script>
-        <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-    @endif
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body class="bg" style="font-family:'Font'">
 
@@ -130,11 +105,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    @if (Request::secure())
-                        <img style="width:12%" src="{{ secure_asset('img/icon.gif') }}">
-                    @else
-                        <img style="width:12%" src="{{ asset('img/icon.gif') }}">
-                    @endif
+                        <img style="width:12%" src="img/icon.gif">
                 </a>
             </div>
 
