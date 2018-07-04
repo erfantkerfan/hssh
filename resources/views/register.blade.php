@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                     {{ csrf_field() }}
-                    <div class="col-md-6 col-md-offset-2">
+                    <div class="col-md-6 col-md-offset-4">
 
                         <div class="form-group{{ $errors->has('f_name') ? ' has-error' : '' }}">
                             <label for="f_name" class="col-md-4 control-label sr-only">نام</label>

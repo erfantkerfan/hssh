@@ -74,6 +74,10 @@
 <body style="font-family:'Font'">
 <div class="flex-center position-ref full-height">
 
+    <div class="top-right links">
+        <a href="{{ url('/') }}">صفحه اصلی</a>
+    </div>
+
     <div class="content">
         <img class="col-md-6" src="/img/maintenance boy.gif">
         <div dir="rtl" class="title m-b-md">
