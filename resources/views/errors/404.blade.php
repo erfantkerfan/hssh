@@ -14,11 +14,7 @@
     <style>
         @font-face {
             font-family:'Font';
-            @if (Request::secure())
-            src: url( {{secure_asset('fonts/'.config('app.font'))}} );
-            @else
-            src: url( {{asset('fonts/'.config('app.font'))}} );
-            @endif
+            src: url( {{secure_asset('fonts/BTITRBOLD.ttf'}} );
         }
         html, body {
             background-color: #fff;

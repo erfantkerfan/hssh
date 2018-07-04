@@ -8,17 +8,17 @@
 
     <!-- Fonts -->
     <link rel="icon" href="/img/icon.gif" type="image/gif">
-    <link href="css/googleapis.css'" rel="stylesheet" type="text/css">
+    <link href="css/googleapis.css" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="css/app.css'" rel="stylesheet">
-    <link rel="stylesheet" href="{{secure_asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{secure_asset('css/font-awesome.min.css')}}">
+    <link href="css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{secure_asset('css/bootstrap.min.css)}}">
+    <link rel="stylesheet" href="{{secure_asset('css/font-awesome.min.css)}}">
 
     <style type="text/css">
         @font-face {
             font-family:'Font';
-                src: url( {{ secure_asset('fonts/'.config('app.font'))}} );
+            src: url( {{secure_asset('fonts/BTITRBOLD.ttf'}} );
         }
         @font-face {
             font-family: 'IranNastaliq';
