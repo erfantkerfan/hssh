@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    @if (Request::secure())
+        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{secure_asset('css/bootstrap.min.css')}}">
+    @else
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    @endif
 
     <title>{{config('app.name')}}</title>
 
@@ -78,7 +83,11 @@
 <div class="flex-center position-ref full-height">
 
     <div class="content">
-        <img class="col-md-6" src="{{asset('img/maintenance boy.gif')}}">
+        @if (Request::secure())
+            <img class="col-md-6" src="{{secure_asset('img/maintenance boy.gif')}}">
+        @else
+            <img class="col-md-6" src="{{asset('img/maintenance boy.gif')}}">
+        @endif
         <div dir="rtl" class="title m-b-md">
             این صفحه در حال بروزرسانی میباشد.
         </div>

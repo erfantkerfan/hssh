@@ -4,8 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    @if (Request::secure())
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    @else
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    @endif
 
     <title>{{config('app.name')}}</title>
 
@@ -17,10 +22,10 @@
         @font-face {
             font-family:'Font';
             @if (Request::secure())
-            src: url( {{secure_asset('fonts/'.config('app.font'))}} );
+                src: url( {{secure_asset('fonts/'.config('app.font'))}} );
             @else
-            src: url( {{asset('fonts/'.config('app.font'))}} );
-        @endif
+                src: url( {{asset('fonts/'.config('app.font'))}} );
+            @endif
 }
         html, body {
             background-color: #fff;
