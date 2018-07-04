@@ -8,14 +8,14 @@
 
     <!-- Fonts -->
     <link rel="icon" href="/img/icon.gif" type="image/gif">
-    @if(env('secure_asset',1))
+    @if (Request::secure())
         <link href="{{ secure_asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
     @else
         <link href="{{ asset('css/googleapis.css') }}" rel="stylesheet" type="text/css">
     @endif
 
     <!-- Styles -->
-    @if(env('secure_asset',1))
+    @if (Request::secure())
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     @else
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -26,7 +26,7 @@
     <style type="text/css">
         @font-face {
             font-family:'Font';
-            @if(env('secure_asset',1))
+            @if (Request::secure())
                 src: url( {{ secure_asset('fonts/'.config('app.font'))}} );
             @else
                 src: url( {{ asset('fonts/'.config('app.font'))}} );
@@ -34,7 +34,7 @@
         }
         @font-face {
             font-family: 'IranNastaliq';
-            @if(env('secure_asset',1))
+            @if (Request::secure())
                 src: url('{{secure_asset('fonts/IranNastaliq.eot?#')}}') format('eot'),
                 url('{{secure_asset('fonts/IranNastaliq.ttf')}}') format('truetype'),
                 url('{{secure_asset('fonts/IranNastaliq.woff')}}') format('woff');
@@ -102,7 +102,7 @@
             left: 0;
         }
     </style>
-    @if(env('secure_asset',1))
+    @if (Request::secure())
         <script src="{{ secure_asset('js/jquery-1.11.0.min.js') }}"></script>
         <script src="{{ secure_asset('js/app.js') }}"></script>
         <script src="{{ secure_asset('js/jquery.min.js')}}"></script>
@@ -130,7 +130,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    @if(env('secure_asset',1))
+                    @if (Request::secure())
                         <img style="width:12%" src="{{ secure_asset('img/icon.gif') }}">
                     @else
                         <img style="width:12%" src="{{ asset('img/icon.gif') }}">

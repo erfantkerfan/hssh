@@ -14,7 +14,7 @@
     <style>
         @font-face {
             font-family:'Font';
-            @if(env('secure_asset',1))
+            @if (Request::secure())
             src: url( {{secure_asset('fonts/'.config('app.font'))}} );
             @else
             src: url( {{asset('fonts/'.config('app.font'))}} );

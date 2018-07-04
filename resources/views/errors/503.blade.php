@@ -16,8 +16,12 @@
     <style>
         @font-face {
             font-family:'Font';
+            @if (Request::secure())
+            src: url( {{secure_asset('fonts/'.config('app.font'))}} );
+            @else
             src: url( {{asset('fonts/'.config('app.font'))}} );
-        }
+        @endif
+}
         html, body {
             background-color: #fff;
             color: #636b6f;
