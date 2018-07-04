@@ -38,20 +38,6 @@
             justify-content: center;
         }
 
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
         .title {
             font-size: 60px;
         }
@@ -73,16 +59,16 @@
     </style>
 </head>
 <body style="font-family:'Font'">
-<div class="flex-center position-ref full-height">
+    <div class="container text-center flex-center full-height">
 
-    <div class="content">
-        <img class="col-md-6" src="/img/maintenance boy.gif">
-        <div dir="rtl" class="title m-b-md">
-            سایت در حال بروزرسانی یا تعمیر میباشد.
+        <div>
+            <img class="col-md-6" src="/img/maintenance boy.gif">
+            <div dir="rtl" class="col-md-6 title m-b-md">
+                سایت در حال بروزرسانی یا تعمیر میباشد.
+            </div>
+            <div class="number font-red"> 503 </div>
         </div>
-        <div class="number font-red"> 503 </div>
-    </div>
 
-</div>
+    </div>
 </body>
 </html>
