@@ -24,9 +24,21 @@
                     09106776236
                     <br>
                     <br>
-                    <a href="http://sapp.ir/hsshohada">@hsshohada</a>
+                    <a href="https://sapp.ir/hsshohada2">@hsshohada2</a>
                     <b style="color: #0062cc">
                         :لینک کانال در پیام رسان سروش
+                    </b>
+                    <br>
+                    <br>
+                    <a href="https://ble.im/hsshohada2">@hsshohada2</a>
+                    <b style="color: #0062cc">
+                        :لینک کانال در پیام رسان بله
+                    </b>
+                    <br>
+                    <br>
+                    <a href="http://rubika.ir/hsshohada2">@hsshohada2</a>
+                    <b style="color: #0062cc">
+                        :لینک کانال در روبیکا
                     </b>
                     <br>
                     <br>

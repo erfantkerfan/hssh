@@ -33,8 +33,7 @@ class StaticController extends Controller
     public function staff()
     {
         $sliders[1]=1;
-//        return view('about.staff')->with(['sliders'=>$sliders]);
-        return view('errors.SinglePage503');
+        return view('about.staff')->with(['sliders'=>$sliders]);
     }
 
     public function dep()
@@ -43,8 +42,7 @@ class StaticController extends Controller
         $sliders[2]=2;
         $sliders[3]=3;
         $sliders[4]=4;
-//        return view('about.dep')->with(['sliders'=>$sliders]);
-        return view('errors.SinglePage503');
+        return view('about.dep')->with(['sliders'=>$sliders]);
     }
 
     public function assets()
