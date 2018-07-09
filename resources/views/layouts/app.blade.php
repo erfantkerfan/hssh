@@ -152,8 +152,8 @@
         <div class="content">
             <div class="title">
                 <div class="iran text-center">
-                    <h2>
-                    دبیرستان حضرت سید الشهداعلیه السلام منطقه ۲ - دوره دوم
+                    <h2 dir="rtl">
+                    مجتمع آموزشی فرهنگی حضرت سید الشهدا علیه السلام(دوره دوم)
                     </h2>
                 </div>
             </div>

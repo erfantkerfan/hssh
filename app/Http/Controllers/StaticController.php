@@ -9,6 +9,7 @@ class StaticController extends Controller
     public function home()
     {
         $sliders[1]=1;
+        $sliders[2]=2;
         return view('home')->with(['sliders'=>$sliders]);
     }
     
