@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Hekmatinasser\Verta\Verta;
 
 class LoginController extends Controller
 {
@@ -20,12 +21,23 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+    public function username()
+    {
+        return 'username';
+    }
+
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
     protected $redirectTo = '/home';
+    public function redirectTo()
+    {
+        auth()->user()->last_login = Verta::now();
+        auth()->user()->save();
+        return '/';
+    }
 
     /**
      * Create a new controller instance.

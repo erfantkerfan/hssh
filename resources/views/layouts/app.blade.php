@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name') }}</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Fonts -->
     <link rel="icon" href="/img/icon.gif" type="image/gif">
@@ -84,6 +85,10 @@
             left: 0;
         }
     </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script src="/js/jquery-1.11.0.min.js"></script>
     <script src="/js/app.js"></script>
     <script src="/js/jquery.min.js"></script>
@@ -105,14 +110,44 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                        <img style="width:12%" src="/img/icon.gif">
+                        <img src="/img/icon.gif">
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
+                    @guest
+                        <button class="different"><a href="{{ route('login') }}">ورود</a></button>
+                    @else
+                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                            {{ Auth::user()->username }}
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="{{ route('logout') }}">
+                                    خروج
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
 
+                            </li>
+                        </ul>
+
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
+                                <span class="caret"></span></button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+                                <li role="presentation" class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                            </ul>
+                        </div>
+                    @endguest
                 </ul>
 
                 <!-- Right Side Of Navbar -->
