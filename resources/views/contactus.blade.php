@@ -42,6 +42,12 @@
                     </b>
                     <br>
                     <br>
+                    <a href="https://t.me/hsshohada2">@hsshohada2</a>
+                    <b style="color: #0062cc">
+                        :لینک کانال در پیام رسان تلگرام
+                    </b>
+                    <br>
+                    <br>
                 </h4>
             </div>
 
