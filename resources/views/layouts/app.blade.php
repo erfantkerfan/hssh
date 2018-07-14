@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <style type="text/css">
+
         @font-face {
             font-family:'Font';
             src: url('/fonts/BTITRBOLD.ttf');
@@ -100,14 +101,6 @@
         <div class="container">
             <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="/img/icon.gif">
@@ -116,37 +109,47 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-left">
                     @guest
-                        <button class="different"><a href="{{ route('login') }}">ورود</a></button>
+                        <li class="different"><a href="{{ route('login') }}">ورود <span style="color: dodgerblue" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
                     @else
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                            {{ Auth::user()->username }}
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li role="presentation">
-                                <a role="menuitem" tabindex="-1" href="{{ route('logout') }}">
-                                    خروج
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
+                        <li class="dropdown different">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                {{ Auth::user()->username }}
+                                <span style="color: dodgerblue" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="text-center">
 
-                            </li>
-                        </ul>
+                                    <a class="dropdown-item" href="{{Route('preregister')}}">
+                                        لیست پیش ثبت نامی ها
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    </a>
 
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
-                                <span class="caret"></span></button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+                                    <a class="dropdown-item" href="{{Route('news_create')}}">
+                                        ثبت خبر
+                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    </a>
+
+                                    <a class="dropdown-item" style="color: dodgerblue" href="#">
+                                        آخرین ورود شما:
+                                          {{str_after(Auth::user()->last_login,' ')}}
+                                          {{str_replace('-','/',str_before(Auth::user()->last_login,' '))}}
+                                    </a>
+                                    <a class="dropdown-item" style="color: red;" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        خروج
+                                        <span style="color: red" class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+
+                                </li>
                             </ul>
-                        </div>
+                        </li>
                     @endguest
                 </ul>
 
@@ -157,6 +160,7 @@
                     <li class="dropdown different">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                              درباره ما<span class="caret"></span>
+                            <span style="color:yellowgreen" class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
                         </a>
                         <ul class="dropdown-menu">
 
@@ -176,6 +180,7 @@
                         </ul>
 
                     <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+                    <li class="different"><a style="color:orange" href="{{ route('news') }}">اخبار و اطلاعیه ها <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a></li>
                     <li class="different"><a href="{{ route('home') }}">صفحه اصلی <span style="color: black" class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
                 </ul>
             </div>

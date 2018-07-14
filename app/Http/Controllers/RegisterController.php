@@ -7,21 +7,12 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
-    public function qwertyuiop()
-    {
-        return view('qwertyuiop');
-    }
 
-    public function post_qwertyuiop(Request $request)
+    public function preregister()
     {
-        if($request->password=='vahidkebriaee') {
-            $r10s = Preregister::where('grade','=','دهم')->get();
-            $r11s = Preregister::where('grade','=','یازدهم')->get();
-            return view('post_qwertyuiop')->with(['r10s' => $r10s,'r11s'=>$r11s]);
-        }
-        else {
-            return redirect('/qwertyuiop');
-        }
+        $r10s = Preregister::where('grade','=','دهم')->get();
+        $r11s = Preregister::where('grade','=','یازدهم')->get();
+        return view('admin.preregister')->with(['r10s' => $r10s,'r11s'=>$r11s]);
     }
 
     public function form()

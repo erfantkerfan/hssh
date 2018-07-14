@@ -3,12 +3,12 @@
 @section('content')
     <div class="container">
 
-        <div class="col-md-3">
+        <div class="col-md-2">
 
-            <div class="panel panel-primary">
+            <div class="panel panel-info">
                 <div class="panel-heading text-center">ورود به سامانه کارسنج</div>
 
-                <div class="panel-body bg-success text-center">
+                <div class="panel-body text-center">
                     <form class="form" method="POST" action="https://www.karsanj.net/login.php">
 
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
