@@ -35,7 +35,8 @@ class LoginController extends Controller
     protected $redirectTo = '/home';
     public function redirectTo()
     {
-        auth()->user()->last_login = Verta::now();
+        auth()->user()->last_login = auth()->user()->login;
+        auth()->user()->login = Verta::now();
         auth()->user()->save();
         return '/home';
     }
