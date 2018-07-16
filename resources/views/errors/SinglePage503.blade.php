@@ -68,7 +68,7 @@
     <div class="container text-center flex-center full-height">
 
         <div class="top-right links">
-            <a href="{{ url('/') }}">صفحه اصلی</a>
+            <a href="{{ route('home') }}">صفحه اصلی</a>
         </div>
 
         <div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use http\Env\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Hekmatinasser\Verta\Verta;
 
@@ -36,7 +37,7 @@ class LoginController extends Controller
     {
         auth()->user()->last_login = Verta::now();
         auth()->user()->save();
-        return '/';
+        return '/home';
     }
 
     /**

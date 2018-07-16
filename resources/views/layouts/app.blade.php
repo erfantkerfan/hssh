@@ -94,6 +94,10 @@
     <script src="/js/app.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    {{--for-bootstrap-new-badge--}}
+    <style>
+        .badge{display:inline-block;padding:.25em .4em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25rem}.badge:empty{display:none}.btn .badge{position:relative;top:-1px}a.badge:focus,a.badge:hover{color:#fff;text-decoration:none;cursor:pointer}.badge-pill{padding-right:.6em;padding-left:.6em;border-radius:10rem}.badge-default{background-color:#636c72}.badge-default[href]:focus,.badge-default[href]:hover{background-color:#4b5257}.badge-primary{background-color:#0275d8}.badge-primary[href]:focus,.badge-primary[href]:hover{background-color:#025aa5}.badge-success{background-color:#5cb85c}.badge-success[href]:focus,.badge-success[href]:hover{background-color:#449d44}.badge-info{background-color:#5bc0de}.badge-info[href]:focus,.badge-info[href]:hover{background-color:#31b0d5}.badge-warning{background-color:#f0ad4e}.badge-warning[href]:focus,.badge-warning[href]:hover{background-color:#ec971f}.badge-danger{background-color:#d9534f}.badge-danger[href]:focus,.badge-danger[href]:hover{background-color:#c9302c}
+    </style>
 </head>
 <body class="bg" style="font-family:'Font'">
 
@@ -127,7 +131,7 @@
                                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                     </a>
 
-                                    <a class="dropdown-item" href="{{Route('news_create')}}">
+                                    <a class="dropdown-item" href="{{Route('news_form')}}">
                                         ثبت خبر
                                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                     </a>
@@ -180,7 +184,20 @@
                         </ul>
 
                     <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
-                    <li class="different"><a style="color:orange" href="{{ route('news') }}">اخبار و اطلاعیه ها <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a></li>
+                    <li class="dropdown different">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                            اخبار و اطلاعیه ها <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li class="text-center">
+
+                                <a href="{{ route('news10') }}">پایه دهم</a>
+
+                                <a href="{{ route('news11') }}">پایه یازدهم</a>
+
+                            </li>
+                        </ul>
                     <li class="different"><a href="{{ route('home') }}">صفحه اصلی <span style="color: black" class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
                 </ul>
             </div>
