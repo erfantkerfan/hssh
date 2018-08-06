@@ -51,6 +51,35 @@
 
             </div>
 
+            <div class="panel panel-info">
+                <div class="panel-heading text-center">پیوندهای مفید</div>
+
+                <br>
+
+                <a href="http://nojavan.khamenei.ir">
+                    <img  class="col-md-12" alt="http://nojavan.khamenei.ir" src="/img/links/1.png">
+                </a>
+                <br>
+                <br>
+                <br>
+
+                <a href="http://www.khamenei.ir/">
+                    <img  class="col-md-12" alt="http://www.khamenei.ir/" src="/img/links/2.png">
+                </a>
+                <br>
+                <br>
+                <br>
+
+                <a href="http://www.ayandehsazan.ir/">
+                    <img  class="col-md-12" alt="http://www.ayandehsazan.ir/" src="/img/links/3.png">
+                </a>
+
+                <div class="panel-body text-center row">
+
+                </div>
+
+            </div>
+
             {{--<div class="panel panel-primary">--}}
             {{--<a data-toggle="collapse" href="#karsanj">--}}
             {{--<div class="panel-heading">ورود به منتا</div>--}}
