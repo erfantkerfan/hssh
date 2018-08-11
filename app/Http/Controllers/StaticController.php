@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
 use Illuminate\Http\Request;
 
 class StaticController extends Controller
@@ -10,7 +11,8 @@ class StaticController extends Controller
     {
         $sliders[1]=1;
         $sliders[2]=2;
-        return view('home')->with(['sliders'=>$sliders]);
+        $news = News::where('files','!=','0')->take(3)->orderBy('created_at', 'desc')->get();
+        return view('home')->with(['sliders'=>$sliders,'news'=>$news]);
     }
     
     public function contactus()

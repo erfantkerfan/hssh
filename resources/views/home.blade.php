@@ -88,16 +88,10 @@
 
             </div>
 
-            {{--<div class="panel panel-primary">--}}
-            {{--<a data-toggle="collapse" href="#karsanj">--}}
-            {{--<div class="panel-heading">ورود به منتا</div>--}}
-            {{--</a>--}}
-            {{--</div>--}}
-
         </div>
 
-        <div class="col-md-8">
-        <div id="myCarousel" data-interval="3000" class="carousel slide" data-ride="carousel">
+        <div class="col-md-5">
+        <div id="myCarousel" data-interval="4000" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 @foreach($sliders as $slider)
@@ -126,6 +120,44 @@
         </div>
     </div>
 
+        <div class="col-md-5">
+            <div id="myCarousel2" data-interval="1000" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    @foreach($news as $new)
+                        <li data-target="#myCarousel2" data-slide-to="{{$new->id}}"></li>
+                    @endforeach
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    @foreach($news as $new)
+                        <div class="item {{ $loop->first ? ' active' : '' }}">
+                            <a href="{{route('news_single',['id'=>$new->id])}}">
+                                <img src="/img/news/{{$new->id}}/1.jpg" style="width:100%;">
+                            </a>
+                            {{--<div class="carousel-caption d-none d-md-block">--}}
+                                {{--<a href="{{route('news_single',['id'=>$new->id])}}" style="text-decoration: none;color: yellow;font-size: 15px">--}}
+                                    {{--مشاهده--}}
+                                    {{--{{$new->title}}--}}
+                                {{--</a>--}}
+                            {{--</div>--}}
+                        </div>
+
+                    @endforeach
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">قبلی</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">بعدی</span>
+                </a>
+            </div>
+        </div>
 
     </div>
 @endsection
