@@ -121,7 +121,7 @@
     </div>
 
         <div class="col-md-5">
-            <div id="myCarousel2" data-interval="1000" class="carousel slide" data-ride="carousel">
+            <div id="myCarousel2" data-interval="4000" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     @foreach($news as $new)
