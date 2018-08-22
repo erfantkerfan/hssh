@@ -2,7 +2,7 @@
 
 ## About HSSH
 
-This is a simple and robust school-site for those who are into that kind of thing the, the features are:
+This is a simple and robust school-site for those who are into that kind of thing , the features are:
 
 - Simple Routing.
 - Simple but complete Models.
