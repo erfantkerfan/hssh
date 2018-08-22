@@ -4,48 +4,51 @@
     <div class="container">
         <div class="col-md-12">
 
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center panel" dir="rtl" style="background-color: #d0d2db">
                 <h4>
                     <b style="color: #0062cc">
-                    آدرس مدرسه:
+                        آدرس مدرسه:
                     </b>
-                    بزرگراه شیخ فضل الله نوری، بلوار شهید تیموری، خیابان شهید درویش وند، پلاک 30
+                    بزرگراه شیخ فضل الله نوری، بلوار شهید تیموری،
+                    <br>
+                    <br>
+                    خیابان شهید درویش وند، پلاک 30
                     <br>
                     <br>
                     <b style="color: #0062cc">
-                    شماره تماس مدرسه: 
+                        شماره تماس مدرسه: 
                     </b>
                     66008864-021
                     <br>
                     <br>
                     <b style="color: #0062cc">
-                    شماره تماس: 
+                        شماره تماس: 
                     </b>
                     09106776236
                     <br>
                     <br>
-                    <a href="https://sapp.ir/hsshohada2">@hsshohada2</a>
                     <b style="color: #0062cc">
                         :لینک کانال در پیام رسان سروش
                     </b>
+                    <a href="https://sapp.ir/hsshohada2">@hsshohada2</a>
                     <br>
                     <br>
-                    <a href="https://ble.im/hsshohada2">@hsshohada2</a>
                     <b style="color: #0062cc">
                         :لینک کانال در پیام رسان بله
                     </b>
+                    <a href="https://ble.im/hsshohada2">@hsshohada2</a>
                     <br>
                     <br>
-                    <a href="http://rubika.ir/hsshohada2">@hsshohada2</a>
                     <b style="color: #0062cc">
                         :لینک کانال در روبیکا
                     </b>
+                    <a href="http://rubika.ir/hsshohada2">@hsshohada2</a>
                     <br>
                     <br>
-                    <a href="https://t.me/hsshohada2">@hsshohada2</a>
                     <b style="color: #0062cc">
                         :لینک کانال در پیام رسان تلگرام
                     </b>
+                    <a href="https://t.me/hsshohada2">@hsshohada2</a>
                     <br>
                     <br>
                 </h4>
