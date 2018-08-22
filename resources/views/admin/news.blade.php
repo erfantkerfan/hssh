@@ -61,8 +61,11 @@
 
 
                                 <div class="form-group{{ $errors->has('img') ? ' has-error' : '' }}">
-                                    <label for="img" class="col-md-2 control-label pull-right">آپلود فایل:</label>
-                                    <div class="col-md-9 col-md-offset-1">
+                                    <label for="img" class="col-md-5 control-label pull-right">
+                                        آپلود فایل:
+                                        (مجموعا از 50 مگابایت تجاوز نکند)
+                                    </label>
+                                    <div class="col-md-6 col-md-offset-1">
                                         <input type="file" class="form-control" name="img[]" multiple>
 
                                         @if ($errors->has('img'))
