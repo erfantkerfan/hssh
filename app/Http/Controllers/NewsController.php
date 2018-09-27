@@ -8,18 +8,10 @@ use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
-    public function index10()
+    public function index()
     {
-        $news = News::where('grade_id','=','10')->orwhere('grade_id','=',null)->orderBy('date','desc')->paginate(20);
-        $grade = 'دهم';
-        return view('news')->with(['news'=>$news,'grade'=>$grade]);
-    }
-
-    public function index11()
-    {
-        $news = News::where('grade_id','=','11')->orwhere('grade_id','=',null)->orderBy('date','desc')->paginate(20);
-        $grade = 'یازدهم';
-        return view('news')->with(['news'=>$news,'grade'=>$grade]);
+        $news = News::orderBy('date','desc')->paginate(20);
+        return view('news')->with(['news'=>$news]);
     }
 
     public function single($id)
@@ -83,12 +75,7 @@ class NewsController extends Controller
                 $file->move(public_path('img/news/'.$news->id.'/'), $i.'.jpg');
             }
         }
-
-        if ($news->grade_id==10){
-            return redirect('news10');
-        }else{
-            return redirect('news11');
-        }
+        return redirect('news');
 
     }
 }

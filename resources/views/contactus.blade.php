@@ -55,7 +55,7 @@
             </div>
 
             <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5448.433547933377!2d51.34381956176717!3d35.710033505694604!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7ef61f3805d2abef!2z2K_YqNuM2LHYs9iq2KfZhiDYrdi22LHYqiDYs9uM2K8g2KfZhNi02YfYr9in2LnZhNuM2Ycg2KfZhNiz2YTYp9mFIC0g2K_ZiNix2Ycg2K_ZiNmF!5e0!3m2!1sen!2s!4v1528272564110" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9163.39773905597!2d51.343288998879025!3d35.70776085261836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dff96f3a028e9%3A0x7ef61f3805d2abef!2z2K_YqNuM2LHYs9iq2KfZhiDYrdi22LHYqiDYs9uM2K8g2KfZhNi02YfYr9in2LnZhNuM2Ycg2KfZhNiz2YTYp9mFIC0g2K_ZiNix2Ycg2K_ZiNmF!5e0!3m2!1sen!2sus!4v1537965334222" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
 
         </div>

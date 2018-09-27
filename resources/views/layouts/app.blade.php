@@ -123,9 +123,9 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="/img/icon.gif">
-                </a>
+                {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
+                        {{--<img src="/img/icon.gif">--}}
+                {{--</a>--}}
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -200,21 +200,24 @@
                             </li>
                         </ul>
 
-                    <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
-                    <li class="dropdown different">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                            اخبار و اطلاعیه ها <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
+                    {{--<li class="different"><a href="{{ route('register_form') }}" disabled="">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>--}}
 
-                            <li class="text-center">
+                    {{--<li class="dropdown different">--}}
+                        {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">--}}
+                            {{--اخبار و اطلاعیه ها <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span class="caret"></span>--}}
+                        {{--</a>--}}
+                        {{--<ul class="dropdown-menu">--}}
 
-                                <a href="{{ route('news10') }}">پایه دهم</a>
+                            {{--<li class="text-center">--}}
 
-                                <a href="{{ route('news11') }}">پایه یازدهم</a>
+                                {{--<a href="{{ route('news10') }}">پایه دهم</a>--}}
 
-                            </li>
-                        </ul>
+                                {{--<a href="{{ route('news11') }}">پایه یازدهم</a>--}}
+
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    <li class="different"><a href="{{ route('news') }}">اخبار <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a></li>
                     <li class="different"><a href="{{ route('home') }}">صفحه اصلی <span style="color: black" class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
                 </ul>
             </div>
