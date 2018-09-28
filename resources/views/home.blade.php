@@ -93,7 +93,7 @@
         </div>
 
         {{-- BANNER --}}
-        <div class="col-md-5">
+        <div class="col-md-6">
             <div id="myCarousel" data-interval="4000" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -123,9 +123,40 @@
             </div>
         </div>
 
-        {{-- GALLERY --}}
-        <div class="col-md-5">
-            <div id="myCarousel2" data-interval="4000" class="carousel slide" data-ride="carousel">
+        <div class="col-md-4">
+            {{-- NEWS --}}
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    اخبار دبیرستان
+                </div>
+                <div class="panel-body">
+                    <div class="tab-content">
+                        @foreach($news as $new)
+
+                            <div class="text-center" dir="rtl">
+                                {{$new->title}}
+                                <a href="{{route('news_single',['id'=>$new->id])}}">
+                                    <span class="badge badge-success badge-pill" dir="rtl">
+                                        <span style="color:#2c2c2d">
+                                            مشاهده خبر
+                                        </span>
+                                    </span>
+                                </a>
+                                <span class="badge badge-pill badge-danger">
+                                    {{str_replace('1397/','97/',str_replace('-','/',str_before($new->date,' ')))}}
+                                </span>
+                                @if(!$loop->last)
+                                    <hr style="background-color:darkseagreen; height:2px;">
+                                @endif
+                            </div>
+
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
+            {{-- GALLERY --}}
+            <div id="myCarousel2" data-interval="2500" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     @foreach($galleries as $gallery)

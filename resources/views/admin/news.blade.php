@@ -31,7 +31,7 @@
                                 <div class="form-group{{ $errors->has('text') ? ' has-error' : '' }}">
                                     <label for="title" class="col-md-2 control-label pull-right">متن خبر:</label>
                                     <div class="col-md-9 col-md-offset-1">
-                                        <textarea dir="rtl" style="resize: vertical" class="form-control form-group pull-left" name="text" rows="5" required autofocus>{{ old('text') }}</textarea>
+                                        <textarea dir="rtl" style="resize: vertical" class="form-control form-group pull-left" name="text" rows="5" autofocus>{{ old('text') }}</textarea>
 
                                         @if ($errors->has('text'))
                                             <span class="help-block">
@@ -41,23 +41,23 @@
                                     </div>
                                 </div>
 
-                                <div  class="form-group{{ $errors->has('grade_id') ? ' has-error' : '' }}">
-                                    <label for="grade_id" class="control-label sr-only">پایه تحصیلی</label>
+                                {{--<div  class="form-group{{ $errors->has('grade_id') ? ' has-error' : '' }}">--}}
+                                    {{--<label for="grade_id" class="control-label sr-only">پایه تحصیلی</label>--}}
 
-                                    <div class="col-md-2 col-md-offset-5" >
-                                        <select id="grade_id" type="text" class="form-control" name="grade_id" autofocus>
-                                            <option value="" selected>هر دو پایه</option>
-                                            <option value="10">دهم</option>
-                                            <option value="11">یازدهم</option>
-                                        </select>
+                                    {{--<div class="col-md-2 col-md-offset-5" >--}}
+                                        {{--<select id="grade_id" type="text" class="form-control" name="grade_id" autofocus>--}}
+                                            {{--<option value="" selected>هر دو پایه</option>--}}
+                                            {{--<option value="10">دهم</option>--}}
+                                            {{--<option value="11">یازدهم</option>--}}
+                                        {{--</select>--}}
 
-                                        @if ($errors->has('grade'))
-                                            <span class="help-block">
-                                                <strong>{{ $errors->first('grade') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div>
-                                </div>
+                                        {{--@if ($errors->has('grade'))--}}
+                                            {{--<span class="help-block">--}}
+                                                {{--<strong>{{ $errors->first('grade') }}</strong>--}}
+                                            {{--</span>--}}
+                                        {{--@endif--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
 
 
                                 <div class="form-group{{ $errors->has('img') ? ' has-error' : '' }}">

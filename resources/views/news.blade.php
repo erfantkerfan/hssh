@@ -39,7 +39,9 @@
                                             </span>
                                         </a>
                                     @endauth
-                                    <hr style="background-color:darkseagreen; height:2px;">
+                                    @if(!$loop->last)
+                                        <hr style="background-color:darkseagreen; height:2px;">
+                                    @endif
                                 </div>
 
                             @endforeach

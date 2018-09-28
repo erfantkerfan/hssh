@@ -12,7 +12,8 @@ class StaticController extends Controller
         $sliders[1]=1;
         $sliders[2]=2;
         $galleries = News::where('files','!=','0')->take(5)->orderBy('created_at', 'desc')->get();
-        return view('home')->with(['sliders'=>$sliders,'galleries'=>$galleries]);
+        $news = News::orderBy('date','desc')->take(5)->get();
+        return view('home')->with(['sliders'=>$sliders,'galleries'=>$galleries,'news'=>$news]);
     }
     
     public function contactus()

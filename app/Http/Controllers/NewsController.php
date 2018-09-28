@@ -45,7 +45,7 @@ class NewsController extends Controller
         $this->Validate($request, [
             'title' => 'required|string',
             'text' => 'nullable|string',
-            'grade_id' => 'nullable|string',
+//            'grade_id' => 'nullable|string',
             'img[]' => 'image|mimes:jpg',
         ]);
 
@@ -58,7 +58,8 @@ class NewsController extends Controller
         $news = new News(array(
             'title' => $request['title'],
             'text' => $request['text'],
-            'grade_id' => $request['grade_id'],
+//
+            'type' => null,
             'date' => Verta::now(),
             'files' => $count,
         ));
