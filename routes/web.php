@@ -37,6 +37,7 @@ Route::prefix('about')->group(function () {
 //Admin:
 Route::middleware('auth')->group(function () {
     Route::prefix('admin')->group(function () {
+        Route::get('/news/all','NewsController@all')->name('news_all');
         Route::get('/preregister', 'RegisterController@preregister')->name('preregister');
         Route::get('/news/form', 'NewsController@form')->name('news_form');
         Route::Post('/news', 'NewsController@create')->name('news_create');

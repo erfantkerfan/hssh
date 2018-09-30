@@ -149,8 +149,13 @@
                                     </a>
 
                                     <a class="dropdown-item" href="{{Route('news_form')}}">
-                                        ثبت خبر
+                                        درج محتوا
                                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{Route('news_all')}}">
+                                        تمام محتوا های درج شده
+                                        {{--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>--}}
                                     </a>
 
                                     <a class="dropdown-item" style="color: dodgerblue" href="#">
