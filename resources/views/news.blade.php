@@ -7,17 +7,17 @@
                 <br>
                 <div class="panel panel-primary">
                     <div class="panel-heading text-center">
-                        اخبار دبیرستان
+                        {{ $title }}
                     </div>
                     <div class="panel-body">
                         <div class="tab-content">
                             @foreach($news as $new)
                                 <div class="text-right" dir="rtl">
                                     {{$new->title}}
-                                    <a href="{{route('news_single',['id'=>$new->id])}}">
+                                    <a href="{{route('news_single',['type'=>$new->type,'id'=>$new->id])}}">
                                         <span class="badge badge-success badge-pill" dir="rtl">
                                             <span style="color:#2c2c2d">
-                                                مشاهده خبر
+                                                مشاهده
                                             </span>
                                               
                                         </span>

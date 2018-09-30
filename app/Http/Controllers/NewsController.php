@@ -10,11 +10,18 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::orderBy('date','desc')->paginate(20);
-        return view('news')->with(['news'=>$news]);
+        $news = News::where('type','=','201')->orderBy('date','desc')->paginate(20);
+        $title = 'لیست اخبار';
+        return view('news')->with(['title'=>$title,'news'=>$news]);
     }
 
-    public function single($id)
+    public function category($type)
+    {
+        $news = News::where('type','=',$type)->orderBy('date','desc')->paginate(20);
+        $title = 'لیست مطالب';
+        return view('news')->with(['title'=>$title,'news'=>$news]);
+    }
+    public function single($type , $id)
     {
         $news = News::FindOrFail($id);
         return view('news_single')->with(['news'=>$news]);
@@ -45,7 +52,7 @@ class NewsController extends Controller
         $this->Validate($request, [
             'title' => 'required|string',
             'text' => 'nullable|string',
-//            'grade_id' => 'nullable|string',
+            'type' => 'string',
             'img[]' => 'image|mimes:jpg',
         ]);
 
@@ -58,12 +65,10 @@ class NewsController extends Controller
         $news = new News(array(
             'title' => $request['title'],
             'text' => $request['text'],
-//
-            'type' => null,
+            'type' => $request['type'],
             'date' => Verta::now(),
             'files' => $count,
         ));
-
         $news->save();
 
         if($count!=0)
@@ -76,7 +81,7 @@ class NewsController extends Controller
                 $file->move(public_path('img/news/'.$news->id.'/'), $i.'.jpg');
             }
         }
-        return redirect('news');
+        return redirect('/');
 
     }
 }

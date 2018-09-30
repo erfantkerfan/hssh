@@ -199,6 +199,7 @@
 
                             </li>
                         </ul>
+                    </li>
 
                     {{--<li class="different"><a href="{{ route('register_form') }}" disabled="">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>--}}
 
@@ -217,6 +218,54 @@
                             {{--</li>--}}
                         {{--</ul>--}}
                     {{--</li>--}}
+                    <li class="dropdown different">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                            پرورشی<span class="caret"></span>
+                            <span style="color:slateblue" class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li class="text-center">
+
+                                <a href="{{ route('news_category',['type'=>'401']) }}">...خبردار </a>
+
+                                <a href="{{ route('news_category',['type'=>'402']) }}">قرآن کریم </a>
+
+                                <a href="{{ route('news_category',['type'=>'403']) }}">راه بندگی </a>
+
+                                <a href="{{ route('news_category',['type'=>'404']) }}">همکلاسی آسمانی </a>
+
+                                <a href="{{ route('news_category',['type'=>'405']) }}">نوجوان </a>
+
+                                <a href="{{ route('news_category',['type'=>'406']) }}">مسابقه فرهنگی </a>
+
+                                <a href="{{ route('news_category',['type'=>'407']) }}">مسابقه علمی </a>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown different">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                            به روایت تصویر<span class="caret"></span>
+                            <span style="color: #c7254e" class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li class="text-center">
+
+                                <a href="{{ route('news_category',['type'=>'301']) }}">اردوها </a>
+
+                                <a href="{{ route('news_category',['type'=>'302']) }}">مراسم </a>
+
+                                <a href="{{ route('news_category',['type'=>'303']) }}">فوق برنامه </a>
+
+                                <a href="{{ route('news_category',['type'=>'304']) }}">جلسات </a>
+
+                                <a href="{{ route('news_category',['type'=>'305']) }}">سایر </a>
+
+                            </li>
+                        </ul>
+                    </li>
                     <li class="different"><a href="{{ route('news') }}">اخبار <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a></li>
                     <li class="different"><a href="{{ route('home') }}">صفحه اصلی <span style="color: black" class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
                 </ul>

@@ -135,7 +135,7 @@
 
                             <div class="text-center" dir="rtl">
                                 {{$new->title}}
-                                <a href="{{route('news_single',['id'=>$new->id])}}">
+                                <a href="{{route('news_single',['type'=>$new->type,'id'=>$new->id])}}">
                                     <span class="badge badge-success badge-pill" dir="rtl">
                                         <span style="color:#2c2c2d">
                                             مشاهده خبر
@@ -168,7 +168,7 @@
                 <div class="carousel-inner">
                     @foreach($galleries as $gallery)
                         <div class="item {{ $loop->first ? ' active' : '' }}">
-                            <a href="{{route('news_single',['id'=>$gallery->id])}}">
+                            <a href="{{route('news_single',['type'=>$gallery->type,'id'=>$gallery->id])}}">
                                 <img src="/img/news/{{$gallery->id}}/1.jpg" style="width:100%;">
                             </a>
                             {{--<div class="carousel-caption d-none d-md-block">--}}

@@ -41,29 +41,40 @@
                                     </div>
                                 </div>
 
-                                {{--<div  class="form-group{{ $errors->has('grade_id') ? ' has-error' : '' }}">--}}
-                                    {{--<label for="grade_id" class="control-label sr-only">پایه تحصیلی</label>--}}
+                                <div  class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
+                                    <label for="type" class="control-label sr-only">نوع</label>
 
-                                    {{--<div class="col-md-2 col-md-offset-5" >--}}
-                                        {{--<select id="grade_id" type="text" class="form-control" name="grade_id" autofocus>--}}
-                                            {{--<option value="" selected>هر دو پایه</option>--}}
-                                            {{--<option value="10">دهم</option>--}}
-                                            {{--<option value="11">یازدهم</option>--}}
-                                        {{--</select>--}}
+                                    <div class="col-md-2 col-md-offset-5" >
+                                        <select id="type" type="text" class="form-control" name="type" autofocus>
+                                            <option value="" selected>انتخاب کنید</option>
+                                            <option value="201">خبر</option>
+                                            <option value="301">گالری:اردو</option>
+                                            <option value="302">گالری:مراسم</option>
+                                            <option value="303">گالری:فوق برنامه</option>
+                                            <option value="304">گالری:جلسات</option>
+                                            <option value="305">گالری:سایر</option>
+                                            <option value="401">پرورشی:خبردار</option>
+                                            <option value="402">پرورشی:قرآن کریم</option>
+                                            <option value="403">پرورشی:راه بندگی</option>
+                                            <option value="404">پرورشی:همکلاسی آسمانی</option>
+                                            <option value="405">پرورشی:نوجوان</option>
+                                            <option value="406">پرورشی:مسابقه فرهنگی</option>
+                                            <option value="407">پرورشی:مسابقه علمی</option>
+                                        </select>
 
-                                        {{--@if ($errors->has('grade'))--}}
-                                            {{--<span class="help-block">--}}
-                                                {{--<strong>{{ $errors->first('grade') }}</strong>--}}
-                                            {{--</span>--}}
-                                        {{--@endif--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
+                                        @if ($errors->has('grade'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('grade') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
 
 
                                 <div class="form-group{{ $errors->has('img') ? ' has-error' : '' }}">
                                     <label for="img" class="col-md-5 control-label pull-right">
-                                        آپلود فایل:
-                                        (مجموعا از 50 مگابایت تجاوز نکند)
+                                        آپلود عکس:
+                                        (با پسوند jpg و مجموعا کمتر از 50 مگابایت)
                                     </label>
                                     <div class="col-md-6 col-md-offset-1">
                                         <input type="file" class="form-control" name="img[]" multiple>

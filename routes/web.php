@@ -20,7 +20,8 @@ Route::get('/','Controller@home')->name('home');
 Route::get('/home','StaticController@home')->name('home');
 Route::get('/contactus','StaticController@contactus')->name('contactus');
 Route::get('/news','NewsController@index')->name('news');
-Route::get('/news/{id}','NewsController@single')->name('news_single');
+Route::get('/news/{type}','NewsController@category')->name('news_category');
+Route::get('/news/{type}/{id}','NewsController@single')->name('news_single');
 Route::prefix('about')->group(function () {
     Route::get('goals','StaticController@goals')->name('about_goals');
     Route::get('chart','StaticController@chart')->name('about_chart');
