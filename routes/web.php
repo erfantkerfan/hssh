@@ -22,6 +22,8 @@ Route::get('/contactus','StaticController@contactus')->name('contactus');
 Route::get('/news','NewsController@index')->name('news');
 Route::get('/news/{type}','NewsController@category')->name('news_category');
 Route::get('/news/{type}/{id}','NewsController@single')->name('news_single');
+Route::get('/message','MessageController@form')->name('message_form');
+Route::post('/message','MessageController@create')->name('message_create');
 Route::prefix('about')->group(function () {
     Route::get('goals','StaticController@goals')->name('about_goals');
     Route::get('chart','StaticController@chart')->name('about_chart');
@@ -42,5 +44,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/news/form', 'NewsController@form')->name('news_form');
         Route::Post('/news', 'NewsController@create')->name('news_create');
         Route::get('/news/delete/{id}', 'NewsController@delete')->name('news_delete');
+        Route::get('/message/delete/{id}','MessageController@delete')->name('message_delete');
+        Route::get('/message','MessageController@index')->name('message_index');
     });
 });

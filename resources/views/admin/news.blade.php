@@ -29,14 +29,14 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('text') ? ' has-error' : '' }}">
-                                    <label for="title" class="col-md-2 control-label pull-right">متن خبر:</label>
+                                    <label for="text" class="col-md-2 control-label pull-right">متن خبر:</label>
                                     <div class="col-md-9 col-md-offset-1">
                                         <textarea dir="rtl" style="resize: vertical" class="form-control form-group pull-left" name="text" rows="5" autofocus>{{ old('text') }}</textarea>
 
                                         @if ($errors->has('text'))
                                             <span class="help-block">
-                                    <strong>{{ $errors->first('text') }}</strong>
-                                </span>
+                                                <strong>{{ $errors->first('text') }}</strong>
+                                            </span>
                                         @endif
                                     </div>
                                 </div>

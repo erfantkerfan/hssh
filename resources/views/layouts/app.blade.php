@@ -143,18 +143,23 @@
                             <ul class="dropdown-menu">
                                 <li class="text-center">
 
-                                    <a class="dropdown-item" href="{{Route('preregister')}}">
-                                        لیست پیش ثبت نامی ها
-                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    </a>
-
                                     <a class="dropdown-item" href="{{Route('news_form')}}">
                                         درج محتوا
                                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                     </a>
 
+                                    <a class="dropdown-item" href="{{Route('preregister')}}">
+                                        لیست پیش ثبت نامی ها
+                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    </a>
+
                                     <a class="dropdown-item" href="{{Route('news_all')}}">
                                         تمام محتوا های درج شده
+                                        {{--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>--}}
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{Route('message_index')}}">
+                                        لیست پیام های دریافتی
                                         {{--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>--}}
                                     </a>
 
