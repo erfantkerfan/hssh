@@ -24,6 +24,12 @@ Route::get('/news/{type}','NewsController@category')->name('news_category');
 Route::get('/news/{type}/{id}','NewsController@single')->name('news_single');
 Route::get('/message','MessageController@form')->name('message_form');
 Route::post('/message','MessageController@create')->name('message_create');
+
+//
+Route::get('/educational/{type}','EducationalController@category')->name('educational_category');
+Route::get('/educational/{type}/{id}','EducationalController@single')->name('educational_single');
+//
+
 Route::prefix('about')->group(function () {
     Route::get('goals','StaticController@goals')->name('about_goals');
     Route::get('chart','StaticController@chart')->name('about_chart');
@@ -46,5 +52,10 @@ Route::middleware('auth')->group(function () {
         Route::get('/news/delete/{id}', 'NewsController@delete')->name('news_delete');
         Route::get('/message/delete/{id}','MessageController@delete')->name('message_delete');
         Route::get('/message','MessageController@index')->name('message_index');
+        //
+        Route::get('/educational/form', 'EducationalController@form')->name('educational_form');
+        Route::Post('/educational', 'EducationalController@create')->name('educational_create');
+        Route::get('/educational/delete/{id}', 'EducationalController@delete')->name('educational_delete');
+        //
     });
 });
