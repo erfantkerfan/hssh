@@ -276,7 +276,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="different"><a href="{{ route('news') }}">اخبار <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a></li>
+                    {{--<li class="different"><a href="{{ route('news') }}">اخبار <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a></li>--}}
                     <li class="different"><a href="{{ route('home') }}">صفحه اصلی <span style="color: black" class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
                 </ul>
             </div>

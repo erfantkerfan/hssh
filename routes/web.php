@@ -10,26 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Auth:
+// Auth:
 Route::get('login','Auth\LoginController@showLoginForm')->name('login');
 Route::post('login','Auth\LoginController@login');
 Route::post('logout','Auth\LoginController@logout')->name('logout');
 
-//Public:
+// Public:
 Route::get('/','Controller@home')->name('home');
 Route::get('/home','StaticController@home')->name('home');
 Route::get('/contactus','StaticController@contactus')->name('contactus');
-Route::get('/news','NewsController@index')->name('news');
-Route::get('/news/{type}','NewsController@category')->name('news_category');
-Route::get('/news/{type}/{id}','NewsController@single')->name('news_single');
-Route::get('/message','MessageController@form')->name('message_form');
-Route::post('/message','MessageController@create')->name('message_create');
-
-//
-Route::get('/educational/{type}','EducationalController@category')->name('educational_category');
-Route::get('/educational/{type}/{id}','EducationalController@single')->name('educational_single');
-//
-
 Route::prefix('about')->group(function () {
     Route::get('goals','StaticController@goals')->name('about_goals');
     Route::get('chart','StaticController@chart')->name('about_chart');
@@ -37,16 +26,20 @@ Route::prefix('about')->group(function () {
     Route::get('dep','StaticController@dep')->name('about_dep');
     Route::get('assets','StaticController@assets')->name('about_assets');
 });
+Route::get('/news/{type}','NewsController@category')->name('news_category');
+Route::get('/news/{type}/{id}','NewsController@single')->name('news_single');
+Route::post('/message','MessageController@create')->name('message_create');
 
-//Preregister:
-//Route::get('/register','RegisterController@form')->name('register_form');
-//Route::post('/register','RegisterController@register')->name('register');
+//
+Route::get('/educational/{type}','EducationalController@category')->name('educational_category');
+Route::get('/educational/{type}/{id}','EducationalController@single')->name('educational_single');
+//
 
-//Admin:
+// Admin:
 Route::middleware('auth')->group(function () {
     Route::prefix('admin')->group(function () {
-        Route::get('/news/all','NewsController@all')->name('news_all');
         Route::get('/preregister', 'RegisterController@preregister')->name('preregister');
+        Route::get('/news/all','NewsController@all')->name('news_all');
         Route::get('/news/form', 'NewsController@form')->name('news_form');
         Route::Post('/news', 'NewsController@create')->name('news_create');
         Route::get('/news/delete/{id}', 'NewsController@delete')->name('news_delete');
@@ -59,3 +52,7 @@ Route::middleware('auth')->group(function () {
         //
     });
 });
+
+// Preregister:
+//Route::get('/register','RegisterController@form')->name('register_form');
+//Route::post('/register','RegisterController@register')->name('register');

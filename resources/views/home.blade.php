@@ -127,7 +127,7 @@
             {{-- NEWS --}}
             <div class="panel panel-primary">
                 <div class="panel-heading text-center">
-                    اخبار دبیرستان
+                    آخرین اخبار دبیرستان
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">

@@ -8,13 +8,6 @@ use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
-    public function index()
-    {
-        $news = News::where('type','=','201')->orderBy('date','desc')->paginate(20);
-        $title = 'لیست اخبار';
-        return view('news')->with(['title'=>$title,'news'=>$news]);
-    }
-
     public function category($type)
     {
         $news = News::where('type','=',$type)->orderBy('date','desc')->paginate(20);
