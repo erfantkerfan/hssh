@@ -42,4 +42,12 @@ class RegisterController extends Controller
 
         return redirect(route('home'));
     }
+
+    public function delete($id)
+    {
+        $register = Preregister::FindOrFail($id);
+        $register->delete();
+        $register->save();
+        return back();
+    }
 }

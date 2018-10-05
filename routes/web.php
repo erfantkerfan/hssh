@@ -39,6 +39,7 @@ Route::get('/educational/{type}/{id}','EducationalController@single')->name('edu
 Route::middleware('auth')->group(function () {
     Route::prefix('admin')->group(function () {
         Route::get('/preregister', 'RegisterController@preregister')->name('preregister');
+        Route::get('/preregister/delete/{id}','RegisterController@delete')->name('register_delete');
         Route::get('/news/all','NewsController@all')->name('news_all');
         Route::get('/news/form', 'NewsController@form')->name('news_form');
         Route::Post('/news', 'NewsController@create')->name('news_create');

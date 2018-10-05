@@ -145,28 +145,38 @@
 
                                     <a class="dropdown-item" href="{{Route('news_form')}}">
                                         درج محتوا
-                                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
                                     </a>
 
                                     <a class="dropdown-item" href="{{Route('preregister')}}">
+                                        <div class="badge badge-success">
+                                            {{App\Preregister::count()}}
+                                        </div>
                                         لیست پیش ثبت نامی ها
                                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                     </a>
 
                                     <a class="dropdown-item" href="{{Route('news_all')}}">
+                                        <div class="badge badge-success">
+                                            {{App\News::count()}}
+                                        </div>
                                         تمام محتوا های درج شده
-                                        {{--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>--}}
+                                        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
                                     </a>
 
                                     <a class="dropdown-item" href="{{Route('message_index')}}">
+                                        <div class="badge badge-success">
+                                            {{App\Message::count()}}
+                                        </div>
                                         لیست پیام های دریافتی
-                                        {{--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>--}}
+                                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                                     </a>
 
                                     <a class="dropdown-item" style="color: dodgerblue" href="#">
-                                        آخرین ورود شما:
+                                        آخرین ورود:
                                           {{str_after(Auth::user()->last_login,' ')}}
                                           {{str_replace('-','/',str_before(Auth::user()->last_login,' '))}}
+                                        <span style="color: dodgerblue" class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                     </a>
                                     <a class="dropdown-item" style="color: red;" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -237,19 +247,54 @@
 
                             <li class="text-center">
 
-                                <a href="{{ route('news_category',['type'=>'401']) }}">...خبردار </a>
+                                <a href="{{ route('news_category',['type'=>'401']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','401')->count()}}
+                                    </div>
+                                    ...خبردار
+                                </a>
 
-                                <a href="{{ route('news_category',['type'=>'402']) }}">قرآن کریم </a>
+                                <a href="{{ route('news_category',['type'=>'402']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','402')->count()}}
+                                    </div>
+                                    قرآن کریم
+                                </a>
 
-                                <a href="{{ route('news_category',['type'=>'403']) }}">راه بندگی </a>
+                                <a href="{{ route('news_category',['type'=>'403']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','403')->count()}}
+                                    </div>
+                                    راه بندگی
+                                </a>
 
-                                <a href="{{ route('news_category',['type'=>'404']) }}">همکلاسی آسمانی </a>
+                                <a href="{{ route('news_category',['type'=>'404']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','404')->count()}}
+                                    </div>
+                                    همکلاسی آسمانی
+                                </a>
 
-                                <a href="{{ route('news_category',['type'=>'405']) }}">نوجوان </a>
+                                <a href="{{ route('news_category',['type'=>'405']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','405')->count()}}
+                                    </div>
+                                    نوجوان
+                                </a>
 
-                                <a href="{{ route('news_category',['type'=>'406']) }}">مسابقه فرهنگی </a>
+                                <a href="{{ route('news_category',['type'=>'406']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','406')->count()}}
+                                    </div>
+                                    مسابقه فرهنگی
+                                </a>
 
-                                <a href="{{ route('news_category',['type'=>'407']) }}">مسابقه علمی </a>
+                                <a href="{{ route('news_category',['type'=>'407']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','407')->count()}}
+                                    </div>
+                                    مسابقه علمی
+                                </a>
 
                             </li>
                         </ul>
@@ -263,15 +308,40 @@
 
                             <li class="text-center">
 
-                                <a href="{{ route('news_category',['type'=>'301']) }}">اردوها </a>
+                                <a href="{{ route('news_category',['type'=>'301']) }}">
+                                    <div class="badge badge-success pull-left pull-left">
+                                        {{App\News::where('type','301')->count()}}
+                                    </div>
+                                    اردوها
+                                </a>
 
-                                <a href="{{ route('news_category',['type'=>'302']) }}">مراسم </a>
+                                <a href="{{ route('news_category',['type'=>'302']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','302')->count()}}
+                                    </div>
+                                    مراسم
+                                </a>
 
-                                <a href="{{ route('news_category',['type'=>'303']) }}">فوق برنامه </a>
+                                <a href="{{ route('news_category',['type'=>'303']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','303')->count()}}
+                                    </div>
+                                    فوق برنامه
+                                </a>
 
-                                <a href="{{ route('news_category',['type'=>'304']) }}">جلسات </a>
+                                <a href="{{ route('news_category',['type'=>'304']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','304')->count()}}
+                                    </div>
+                                    جلسات
+                                </a>
 
-                                <a href="{{ route('news_category',['type'=>'305']) }}">سایر </a>
+                                <a href="{{ route('news_category',['type'=>'305']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\News::where('type','305')->count()}}
+                                    </div>
+                                    سایر
+                                </a>
 
                             </li>
                         </ul>

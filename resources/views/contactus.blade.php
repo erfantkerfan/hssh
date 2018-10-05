@@ -8,6 +8,7 @@
                 <div class="text-center panel"  dir="rtl" style="background-color: #d0d2db">
                     <h4>
                         <b style="color: #0062cc">
+                            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
                             آدرس مدرسه:
                         </b>
                         بزرگراه شیخ فضل الله نوری، بلوار شهید تیموری،
@@ -17,18 +18,21 @@
                         <br>
                         <br>
                         <b style="color: #0062cc">
+                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
                             شماره تماس مدرسه: 
                         </b>
                         66008864-021
                         <br>
                         <br>
                         <b style="color: #0062cc">
+                            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
                             شماره تماس: 
                         </b>
                         09106776236
                         <br>
                         <br>
                         <b style="color: #0062cc">
+                            <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
                             کانال ما در پیام رسان سروش، بله، روبیکاو تلگرام:
                         </b>
                         <a href="https://t.me/hsshohada2">hsshohada2@</a>

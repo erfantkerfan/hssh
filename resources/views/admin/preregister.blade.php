@@ -5,7 +5,7 @@
         <div class="panel panel-primary">
             <div class="panel-heading text-center">ثبت نامی های دهم</div>
             <div class="panel-body">
-                <table class="table table-striped">
+                <table class="table table-striped" dir="rtl">
                     <thead>
                     <tr class="bg-info">
                         <th class="text-center">شماره ردیف دیتابیس</th>
@@ -15,6 +15,7 @@
                         <th class="text-center">رشته</th>
                         <th class="text-center">تلفن</th>
                         <th class="text-center">موبایل</th>
+                        <th class="text-center">حذف</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -27,6 +28,11 @@
                         <th class="text-center">{{$r10->field}}</th>
                         <th class="text-center">{{$r10->phone}}</th>
                         <th class="text-center">{{$r10->mobile}}</th>
+                        <th class="text-center">
+                            <a href="{{Route('register_delete',['id'=>$r10->id])}}">
+                                <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </a>
+                        </th>
                     </tr>
                     @endforeach
                     </tbody>
@@ -37,7 +43,7 @@
         <div class="panel panel-primary">
             <div class="panel-heading text-center">ثبت نامی های یازدهم</div>
             <div class="panel-body">
-                <table class="table table-striped">
+                <table class="table table-striped" dir="rtl">
                     <thead>
                     <tr class="bg-info">
                         <th class="text-center">شماره ردیف دیتابیس</th>
@@ -47,6 +53,7 @@
                         <th class="text-center">رشته</th>
                         <th class="text-center">تلفن</th>
                         <th class="text-center">موبایل</th>
+                        <th class="text-center">حذف</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -59,6 +66,11 @@
                             <th class="text-center">{{$r11->field}}</th>
                             <th class="text-center">{{$r11->phone}}</th>
                             <th class="text-center">{{$r11->mobile}}</th>
+                            <th class="text-center">
+                                <a href="{{Route('register_delete',['id'=>$r10->id])}}">
+                                    <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </a>
+                            </th>
                         </tr>
                     @endforeach
                     </tbody>

@@ -47,7 +47,7 @@
                                     <div class="col-md-2 col-md-offset-5" >
                                         <select id="type" type="text" class="form-control" name="type" autofocus>
                                             <option value="" selected>انتخاب کنید</option>
-                                            <option value="201">خبر</option>
+                                            {{--<option value="201">خبر</option>--}}
                                             <option value="301">گالری:اردو</option>
                                             <option value="302">گالری:مراسم</option>
                                             <option value="303">گالری:فوق برنامه</option>

@@ -28,9 +28,7 @@
                             <th class="text-center">{{$message->IP}}</th>
                             <th class="text-center">
                                 <a href="{{Route('message_delete',['id'=>$message->id])}}">
-                                    <button type="submit" class="btn btn-danger">
-                                        حذف
-                                    </button>
+                                    <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </a>
                             </th>
                         </tr>

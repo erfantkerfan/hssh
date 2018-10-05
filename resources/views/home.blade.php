@@ -7,7 +7,10 @@
 
             {{-- KARSANJ --}}
             <div class="panel panel-info">
-                <div class="panel-heading text-center">ورود به سامانه کارسنج</div>
+                <div class="panel-heading text-center">
+                    <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+                    ورود به سامانه کارسنج
+                </div>
 
                 <div class="panel-body text-center">
                     <form class="form" method="POST" action="https://www.karsanj.net/login.php">
@@ -54,7 +57,10 @@
 
             {{-- PEYVAND --}}
             <div class="panel panel-info">
-                <div class="panel-heading text-center">پیوندهای مفید</div>
+                <div class="panel-heading text-center">
+                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                    پیوندهای مفید
+                </div>
 
                 <br>
 
@@ -125,9 +131,10 @@
 
         <div class="col-md-4">
             {{-- NEWS --}}
-            <div class="panel panel-primary">
+            <div class="panel panel-info">
                 <div class="panel-heading text-center">
                     آخرین اخبار دبیرستان
+                    <span class="glyphicon glyphicon-th-list" style="color: crimson" aria-hidden="true"></span>
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">
@@ -138,7 +145,7 @@
                                 <a href="{{route('news_single',['type'=>$new->type,'id'=>$new->id])}}">
                                     <span class="badge badge-success badge-pill" dir="rtl">
                                         <span style="color:#2c2c2d">
-                                            مشاهده خبر
+                                            مشاهده
                                         </span>
                                     </span>
                                 </a>
