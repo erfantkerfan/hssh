@@ -18,7 +18,7 @@ class CreateEducationalsTable extends Migration
             $table->mediumInteger('type');
             $table->string('title');
             $table->longText('text')->nullable();
-            $table->integer('file')->nullable();
+            $table->string('file')->nullable();
             $table->string('date');
             $table->softDeletes();
             $table->timestamps();

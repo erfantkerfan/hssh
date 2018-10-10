@@ -12,12 +12,12 @@ class EducationalController extends Controller
     {
         $educationals = Educational::where('type','=',$type)->orderBy('date','desc')->paginate(20);
         $title = 'لیست مطالب';
-        return view('educatinals')->with(['title'=>$title,'educationals'=>$educationals]);
+        return view('educationals')->with(['title'=>$title,'educationals'=>$educationals]);
     }
     public function single($type , $id)
     {
         $educational = Educational::FindOrFail($id);
-        return view('educatinal_single')->with(['educational'=>$educational]);
+        return view('educational_single')->with(['educational'=>$educational]);
     }
     public function form()
     {
