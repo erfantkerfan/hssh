@@ -38,14 +38,12 @@ Route::get('/educational/{type}/{id}','EducationalController@single')->name('edu
 // Admin:
 Route::middleware('auth')->group(function () {
     Route::prefix('admin')->group(function () {
-        Route::get('/preregister', 'RegisterController@preregister')->name('preregister');
+        Route::get('/panel', 'Controller@panel')->name('panel');
         Route::get('/preregister/delete/{id}','RegisterController@delete')->name('register_delete');
-        Route::get('/news/all','NewsController@all')->name('news_all');
         Route::get('/news/form', 'NewsController@form')->name('news_form');
         Route::Post('/news', 'NewsController@create')->name('news_create');
         Route::get('/news/delete/{id}', 'NewsController@delete')->name('news_delete');
         Route::get('/message/delete/{id}','MessageController@delete')->name('message_delete');
-        Route::get('/message','MessageController@index')->name('message_index');
         //
         Route::get('/educational/form', 'EducationalController@form')->name('educational_form');
         Route::Post('/educational', 'EducationalController@create')->name('educational_create');

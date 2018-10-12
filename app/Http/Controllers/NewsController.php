@@ -20,13 +20,6 @@ class NewsController extends Controller
         return view('news_single')->with(['news'=>$news]);
     }
 
-    public function all()
-    {
-        $news = News::orderBy('date','desc')->paginate(50);
-        $title = 'لیست مطالب';
-        return view('news')->with(['title'=>$title,'news'=>$news]);
-    }
-
     public function delete($id)
     {
         $news = News::FindOrFail($id);

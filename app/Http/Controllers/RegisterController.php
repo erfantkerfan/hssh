@@ -7,14 +7,6 @@ use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
-
-    public function preregister()
-    {
-        $r10s = Preregister::where('grade','=','دهم')->get();
-        $r11s = Preregister::where('grade','=','یازدهم')->get();
-        return view('admin.preregister')->with(['r10s' => $r10s,'r11s'=>$r11s]);
-    }
-
     public function form()
     {
         return view('register');

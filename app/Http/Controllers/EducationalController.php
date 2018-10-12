@@ -60,6 +60,5 @@ class EducationalController extends Controller
             $request->file('file')->move(public_path('educatinal/'), $file_name);
         }
         return redirect(route('home'));
-
     }
 }

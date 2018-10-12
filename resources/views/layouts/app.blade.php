@@ -143,41 +143,46 @@
                             <ul class="dropdown-menu">
                                 <li class="text-center">
 
-                                    <a class="dropdown-item" href="{{Route('news_form')}}">
-                                        درج محتوا
-                                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+                                    <a class="dropdown-item" href="{{Route('panel')}}">
+                                    پنل ادمین
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                     </a>
 
-                                    <a class="dropdown-item" href="{{Route('preregister')}}">
-                                        <div class="badge badge-success">
-                                            {{App\Preregister::count()}}
-                                        </div>
-                                        لیست پیش ثبت نامی ها
-                                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    </a>
+                                    {{--<a class="dropdown-item" href="{{Route('news_form')}}">--}}
+                                        {{--درج محتوا--}}
+                                        {{--<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>--}}
+                                    {{--</a>--}}
 
-                                    <a class="dropdown-item" href="{{Route('news_all')}}">
-                                        <div class="badge badge-success">
-                                            {{App\News::count()}}
-                                        </div>
-                                        تمام محتوا های درج شده
-                                        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-                                    </a>
+                                    {{--<a class="dropdown-item" href="{{Route('preregister')}}">--}}
+                                        {{--<div class="badge badge-success">--}}
+                                            {{--{{App\Preregister::count()}}--}}
+                                        {{--</div>--}}
+                                        {{--لیست پیش ثبت نامی ها--}}
+                                        {{--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>--}}
+                                    {{--</a>--}}
 
-                                    <a class="dropdown-item" href="{{Route('message_index')}}">
-                                        <div class="badge badge-success">
-                                            {{App\Message::count()}}
-                                        </div>
-                                        لیست پیام های دریافتی
-                                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                                    </a>
+                                    {{--<a class="dropdown-item" href="{{Route('news_all')}}">--}}
+                                        {{--<div class="badge badge-success">--}}
+                                            {{--{{App\News::count()}}--}}
+                                        {{--</div>--}}
+                                        {{--تمام محتوا های درج شده--}}
+                                        {{--<span class="glyphicon glyphicon-th" aria-hidden="true"></span>--}}
+                                    {{--</a>--}}
 
-                                    <a class="dropdown-item" style="color: dodgerblue" href="#">
-                                        آخرین ورود:
-                                          {{str_after(Auth::user()->last_login,' ')}}
-                                          {{str_replace('-','/',str_before(Auth::user()->last_login,' '))}}
-                                        <span style="color: dodgerblue" class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                    </a>
+                                    {{--<a class="dropdown-item" href="{{Route('message_index')}}">--}}
+                                        {{--<div class="badge badge-success">--}}
+                                            {{--{{App\Message::count()}}--}}
+                                        {{--</div>--}}
+                                        {{--لیست پیام های دریافتی--}}
+                                        {{--<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>--}}
+                                    {{--</a>--}}
+
+                                    {{--<a class="dropdown-item" style="color: dodgerblue" href="#">--}}
+                                        {{--آخرین ورود:--}}
+                                        {{--  {{str_after(Auth::user()->last_login,' ')}}--}}
+                                        {{--  {{str_replace('-','/',str_before(Auth::user()->last_login,' '))}}--}}
+                                        {{--<span style="color: dodgerblue" class="glyphicon glyphicon-user" aria-hidden="true"></span>--}}
+                                    {{--</a>--}}
                                     <a class="dropdown-item" style="color: red;" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

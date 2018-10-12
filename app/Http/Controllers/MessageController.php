@@ -41,10 +41,4 @@ class MessageController extends Controller
         $message->save();
         return back();
     }
-
-    public function index()
-    {
-        $messages = Message::orderBy('date','desc')->paginate(20);
-        return view('admin.message')->with(['messages'=>$messages]);
-    }
 }
