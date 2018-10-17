@@ -38,7 +38,7 @@ class LoginController extends Controller
         auth()->user()->last_login = auth()->user()->login;
         auth()->user()->login = Verta::now();
         auth()->user()->save();
-        return '/home';
+        return Route('panel');
     }
 
     /**

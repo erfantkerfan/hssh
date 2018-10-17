@@ -137,8 +137,15 @@
                                     <tr>
                                         <th class="text-center">{{$user->username}}</th>
                                         <th class="text-center">
-                                            {{str_after($user->last_login,' ')}}
-                                            {{str_replace('-','/',str_before($user->last_login,' '))}}
+                                            @if ($user == Auth::user())
+                                                {{str_after($user->last_login,' ')}}
+                                                
+                                                {{str_replace('-','/',str_before($user->last_login,' '))}}
+                                            @else
+                                                {{str_after($user->login,' ')}}
+                                                
+                                                {{str_replace('-','/',str_before($user->login,' '))}}
+                                            @endif
                                         </th>
                                     </tr>
                                 @endforeach
@@ -155,7 +162,7 @@
                                 درج محتوا جدید
                             </button>
                         </a>
-                        تمام محتواهای درج شده
+                             تمام محتواهای درج شده
                     </div>
                     <div class="panel-body">
                         <div class="tab-content">
@@ -195,6 +202,55 @@
                             @endforeach
                         </div>
                         <div class="text-center"> {{$news->links()}} </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <a href="{{Route('educational_form')}}">
+                            <button type="button" class="btn btn-success">
+                                درج محتوا آموزشی
+                            </button>
+                        </a>
+                             تمام محتواهای آموزشی
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            @foreach($educationals as $educational)
+                                <div class="text-right" dir="rtl">
+                                    {{$educational->title}}
+                                    <a href="{{route('educational_single',['type'=>$educational->type,'id'=>$educational->id])}}">
+                                        <span class="badge badge-success badge-pill" dir="rtl">
+                                            <span style="color:#2c2c2d">
+                                                مشاهده
+                                            </span>
+                                              
+                                        </span>
+                                    </a>
+                                    <span class="badge badge-warning badge-pill" dir="rtl">
+                                            <span style="color:#2c2c2d">
+                                                @if($educational->file)
+                                                    {{$educational->file}}
+                                                @else
+                                                    بدون فایل
+                                                @endif
+                                            </span>
+                                        </span>
+                                    @auth
+                                        <a href="{{route('educational_delete',['id'=>$educational->id])}}" onclick="return confirm('از حذف این فایل اطمینان دارید؟')">
+                                            <span class="badge badge-danger pull-left badge-pill" dir="rtl">
+                                                  حذف فایل
+                                            </span>
+                                        </a>
+                                    @endauth
+                                    @if(!$loop->last)
+                                        <hr style="background-color:darkseagreen; height:2px;">
+                                    @endif
+                                </div>
+
+                            @endforeach
+                        </div>
+                        <div class="text-center"> {{$educationals->links()}} </div>
                     </div>
                 </div>
 

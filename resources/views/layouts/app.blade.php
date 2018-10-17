@@ -351,6 +351,39 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="dropdown different">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                            فایل های آموزشی<span class="caret"></span>
+                            <span style="color: #42bec9" class="glyphicon glyphicon-book" aria-hidden="true"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li class="text-center">
+
+                                <a href="{{ route('educational_category',['type'=>'501']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\Educational::where('type','501')->count()}}
+                                    </div>
+                                    نمونه سوالات
+                                </a>
+
+                                <a href="{{ route('educational_category',['type'=>'502']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\Educational::where('type','502')->count()}}
+                                    </div>
+                                    مشاوره
+                                </a>
+
+                                <a href="{{ route('educational_category',['type'=>'503']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\Educational::where('type','503')->count()}}
+                                    </div>
+                                    برنامه نویسی
+                                </a>
+
+                            </li>
+                        </ul>
+                    </li>
                     {{--<li class="different"><a href="{{ route('news') }}">اخبار <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a></li>--}}
                     <li class="different"><a href="{{ route('home') }}">صفحه اصلی <span style="color: black" class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
                 </ul>

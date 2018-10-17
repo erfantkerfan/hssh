@@ -26,7 +26,7 @@ class EducationalController extends Controller
     public function delete($id)
     {
         $educatinal = Educational::FindOrFail($id);
-        $file_path = public_path('educatinal/') . $educatinal->id . '.' . $educatinal->file;
+        $file_path = public_path('edu/') . $educatinal->id . '.' . $educatinal->file;
         @unlink($file_path);
         $educatinal->delete();
         $educatinal->save();
@@ -57,7 +57,7 @@ class EducationalController extends Controller
 
         $file_name = $educatinal->id .'.'.$educatinal->file;
         if($request->hasFile('file')) {
-            $request->file('file')->move(public_path('educatinal/'), $file_name);
+            $request->file('file')->move(public_path('edu/'), $file_name);
         }
         return redirect(route('home'));
     }

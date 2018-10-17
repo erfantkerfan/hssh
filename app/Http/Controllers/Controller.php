@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Educational;
 use App\Message;
 use App\News;
 use App\Preregister;
@@ -25,12 +26,13 @@ class Controller extends BaseController
     public function panel()
     {
         $news = News::orderBy('date','desc')->paginate(20, ['*'], 'news');
+        $educationals = Educational::orderBy('date','desc')->paginate(20, ['*'], 'edu');
         $messages = Message::orderBy('date','desc')->paginate(10, ['*'], 'messages');
         $r10s = Preregister::where('grade','=','دهم')->get();
         $r11s = Preregister::where('grade','=','یازدهم')->get();
         $users = User::get();
         return view('admin.panel')->with([
-            'news'=>$news,'r10s'=>$r10s,'r11s'=>$r11s,'messages'=>$messages,'users'=>$users
+            'news'=>$news,'r10s'=>$r10s,'r11s'=>$r11s,'messages'=>$messages,'users'=>$users,'educationals'=>$educationals
         ]);
     }
 }

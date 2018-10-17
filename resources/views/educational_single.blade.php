@@ -24,9 +24,11 @@
                         <br>
 
                         @if($educational->file!=null)
-                            <button type="button" class="btn btn-success">
-                                دریافت فایل
-                            </button>
+                            <a href="{{ '/edu/'.$educational->id.'.'.$educational->file }}">
+                                <button type="button" class="btn btn-success">
+                                    دریافت فایل
+                                </button>
+                            </a>
                         @else
                             <button type="button" class="btn btn-warning">
                                 بدون فایل

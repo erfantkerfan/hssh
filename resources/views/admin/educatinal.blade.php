@@ -7,16 +7,16 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-success">
                     <div class="panel-heading text-center">
-                        فرم درج خبر
+                        فرم درج مطلب آموزشی
                     </div>
 
-                    <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="{{ route('news_create') }}">
+                    <form class="form-horizontal" enctype="multipart/form-data" method="POST" action="{{ route('educational_create') }}">
                         {{ csrf_field() }}
 
                             <div class="panel-body" dir="rtl">
 
                                 <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
-                                    <label for="title" class="col-md-2 control-label pull-right">تیتر خبر:</label>
+                                    <label for="title" class="col-md-2 control-label pull-right">تیتر مطلب:</label>
                                     <div class="col-md-9 col-md-offset-1">
                                         <textarea dir="rtl" style="resize: vertical" class="form-control form-group pull-left" name="title" rows="2" required autofocus>{{ old('title') }}</textarea>
 
@@ -29,7 +29,7 @@
                                 </div>
 
                                 <div class="form-group{{ $errors->has('text') ? ' has-error' : '' }}">
-                                    <label for="text" class="col-md-2 control-label pull-right">متن خبر:</label>
+                                    <label for="text" class="col-md-2 control-label pull-right">متن مطلب:</label>
                                     <div class="col-md-9 col-md-offset-1">
                                         <textarea dir="rtl" style="resize: vertical" class="form-control form-group pull-left" name="text" rows="5" autofocus>{{ old('text') }}</textarea>
 
@@ -44,22 +44,12 @@
                                 <div  class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
                                     <label for="type" class="control-label sr-only">نوع</label>
 
-                                    <div class="col-md-4 col-md-offset-4" >
+                                    <div class="col-md-3 col-md-offset-4" >
                                         <select id="type" type="text" class="form-control" name="type" autofocus>
                                             <option value="" selected>انتخاب کنید</option>
-                                            {{--<option value="201">خبر</option>--}}
-                                            <option value="301">گالری:اردو</option>
-                                            <option value="302">گالری:مراسم</option>
-                                            <option value="303">گالری:فوق برنامه</option>
-                                            <option value="304">گالری:جلسات</option>
-                                            <option value="305">گالری:سایر</option>
-                                            <option value="401">پرورشی:خبردار</option>
-                                            <option value="402">پرورشی:قرآن کریم</option>
-                                            <option value="403">پرورشی:راه بندگی</option>
-                                            <option value="404">پرورشی:همکلاسی آسمانی</option>
-                                            <option value="405">پرورشی:نوجوان</option>
-                                            <option value="406">پرورشی:مسابقه فرهنگی</option>
-                                            <option value="407">پرورشی:مسابقه علمی</option>
+                                            <option value="501">نمونه سوالات</option>
+                                            <option value="502">مشاوره</option>
+                                            <option value="503">برنامه نویسی</option>
                                         </select>
 
                                         @if ($errors->has('type'))
@@ -71,17 +61,17 @@
                                 </div>
 
 
-                                <div class="form-group{{ $errors->has('img') ? ' has-error' : '' }}">
-                                    <label for="img" class="col-md-5 control-label pull-right">
-                                        آپلود عکس:
-                                        (با پسوند jpg و مجموعا کمتر از 50 مگابایت)
+                                <div class="form-group{{ $errors->has('file') ? ' has-error' : '' }}">
+                                    <label for="file" class="col-md-5 control-label pull-right">
+                                        آپلود فایل:
+                                        (با هر پسوند کمتر از 50 مگابایت)
                                     </label>
                                     <div class="col-md-6 col-md-offset-1">
-                                        <input type="file" class="form-control" name="img[]" multiple>
+                                        <input type="file" class="form-control" name="file">
 
-                                        @if ($errors->has('img'))
+                                        @if ($errors->has('file'))
                                             <span class="help-block">
-                                    <strong>{{ $errors->first('img') }}</strong>
+                                    <strong>{{ $errors->first('file') }}</strong>
                                 </span>
                                         @endif
                                     </div>
@@ -90,7 +80,7 @@
 
                                 <div class="form-group col-md-12">
                                     <button type="submit" class="btn btn-success">
-                                        ثبت اطلاعات
+                                        ثبت مطلب
                                     </button>
                                 </div>
 
