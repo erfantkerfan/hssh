@@ -9,7 +9,9 @@
                 <br>
                 <div class="panel panel-warning">
                     <div class="panel-heading text-right">
-                        {{$news->title}}
+                        <span dir="rtl">
+                            {{$news->title}}
+                        </span>
                         <span class="badge badge-pill pull-left" dir="rtl">
                             {{str_after($news->date,' ')}}
                               {{str_replace('-','/',str_before($news->date,' '))}}
