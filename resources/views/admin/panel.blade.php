@@ -107,7 +107,7 @@
                                         <th class="text-center">{{$r11->phone}}</th>
                                         <th class="text-center">{{$r11->mobile}}</th>
                                         <th class="text-center">
-                                            <a href="{{Route('register_delete',['id'=>$r10->id])}}">
+                                            <a href="{{Route('register_delete',['id'=>$r11->id])}}">
                                                 <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                             </a>
                                         </th>
