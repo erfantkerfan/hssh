@@ -47,7 +47,10 @@
                                     <div class="col-md-3 col-md-offset-4" >
                                         <select id="type" type="text" class="form-control" name="type" autofocus>
                                             <option value="" selected>انتخاب کنید</option>
-                                            <option value="501">نمونه سوالات</option>
+                                            <option value="501">نمونه سوالات ریاضی دهم</option>
+                                            <option value="504">نمونه سوالات تجربی دهم</option>
+                                            <option value="505">نمونه سوالات ریاضی یازدهم</option>
+                                            <option value="506">نمونه سوالات تجربی یازدهم</option>
                                             <option value="502">مشاوره</option>
                                             <option value="503">برنامه نویسی</option>
                                         </select>

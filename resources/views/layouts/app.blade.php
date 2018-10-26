@@ -364,7 +364,28 @@
                                     <div class="badge badge-success pull-left">
                                         {{App\Educational::where('type','501')->count()}}
                                     </div>
-                                    نمونه سوالات
+                                    نمونه سوالات ریاضی دهم
+                                </a>
+
+                                <a href="{{ route('educational_category',['type'=>'501']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\Educational::where('type','504')->count()}}
+                                    </div>
+                                    نمونه سوالات تجربی دهم
+                                </a>
+
+                                <a href="{{ route('educational_category',['type'=>'501']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\Educational::where('type','505')->count()}}
+                                    </div>
+                                    نمونه سوالات ریاضی یازدهم
+                                </a>
+
+                                <a href="{{ route('educational_category',['type'=>'501']) }}">
+                                    <div class="badge badge-success pull-left">
+                                        {{App\Educational::where('type','506')->count()}}
+                                    </div>
+                                    نمونه سوالات تجربی یازدهم
                                 </a>
 
                                 <a href="{{ route('educational_category',['type'=>'502']) }}">
