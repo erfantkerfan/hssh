@@ -138,13 +138,16 @@
                                         <th class="text-center">{{$user->username}}</th>
                                         <th class="text-center">
                                             @if ($user == Auth::user())
-                                                {{str_after($user->last_login,' ')}}
+                                                {{Verta::parse($user->last_login)->formatDifference(Verta::now())}}
+{{--                                                {{Verta::now()->formatDifference(verta($user->last_login))}}--}}
+{{--                                                {{str_after($user->last_login,' ')}}--}}
                                                 
-                                                {{str_replace('-','/',str_before($user->last_login,' '))}}
+{{--                                                {{str_replace('-','/',str_before($user->last_login,' '))}}--}}
                                             @else
-                                                {{str_after($user->login,' ')}}
+                                                {{Verta::parse($user->login)->formatDifference(Verta::now())}}
+{{--                                                {{str_after($user->login,' ')}}--}}
                                                 
-                                                {{str_replace('-','/',str_before($user->login,' '))}}
+{{--                                                {{str_replace('-','/',str_before($user->login,' '))}}--}}
                                             @endif
                                         </th>
                                     </tr>
