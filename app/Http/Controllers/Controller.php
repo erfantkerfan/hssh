@@ -6,6 +6,7 @@ use App\Educational;
 use App\Message;
 use App\News;
 use App\Preregister;
+use App\Slider;
 use App\User;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
@@ -18,7 +19,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function home()
+    public function landing()
     {
         return redirect(route('home'));
     }
@@ -31,8 +32,10 @@ class Controller extends BaseController
         $r10s = Preregister::where('grade','=','دهم')->get();
         $r11s = Preregister::where('grade','=','یازدهم')->get();
         $users = User::get();
+        $sliders = Slider::all();
         return view('admin.panel')->with([
-            'news'=>$news,'r10s'=>$r10s,'r11s'=>$r11s,'messages'=>$messages,'users'=>$users,'educationals'=>$educationals
+            'news'=>$news,'r10s'=>$r10s,'r11s'=>$r11s,'messages'=>$messages,'users'=>$users,'educationals'=>$educationals,
+            'sliders'=>$sliders
         ]);
     }
 }

@@ -16,7 +16,7 @@ Route::post('login','Auth\LoginController@login');
 Route::post('logout','Auth\LoginController@logout')->name('logout');
 
 // Public:
-Route::get('/','Controller@home')->name('home');
+Route::get('/','Controller@landing');
 Route::get('/home','StaticController@home')->name('home');
 Route::get('/contactus','StaticController@contactus')->name('contactus');
 Route::prefix('about')->group(function () {
@@ -48,6 +48,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/educational/form', 'EducationalController@form')->name('educational_form');
         Route::Post('/educational', 'EducationalController@create')->name('educational_create');
         Route::get('/educational/delete/{id}', 'EducationalController@delete')->name('educational_delete');
+        Route::get('/slider', 'SliderController@show_form')->name('slider');
+        Route::Post('/slider', 'SliderController@create');
+        Route::delete('/slider', 'SliderController@delete');
+
+
         //
     });
 });

@@ -104,7 +104,7 @@
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     @foreach($sliders as $slider)
-                        <li data-target="#myCarousel" data-slide-to="{{$slider}}"></li>
+                        <li data-target="#myCarousel" data-slide-to="{{$slider->id}}"></li>
                     @endforeach
                 </ol>
 
@@ -112,7 +112,11 @@
                 <div class="carousel-inner">
                     @foreach($sliders as $slider)
                         <div class="item {{ $loop->first ? ' active' : '' }}">
-                            <img src="/img/slider/{{$slider}}.jpg" style="width:100%;">
+                            <img src="/img/slider/{{$slider->id}}.jpg" style="width:100%;">
+                            <div class="carousel-caption d-md-block">
+                                <h5 style="mix-blend-mode: difference">{{$slider->head}}</h5>
+                                <p style="mix-blend-mode: difference">{{$slider->body}}</p>
+                            </div>
                         </div>
                     @endforeach
                 </div>

@@ -135,8 +135,8 @@
                                 <tbody>
                                 @foreach($users as $user)
                                     <tr>
-                                        <th class="text-center">{{$user->username}}</th>
-                                        <th class="text-center">
+                                        <td class="text-center">{{$user->username}}</td>
+                                        <td class="text-center">
                                             @if ($user == Auth::user())
                                                 {{Verta::parse($user->last_login)->formatDifference(Verta::now())}}
 {{--                                                {{Verta::now()->formatDifference(verta($user->last_login))}}--}}
@@ -149,7 +149,7 @@
                                                 
 {{--                                                {{str_replace('-','/',str_before($user->login,' '))}}--}}
                                             @endif
-                                        </th>
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -160,8 +160,60 @@
 
                 <div class="panel panel-primary">
                     <div class="panel-heading text-center">
+                        <a href="{{Route('slider')}}">
+                            <button type="button" class="btn btn-sm btn-success">
+                                درج بنر جدید
+                            </button>
+                        </a>
+                             تمام بنرهای درج شده
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            <table class="table table-striped" dir="rtl">
+                                <thead>
+                                <tr class="bg-info">
+                                    <th class="text-center">#</th>
+                                    <th class="text-center">شناساگر</th>
+                                    <th class="text-center">تیتر</th>
+                                    <th class="text-center">متن</th>
+                                    <th class="text-center">عکس</th>
+                                    <th class="text-center">حذف</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($sliders as $slider)
+                                    <tr>
+                                        <td class="text-center">{{$slider->id}}</td>
+                                        <td class="text-center">{{$slider->name}}</td>
+                                        <td class="text-center">{{$slider->head}}</td>
+                                        <td class="text-center">{{$slider->body}}</td>
+                                        <td class="text-center">
+                                            <a href="/img/slider/{{$slider->id}}.jpg">
+                                                <button type="submit" class="btn btn-sm btn-success">مشاهده</button>
+                                            </a>
+                                        </td>
+                                        <td class="text-center">
+                                            <form method="post" action="{{ route('slider') }}">
+                                            <form method="post" action="/">
+                                                {{ csrf_field() }}
+                                                {{ method_field('delete') }}
+                                                <input type="hidden" class="form-control" name="id" id="id" value="{{$slider->id}}">
+                                                <button type="submit" class="btn btn-sm btn-danger">حذف</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center"> {{$news->links()}} </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
                         <a href="{{Route('news_form')}}">
-                            <button type="button" class="btn btn-success">
+                            <button type="button" class="btn btn-sm btn-success">
                                 درج محتوا جدید
                             </button>
                         </a>
@@ -211,7 +263,7 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading text-center">
                         <a href="{{Route('educational_form')}}">
-                            <button type="button" class="btn btn-success">
+                            <button type="button" class="btn btn-sm btn-success">
                                 درج محتوا آموزشی
                             </button>
                         </a>
