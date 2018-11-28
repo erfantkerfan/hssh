@@ -16,6 +16,9 @@
     <title>{{ config('app.name') }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <meta name="keywords" content="دبیرستان, حضرت, سیدالشهدا, علیه السلام, مدرسه , دوره دوم">
+    <meta name="description" content="دبیرستان حضرت سیدالشهدا علیه السلام">
+
     <!-- Fonts -->
     <link rel="icon" href="/img/icon.gif" type="image/gif">
     <link href="/css/googleapis.css" rel="stylesheet" type="text/css">
