@@ -51,6 +51,7 @@
                                         <option value="" selected>پایه تحصیلی را انتخاب کنید</option>
                                         <option value="دهم">دهم</option>
                                         <option value="یازدهم">یازدهم</option>
+                                        <option value="دوازدهم">دوازدهم</option>
                                     </select>
 
                                     @if ($errors->has('grade'))

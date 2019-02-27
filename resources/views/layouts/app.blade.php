@@ -151,41 +151,6 @@
                                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                     </a>
 
-                                    {{--<a class="dropdown-item" href="{{Route('news_form')}}">--}}
-                                        {{--درج محتوا--}}
-                                        {{--<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>--}}
-                                    {{--</a>--}}
-
-                                    {{--<a class="dropdown-item" href="{{Route('preregister')}}">--}}
-                                        {{--<div class="badge badge-success">--}}
-                                            {{--{{App\Preregister::count()}}--}}
-                                        {{--</div>--}}
-                                        {{--لیست پیش ثبت نامی ها--}}
-                                        {{--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>--}}
-                                    {{--</a>--}}
-
-                                    {{--<a class="dropdown-item" href="{{Route('news_all')}}">--}}
-                                        {{--<div class="badge badge-success">--}}
-                                            {{--{{App\News::count()}}--}}
-                                        {{--</div>--}}
-                                        {{--تمام محتوا های درج شده--}}
-                                        {{--<span class="glyphicon glyphicon-th" aria-hidden="true"></span>--}}
-                                    {{--</a>--}}
-
-                                    {{--<a class="dropdown-item" href="{{Route('message_index')}}">--}}
-                                        {{--<div class="badge badge-success">--}}
-                                            {{--{{App\Message::count()}}--}}
-                                        {{--</div>--}}
-                                        {{--لیست پیام های دریافتی--}}
-                                        {{--<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>--}}
-                                    {{--</a>--}}
-
-                                    {{--<a class="dropdown-item" style="color: dodgerblue" href="#">--}}
-                                        {{--آخرین ورود:--}}
-                                        {{--  {{str_after(Auth::user()->last_login,' ')}}--}}
-                                        {{--  {{str_replace('-','/',str_before(Auth::user()->last_login,' '))}}--}}
-                                        {{--<span style="color: dodgerblue" class="glyphicon glyphicon-user" aria-hidden="true"></span>--}}
-                                    {{--</a>--}}
                                     <a class="dropdown-item" style="color: red;" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -225,27 +190,14 @@
 
                                 <a href="{{ route('about_assets') }}">ویژگی ها <span style="color:yellow" class="glyphicon glyphicon-star" aria-hidden="true"></span></a>
 
+
+
                             </li>
                         </ul>
                     </li>
 
-                    {{--<li class="different"><a href="{{ route('register_form') }}" disabled="">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>--}}
+                    <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
 
-                    {{--<li class="dropdown different">--}}
-                        {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">--}}
-                            {{--اخبار و اطلاعیه ها <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span class="caret"></span>--}}
-                        {{--</a>--}}
-                        {{--<ul class="dropdown-menu">--}}
-
-                            {{--<li class="text-center">--}}
-
-                                {{--<a href="{{ route('news10') }}">پایه دهم</a>--}}
-
-                                {{--<a href="{{ route('news11') }}">پایه یازدهم</a>--}}
-
-                            {{--</li>--}}
-                        {{--</ul>--}}
-                    {{--</li>--}}
                     <li class="dropdown different">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                             پرورشی<span class="caret"></span>
