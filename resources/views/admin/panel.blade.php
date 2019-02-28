@@ -118,6 +118,45 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">ثبت نامی های دوازدهم</div>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped" dir="rtl">
+                                <thead>
+                                <tr class="bg-info">
+                                    <th class="text-center">تاریخ ثبت</th>
+                                    <th class="text-center">نام</th>
+                                    <th class="text-center">نام خانوادگی</th>
+                                    <th class="text-center">رشته</th>
+                                    <th class="text-center">تلفن</th>
+                                    <th class="text-center">موبایل</th>
+                                    <th class="text-center">حذف</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($r12s as $r12)
+                                    <tr>
+                                        <th class="text-center">{{str_before(str_replace('-','/',Verta($r12->created_at)),' ')}}</th>
+                                        <th class="text-center">{{$r12->f_name}}</th>
+                                        <th class="text-center">{{$r12->l_name}}</th>
+                                        <th class="text-center">{{$r12->field}}</th>
+                                        <th class="text-center">{{$r12->phone}}</th>
+                                        <th class="text-center">{{$r12->mobile}}</th>
+                                        <th class="text-center">
+                                            <a href="{{Route('register_delete',['id'=>$r12->id])}}">
+                                                <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                            </a>
+                                        </th>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="col-md-5">

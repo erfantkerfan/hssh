@@ -31,10 +31,11 @@ class Controller extends BaseController
         $messages = Message::orderBy('date','desc')->paginate(10, ['*'], 'messages');
         $r10s = Preregister::where('grade','=','دهم')->get();
         $r11s = Preregister::where('grade','=','یازدهم')->get();
+        $r12s = Preregister::where('grade','=','دوازدهم')->get();
         $users = User::get();
         $sliders = Slider::all();
         return view('admin.panel')->with([
-            'news'=>$news,'r10s'=>$r10s,'r11s'=>$r11s,'messages'=>$messages,'users'=>$users,'educationals'=>$educationals,
+            'news'=>$news,'r10s'=>$r10s,'r11s'=>$r11s,'r12s'=>$r12s,'messages'=>$messages,'users'=>$users,'educationals'=>$educationals,
             'sliders'=>$sliders
         ]);
     }
