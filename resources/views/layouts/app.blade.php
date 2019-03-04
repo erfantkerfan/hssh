@@ -7,7 +7,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-124216933-1');
     </script>
     <meta charset="utf-8">
@@ -20,25 +19,25 @@
     <meta name="description" content="دبیرستان حضرت سیدالشهدا علیه السلام">
 
     <!-- Fonts -->
-    <link rel="icon" href="/img/icon.gif" type="image/gif">
-    <link href="/css/googleapis.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="{{asset('/img/icon.gif')}}" type="image/gif">
+    <link href="{{asset('/css/googleapis.css')}}" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}">
 
     <style type="text/css">
 
         @font-face {
             font-family:'Font';
-            src: url('/fonts/BTITRBOLD.ttf');
+            src: url('{{asset('/fonts/BTITRBOLD.ttf')}}');
         }
         @font-face {
             font-family: 'IranNastaliq';
-            src: url('/fonts/IranNastaliq.eot?#') format('eot'),
-            url('/fonts/IranNastaliq.ttf') format('truetype'),
-            url('/fonts/IranNastaliq.woff') format('woff');
+            src: url('{{asset('/fonts/IranNastaliq.eot?#')}}') format('eot'),
+            url('{{asset('/fonts/IranNastaliq.ttf')}}') format('truetype'),
+            url('{{asset('/fonts/IranNastaliq.woff')}}') format('woff');
         }
         .iran{
             font-family:IranNastaliq,'IranNastaliq',tahoma;
@@ -63,7 +62,7 @@
             justify-content: center;
         }
         .bg {
-            background-image: url("/img/bg.png");
+            background-image: url("{{asset('/img/bg.png')}}");
             height: 100%;
             background-position: center;
             background-repeat: repeat-y;
@@ -98,6 +97,7 @@
             left: 0;
         }
     </style>
+    {{-- ToDo: minimiza un-localized-cache --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -196,7 +196,7 @@
                         </ul>
                     </li>
 
-                    <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+{{--                    <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>--}}
 
                     <li class="dropdown different">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -360,7 +360,6 @@
                             </li>
                         </ul>
                     </li>
-                    {{--<li class="different"><a href="{{ route('news') }}">اخبار <span style="color:#80bdff" class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a></li>--}}
                     <li class="different"><a href="{{ route('home') }}">صفحه اصلی <span style="color: black" class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
                 </ul>
             </div>
