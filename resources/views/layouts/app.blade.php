@@ -19,25 +19,25 @@
     <meta name="description" content="دبیرستان حضرت سیدالشهدا علیه السلام">
 
     <!-- Fonts -->
-    <link rel="icon" href="{{asset('/img/icon.gif')}}" type="image/gif">
-    <link href="{{asset('/css/googleapis.css')}}" rel="stylesheet" type="text/css">
+    <link rel="icon" href="/img/icon.gif" type="image/gif">
+    <link href="/css/googleapis.css" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
 
     <style type="text/css">
 
         @font-face {
             font-family:'Font';
-            src: url('{{asset('/fonts/BTITRBOLD.ttf')}}');
+            src: url('/fonts/BTITRBOLD.ttf');
         }
         @font-face {
             font-family: 'IranNastaliq';
-            src: url('{{asset('/fonts/IranNastaliq.eot?#')}}') format('eot'),
-            url('{{asset('/fonts/IranNastaliq.ttf')}}') format('truetype'),
-            url('{{asset('/fonts/IranNastaliq.woff')}}') format('woff');
+            src: url('/fonts/IranNastaliq.eot?#') format('eot'),
+            url('/fonts/IranNastaliq.ttf') format('truetype'),
+            url('/fonts/IranNastaliq.woff') format('woff');
         }
         .iran{
             font-family:IranNastaliq,'IranNastaliq',tahoma;
@@ -62,7 +62,7 @@
             justify-content: center;
         }
         .bg {
-            background-image: url("{{asset('/img/bg.png')}}");
+            background-image: url("/img/bg.png");
             height: 100%;
             background-position: center;
             background-repeat: repeat-y;
