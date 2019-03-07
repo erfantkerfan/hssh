@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Message;
 use Hekmatinasser\Verta\Verta;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class MessageController extends Controller
 {
@@ -31,7 +32,10 @@ class MessageController extends Controller
 
         $message->save();
 
-        return redirect('/');
+        $alert = 'پیام شما با موفقیت ثبت شد. در صورت نیاز، پاسخ به ایمیل شما ارسال خواهد شد.';
+        Session::flash('alert', (string)$alert);
+
+        return redirect()->route('home');
     }
 
     public function delete($id)

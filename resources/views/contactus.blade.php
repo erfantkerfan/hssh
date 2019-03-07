@@ -93,16 +93,6 @@
 
                             </div>
 
-                            <div class="text-center text-danger">
-                                در صورت ارسال پیام موفق به صفحه اصلی باز خواهید گشت و از ارسال مجدد خودداری کنید.
-                                <br>
-                            </div>
-                            <div class="text-center text-danger">
-                                در صورت نیاز پاسخ به ایمیل شما ارسال خواهد شد.
-                                <br>
-                                <br>
-                            </div>
-
                             <div class="form-group  col-md-12">
                                 <button type="submit" class="btn btn-success">
                                     ثبت پیام

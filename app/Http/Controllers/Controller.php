@@ -27,8 +27,8 @@ class Controller extends BaseController
     public function panel()
     {
         $news = News::orderBy('date','desc')->paginate(20, ['*'], 'news');
-        $educationals = Educational::orderBy('date','desc')->paginate(20, ['*'], 'edu');
-        $messages = Message::orderBy('date','desc')->paginate(10, ['*'], 'messages');
+        $educationals = Educational::orderBy('date','desc')->paginate(6, ['*'], 'edu');
+        $messages = Message::orderBy('date','desc')->paginate(6, ['*'], 'messages');
         $r10s = Preregister::where('grade','=','دهم')->get();
         $r11s = Preregister::where('grade','=','یازدهم')->get();
         $r12s = Preregister::where('grade','=','دوازدهم')->get();

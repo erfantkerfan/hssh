@@ -383,7 +383,7 @@
         <div class="flex-center" dir="rtl">
             <div class="text-center">
                 <div class="alert alert-success alert-dismissible show" role="alert">
-                    <h4 class="alert-heading">پیام سیستم</h4>
+                    <h4 class="alert-heading">پیام سیستم:</h4>
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">
                         <span class="fa fa-times-circle" style="color:red;">
                         </span>

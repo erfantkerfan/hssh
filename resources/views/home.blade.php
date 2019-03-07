@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="col-md-2">
 
@@ -99,7 +99,7 @@
         </div>
 
         {{-- BANNER --}}
-        <div class="col-md-6">
+        <div class="col-md-7">
             <div id="myCarousel" data-interval="4000" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -133,7 +133,7 @@
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
             {{-- NEWS --}}
             <div class="panel panel-info">
                 <div class="panel-heading text-center">
