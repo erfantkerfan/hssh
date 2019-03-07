@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <div class="panel panel-primary" dir="rtl">
                     <div class="panel-heading text-center">لیست پیام های دریافتی</div>
                     <div class="panel-body">
@@ -43,123 +43,60 @@
                     </div>
                 </div>
 
-                <div class="panel panel-primary">
-                    <div class="panel-heading text-center">ثبت نامی های دهم</div>
-                    <div class="panel-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped" dir="rtl">
-                                <thead>
-                                <tr class="bg-info">
-                                    <th class="text-center">تاریخ ثبت</th>
-                                    <th class="text-center">نام</th>
-                                    <th class="text-center">نام خانوادگی</th>
-                                    <th class="text-center">رشته</th>
-                                    <th class="text-center">تلفن</th>
-                                    <th class="text-center">موبایل</th>
-                                    <th class="text-center">حذف</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach($r10s as $r10)
-                                    <tr>
-                                        <th class="text-center">{{str_before(str_replace('-','/',Verta($r10->created_at)),' ')}}</th>
-                                        <th class="text-center">{{$r10->f_name}}</th>
-                                        <th class="text-center">{{$r10->l_name}}</th>
-                                        <th class="text-center">{{$r10->field}}</th>
-                                        <th class="text-center">{{$r10->phone}}</th>
-                                        <th class="text-center">{{$r10->mobile}}</th>
-                                        <th class="text-center">
-                                            <a href="{{Route('register_delete',['id'=>$r10->id])}}">
-                                                <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                            </a>
-                                        </th>
+                @foreach($preregisters as $grade)
+                    <div class="panel panel-primary">
+                        <div class="panel-heading text-center">ثبت نامی های {{$grade->garde}}</div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped" dir="rtl">
+                                    <thead>
+                                    <tr class="bg-info">
+                                        <th class="text-center">تاریخ ثبت</th>
+                                        <th class="text-center">نام</th>
+                                        <th class="text-center">نام خانوادگی</th>
+                                        <th class="text-center">رشته</th>
+                                        <th class="text-center">مدرسه</th>
+                                        <th class="text-center">معدل</th>
+                                        <th class="text-center">پدر</th>
+                                        <th class="text-center">مادر</th>
+                                        <th class="text-center">منزل</th>
+                                        <th class="text-center">دانش آموز</th>
+                                        <th class="text-center">پرکننده فرم</th>
+                                        <th class="text-center">نحوه آشنایی</th>
+                                        <th class="text-center">حذف</th>
                                     </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($grade->value as $student)
+                                        <tr>
+                                            <th class="text-center">{{str_before(str_replace('-','/',Verta($student->created_at)),' ')}}</th>
+                                            <th class="text-center">{{$student->f_name}}</th>
+                                            <th class="text-center">{{$student->l_name}}</th>
+                                            <th class="text-center">{{$student->field}}</th>
+                                            <th class="text-center">{{$student->school}}</th>
+                                            <th class="text-center">{{$student->average}}</th>
+                                            <th class="text-center">{{$student->father_mobile}}</th>
+                                            <th class="text-center">{{$student->mother_mobile}}</th>
+                                            <th class="text-center">{{$student->phone}}</th>
+                                            <th class="text-center">{{$student->mobile}}</th>
+                                            <th class="text-center">{{$student->filler}}</th>
+                                            <th class="text-center">{{$student->in_touch}}</th>
+                                            <th class="text-center">
+                                                <a href="{{Route('register_delete',['id'=>$student->id])}}">
+                                                    <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                                </a>
+                                            </th>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="panel panel-primary">
-                    <div class="panel-heading text-center">ثبت نامی های یازدهم</div>
-                    <div class="panel-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped" dir="rtl">
-                                <thead>
-                                <tr class="bg-info">
-                                    <th class="text-center">تاریخ ثبت</th>
-                                    <th class="text-center">نام</th>
-                                    <th class="text-center">نام خانوادگی</th>
-                                    <th class="text-center">رشته</th>
-                                    <th class="text-center">تلفن</th>
-                                    <th class="text-center">موبایل</th>
-                                    <th class="text-center">حذف</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach($r11s as $r11)
-                                    <tr>
-                                        <th class="text-center">{{str_before(str_replace('-','/',Verta($r11->created_at)),' ')}}</th>
-                                        <th class="text-center">{{$r11->f_name}}</th>
-                                        <th class="text-center">{{$r11->l_name}}</th>
-                                        <th class="text-center">{{$r11->field}}</th>
-                                        <th class="text-center">{{$r11->phone}}</th>
-                                        <th class="text-center">{{$r11->mobile}}</th>
-                                        <th class="text-center">
-                                            <a href="{{Route('register_delete',['id'=>$r11->id])}}">
-                                                <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                            </a>
-                                        </th>
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-primary">
-                    <div class="panel-heading text-center">ثبت نامی های دوازدهم</div>
-                    <div class="panel-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped" dir="rtl">
-                                <thead>
-                                <tr class="bg-info">
-                                    <th class="text-center">تاریخ ثبت</th>
-                                    <th class="text-center">نام</th>
-                                    <th class="text-center">نام خانوادگی</th>
-                                    <th class="text-center">رشته</th>
-                                    <th class="text-center">تلفن</th>
-                                    <th class="text-center">موبایل</th>
-                                    <th class="text-center">حذف</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach($r12s as $r12)
-                                    <tr>
-                                        <th class="text-center">{{str_before(str_replace('-','/',Verta($r12->created_at)),' ')}}</th>
-                                        <th class="text-center">{{$r12->f_name}}</th>
-                                        <th class="text-center">{{$r12->l_name}}</th>
-                                        <th class="text-center">{{$r12->field}}</th>
-                                        <th class="text-center">{{$r12->phone}}</th>
-                                        <th class="text-center">{{$r12->mobile}}</th>
-                                        <th class="text-center">
-                                            <a href="{{Route('register_delete',['id'=>$r12->id])}}">
-                                                <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                                            </a>
-                                        </th>
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading text-center">ادمین های سایت</div>
                     <div class="panel-body">
@@ -233,7 +170,6 @@
                                         </td>
                                         <td class="text-center">
                                             <form method="post" action="{{ route('slider') }}">
-                                            <form method="post" action="/">
                                                 {{ csrf_field() }}
                                                 {{ method_field('delete') }}
                                                 <input type="hidden" class="form-control" name="id" id="id" value="{{$slider->id}}">

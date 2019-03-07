@@ -196,7 +196,7 @@
                         </ul>
                     </li>
 
-{{--                    <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>--}}
+                    <li class="different"><a href="{{ route('register_form') }}">پیش ثبت نام <span style="color: green" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
 
                     <li class="dropdown different">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -378,6 +378,21 @@
             </div>
         </div>
     </div>
+
+    @if(Session::has('alert'))
+        <div class="flex-center" dir="rtl">
+            <div class="text-center">
+                <div class="alert alert-success alert-dismissible show" role="alert">
+                    <h4 class="alert-heading">پیام سیستم</h4>
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">
+                        <span class="fa fa-times-circle" style="color:red;">
+                        </span>
+                    </a>
+                    <p>{{Session::get('alert')}}</p>
+                </div>
+            </div>
+        </div>
+    @endif
 
     @yield('content')
 

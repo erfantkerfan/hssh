@@ -32,11 +32,17 @@ class Controller extends BaseController
         $r10s = Preregister::where('grade','=','دهم')->get();
         $r11s = Preregister::where('grade','=','یازدهم')->get();
         $r12s = Preregister::where('grade','=','دوازدهم')->get();
+        $preregisters =
+            (object)array(
+                (object)array('garde'=>'دهم','value'=>$r10s),
+                (object)array('garde'=>'یازدهم','value'=>$r11s),
+                (object)array('garde'=>'دوازدهم','value'=>$r12s),
+            )
+            ;
         $users = User::get();
         $sliders = Slider::all();
-        return view('admin.panel')->with([
-            'news'=>$news,'r10s'=>$r10s,'r11s'=>$r11s,'r12s'=>$r12s,'messages'=>$messages,'users'=>$users,'educationals'=>$educationals,
-            'sliders'=>$sliders
-        ]);
+        return view('admin.panel')->with(
+            compact('news','preregisters','messages','users','educationals','sliders')
+        );
     }
 }
