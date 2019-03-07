@@ -181,7 +181,6 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="text-center"> {{$news->links()}} </div>
                     </div>
                 </div>
 
