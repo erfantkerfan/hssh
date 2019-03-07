@@ -45,7 +45,7 @@
 
                 @foreach($preregisters as $grade)
                     <div class="panel panel-primary">
-                        <div class="panel-heading text-center">ثبت نامی های {{$grade->garde}}</div>
+                        <div class="panel-heading text-center">پیش ثبت نام های {{$grade->garde}}</div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped" dir="rtl">
