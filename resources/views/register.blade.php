@@ -94,8 +94,9 @@
                                 <div class="col-md-12">
                                     <select id="filler" type="text" class="form-control" name="filler" required autofocus>
                                         <option value="" selected>تکمیل کننده فرم</option>
-                                        <option value="مادر دانش آموز">مادر دانش آموز</option>
-                                        <option value="پدر دانش آموز">پدر دانش آموز</option>
+                                        <option value="مادر">مادر</option>
+                                        <option value="پدر">پدر</option>
+                                        <option value="دانش آموز">دانش آموز</option>
                                     </select>
 
                                     @if ($errors->has('filler'))
