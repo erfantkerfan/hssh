@@ -51,10 +51,12 @@
                                 <table class="table table-striped" dir="rtl">
                                     <thead>
                                     <tr class="bg-info">
+                                        <th class="text-center">شماره</th>
                                         <th class="text-center">تاریخ ثبت</th>
                                         <th class="text-center">نام</th>
                                         <th class="text-center">نام خانوادگی</th>
                                         <th class="text-center">رشته</th>
+                                        <th class="text-center">منطقه</th>
                                         <th class="text-center">مدرسه</th>
                                         <th class="text-center">معدل</th>
                                         <th class="text-center">پدر</th>
@@ -69,10 +71,12 @@
                                     <tbody>
                                     @foreach($grade->value as $student)
                                         <tr>
+                                            <th class="text-center">{{$loop->iteration}}</th>
                                             <th class="text-center">{{str_before(str_replace('-','/',Verta($student->created_at)),' ')}}</th>
                                             <th class="text-center">{{$student->f_name}}</th>
                                             <th class="text-center">{{$student->l_name}}</th>
                                             <th class="text-center">{{$student->field}}</th>
+                                            <th class="text-center">{{$student->district}}</th>
                                             <th class="text-center">{{$student->school}}</th>
                                             <th class="text-center">{{$student->average}}</th>
                                             <th class="text-center">{{$student->father_mobile}}</th>

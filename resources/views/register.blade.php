@@ -92,8 +92,11 @@
                                 <label for="filler" class="col-md-4 control-label sr-only">تکمیل کننده فرم</label>
 
                                 <div class="col-md-12">
-                                    <input id="filler" type="text" class="form-control" name="filler" value="{{ old('filler') }}"
-                                           required autofocus placeholder="تکمیل کننده فرم(پدر/مادر/...)">
+                                    <select id="filler" type="text" class="form-control" name="filler" required autofocus>
+                                        <option value="" selected>تکمیل کننده فرم</option>
+                                        <option value="مادر دانش آموز">مادر دانش آموز</option>
+                                        <option value="پدر دانش آموز">پدر دانش آموز</option>
+                                    </select>
 
                                     @if ($errors->has('filler'))
                                         <span class="help-block">
@@ -186,7 +189,7 @@
 
                                 <div class="col-md-12">
                                     <select id="grade" type="text" class="form-control" name="grade" required autofocus>
-                                        <option value="" selected>پایه تحصیلی را انتخاب کنید</option>
+                                        <option value="" selected>پایه تحصیلی </option>
                                         <option value="دهم">دهم</option>
                                         <option value="یازدهم">یازدهم</option>
                                         <option value="دوازدهم">دوازدهم</option>
@@ -205,7 +208,7 @@
 
                                 <div class="col-md-12">
                                     <select id="field" type="text" class="form-control" name="field" required autofocus>
-                                        <option value="" selected>رشته تحصیلی را انتخاب کنید</option>
+                                        <option value="" selected>رشته تحصیلی </option>
                                         <option value="ریاضی">ریاضی</option>
                                         <option value="تجربی">تجربی</option>
                                     </select>
