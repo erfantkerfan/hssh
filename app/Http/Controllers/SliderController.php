@@ -15,7 +15,7 @@ class SliderController extends Controller
     {
         $slider = Slider::FindOrFail($request->id);
         $file_path = public_path('img/slider/').$slider->id.'.jpg';
-        unlink($file_path);
+        @unlink($file_path);
         $slider -> delete();
         return back();
     }
