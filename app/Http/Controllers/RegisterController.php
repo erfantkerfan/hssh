@@ -29,6 +29,15 @@ class RegisterController extends Controller
             'average' => 'required|string',
             'in_touch' => 'required|string',
         ]);
+        $check = Preregister::where('phone','=',$request->phone)->where('father_mobile','=',$request->father_mobile)
+        ->where('mother_mobile','=',$request->mother_mobile)->where('f_name','=',$request->f_name)->get();
+        if(count($check)>0){
+            $alert = 'ثبت نام اولیه'.
+                ' '. $request->f_name. ' '. $request->l_name. ' '.
+                'قبلا انجام شده است. لطفا از ثبت نام مجدد خودداری کنید. در صورت مشکل از بخش تماس با ما پیام ارسال بفرمایید.';
+            Session::flash('alert', (string)$alert);
+            return redirect()->route('home');
+        }
 
         $preregister = new Preregister($request->all());
         $preregister->save();
