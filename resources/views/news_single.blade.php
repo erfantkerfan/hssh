@@ -12,7 +12,7 @@
                         <span dir="rtl">
                             {{$news->title}}
                         </span>
-                        <span class="badge badge-pill pull-left" dir="rtl">
+                        <span class="label  pull-left" dir="rtl">
                             {{str_after($news->date,' ')}}
                               {{str_replace('-','/',str_before($news->date,' '))}}
                         </span>

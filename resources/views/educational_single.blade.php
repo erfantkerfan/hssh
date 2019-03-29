@@ -12,7 +12,7 @@
                         <span dir="rtl">
                             {{$educational->title}}
                         </span>
-                        <span class="badge badge-pill pull-left" dir="rtl">
+                        <span class="label  pull-left" dir="rtl">
                             {{str_after($educational->date,' ')}}
                               {{str_replace('-','/',str_before($educational->date,' '))}}
                         </span>

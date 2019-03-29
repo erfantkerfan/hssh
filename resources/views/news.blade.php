@@ -15,14 +15,14 @@
                                 <div class="text-right" dir="rtl">
                                     {{$new->title}}
                                     <a href="{{route('news_single',['type'=>$new->type,'id'=>$new->id])}}">
-                                        <span class="badge badge-success badge-pill" dir="rtl">
+                                        <span class="label label-success " dir="rtl">
                                             <span style="color:#2c2c2d">
                                                 مشاهده
                                             </span>
                                               
                                         </span>
                                     </a>
-                                    <span class="badge badge-warning badge-pill" dir="rtl">
+                                    <span class="label label-warning " dir="rtl">
                                             <span style="color:#2c2c2d">
                                                 @if($new->files)
                                                     {{$new->files}}
@@ -34,7 +34,7 @@
                                         </span>
                                     @auth
                                         <a href="{{route('news_delete',['id'=>$new->id])}}" onclick="return confirm('از حذف این خبر اطمینان دارید؟')">
-                                            <span class="badge badge-danger pull-left badge-pill" dir="rtl">
+                                            <span class="label label-danger pull-left " dir="rtl">
                                                   حذف خبر
                                             </span>
                                         </a>

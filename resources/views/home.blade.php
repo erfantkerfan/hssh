@@ -147,13 +147,13 @@
                             <div class="text-center" dir="rtl">
                                 {{$new->title}}
                                 <a href="{{route('news_single',['type'=>$new->type,'id'=>$new->id])}}">
-                                    <span class="badge badge-success badge-pill" dir="rtl">
+                                    <span class="label label-success " dir="rtl">
                                         <span style="color:#2c2c2d">
                                             مشاهده
                                         </span>
                                     </span>
                                 </a>
-                                <span class="badge badge-pill badge-danger">
+                                <span class="label label-danger">
                                     {{str_replace('1397/','97/',str_replace('-','/',str_before($new->date,' ')))}}
                                 </span>
                                 @if(!$loop->last)

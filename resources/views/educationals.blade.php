@@ -15,13 +15,13 @@
                                 <div class="text-right" dir="rtl">
                                     {{$educational->title}}
                                     <a href="{{route('educational_single',['type'=>$educational->type,'id'=>$educational->id])}}">
-                                        <span class="badge badge-success badge-pill" dir="rtl">
+                                        <span class="label label-success " dir="rtl">
                                             <span style="color:#2c2c2d">
                                                 مشاهده
                                             </span>
                                         </span>
                                     </a>
-                                    <span class="badge badge-warning badge-pill" dir="rtl">
+                                    <span class="label label-warning " dir="rtl">
                                             <span style="color:#2c2c2d">
                                                 @if($educational->file)
                                                     فایل با پسوند
@@ -33,7 +33,7 @@
                                         </span>
                                     @auth
                                         <a href="{{route('educational_delete',['id'=>$educational->id])}}" onclick="return confirm('از حذف این مطلب اطمینان دارید؟')">
-                                            <span class="badge badge-danger pull-left badge-pill" dir="rtl">
+                                            <span class="label label-danger pull-left " dir="rtl">
                                                   حذف مطلب
                                             </span>
                                         </a>
