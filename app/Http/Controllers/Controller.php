@@ -26,7 +26,6 @@ class Controller extends BaseController
 
     public function panel()
     {
-        return base_path('temp/');
         $news = News::orderBy('date','desc')->paginate(6, ['*'], 'news');
         $educationals = Educational::orderBy('date','desc')->paginate(6, ['*'], 'edu');
         $messages = Message::orderBy('date','desc')->paginate(6, ['*'], 'messages');
