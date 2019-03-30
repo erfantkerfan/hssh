@@ -45,7 +45,14 @@
 
                 @foreach($preregisters as $grade)
                     <div class="panel panel-primary">
-                        <div class="panel-heading text-center">پیش ثبت نام های {{$grade->garde}}</div>
+                        <div class="panel-heading text-center" dir="rtl">
+                            پیش ثبت نام های {{$grade->garde}}
+                            <a href="{{Route('pdf',['id'=>$grade->garde])}}">
+                                <button type="button" class="btn btn-sm btn-success">
+                                    دانلود pdf
+                                </button>
+                            </a>
+                        </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped" dir="rtl">

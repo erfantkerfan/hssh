@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Preregister;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use PDF;
 
 class RegisterController extends Controller
 {
@@ -56,5 +57,20 @@ class RegisterController extends Controller
         $register->delete();
         $register->save();
         return back();
+    }
+
+    public function pdf($grade)
+    {
+        if ($grade == 'دهم'){
+            $preregisters = Preregister::where('grade','=','دهم')->get();
+        }elseif($grade == 'یازدهم'){
+            $preregisters = Preregister::where('grade','=','یازدهم')->get();
+        }elseif($grade == 'دوازدهم'){
+            $preregisters = Preregister::where('grade','=','دوازدهم')->get();
+        }else{
+            abort(404);
+        }
+        $pdf = PDF::loadView('pdf.preregister', compact('preregisters','grade'));
+        return $pdf->stream('document.pdf');
     }
 }
