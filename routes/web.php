@@ -14,7 +14,6 @@
 Route::get('login','Auth\LoginController@showLoginForm')->name('login');
 Route::post('login','Auth\LoginController@login');
 Route::post('logout','Auth\LoginController@logout')->name('logout');
-
 // Public:
 Route::get('/','Controller@landing');
 Route::get('/home','StaticController@home')->name('home');
@@ -29,12 +28,8 @@ Route::prefix('about')->group(function () {
 Route::get('/news/{type}','NewsController@category')->name('news_category');
 Route::get('/news/{type}/{id}','NewsController@single')->name('news_single');
 Route::post('/message','MessageController@create')->name('message_create');
-
-//
 Route::get('/educational/{type}','EducationalController@category')->name('educational_category');
 Route::get('/educational/{type}/{id}','EducationalController@single')->name('educational_single');
-//
-
 // Admin:
 Route::middleware('auth')->group(function () {
     Route::prefix('admin')->group(function () {
@@ -44,20 +39,18 @@ Route::middleware('auth')->group(function () {
         Route::Post('/news', 'NewsController@create')->name('news_create');
         Route::get('/news/delete/{id}', 'NewsController@delete')->name('news_delete');
         Route::get('/message/delete/{id}','MessageController@delete')->name('message_delete');
-        //
         Route::get('/educational/form', 'EducationalController@form')->name('educational_form');
         Route::Post('/educational', 'EducationalController@create')->name('educational_create');
         Route::get('/educational/delete/{id}', 'EducationalController@delete')->name('educational_delete');
         Route::get('/slider', 'SliderController@show_form')->name('slider');
         Route::Post('/slider', 'SliderController@create');
         Route::delete('/slider', 'SliderController@delete');
-
-
-        //
     });
 });
-
 // Preregister:
 Route::get('/register','RegisterController@form')->name('register_form');
 Route::post('/register','RegisterController@register')->name('register');
 Route::get('pdf/preregister/{id}','RegisterController@pdf')->name('pdf');
+// Test:
+Route::get('/minimilitia','Controller@minimilitia')->name('minimilitia');
+Route::post('/minimilitia','Controller@minimilitia_post');

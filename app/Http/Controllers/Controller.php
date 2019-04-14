@@ -45,4 +45,50 @@ class Controller extends BaseController
             compact('news','preregisters','messages','users','educationals','sliders')
         );
     }
+
+    public function minimilitia()
+    {
+        return view('test');
+    }
+
+    public function minimilitia_post(Request $request)
+    {
+//        $perperson = $request->perperson;
+        $perperson = 25;
+        $max = max($request->erfan,$request->hossein,$request->reza,$request->alireza);
+        $unit = floor($perperson/$max);
+        if ($unit*$max==$perperson){
+            $unit-=1;
+        }
+        $chanse = array();
+        foreach (array('erfan','hossein','reza','alireza') as $name){
+            if($request->$name>=0){
+                for ($i=0;$i<=$perperson-abs((int)($request->$name)*$unit);$i++){
+                    array_push($chanse,$name);
+                }
+            }else{
+                for ($i=0;$i<=$perperson+abs((int)($request->$name)*$unit);$i++){
+                    array_push($chanse,$name);
+                }
+            }
+        }
+        $erfan = 0;
+        $hossein = 0;
+        $reza = 0;
+        $alireza = 0;
+        for ($i=0;$i<count($chanse);$i++) {
+            if($chanse[$i]=='erfan'){
+                $erfan++;
+            }elseif($chanse[$i]=='hossein'){
+                $hossein++;
+            }elseif($chanse[$i]=='reza'){
+                $reza++;
+            }elseif($chanse[$i]=='alireza'){
+                $alireza++;
+            }
+        }
+        $loser_num = mt_rand(0, count($chanse)-1);
+        $loser = $chanse[$loser_num];
+        return view('test_post')->with(compact('erfan','hossein','reza','alireza','loser'));
+    }
 }
