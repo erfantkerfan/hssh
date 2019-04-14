@@ -54,7 +54,7 @@ class Controller extends BaseController
     public function minimilitia_post(Request $request)
     {
 //        $perperson = $request->perperson;
-        $perperson = 25;
+        $perperson = 32;
         $max = max($request->erfan,$request->hossein,$request->reza,$request->alireza);
         $unit = floor($perperson/$max);
         if ($unit*$max==$perperson){
