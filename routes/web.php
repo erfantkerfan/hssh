@@ -22,7 +22,8 @@ Route::prefix('about')->group(function () {
     Route::get('goals','StaticController@goals')->name('about_goals');
     Route::get('chart','StaticController@chart')->name('about_chart');
     Route::get('staff','StaticController@staff')->name('about_staff');
-    Route::get('dep','StaticController@dep')->name('about_dep');
+    Route::get('teachers','TeacherController@teachers')->name('teachers');
+    Route::get('teacher/{teacher}','TeacherController@teacher')->name('teacher');
     Route::get('assets','StaticController@assets')->name('about_assets');
 });
 Route::get('/news/{type}','NewsController@category')->name('news_category');

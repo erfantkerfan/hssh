@@ -40,15 +40,6 @@ class StaticController extends Controller
         return view('about.staff')->with(['sliders'=>$sliders]);
     }
 
-    public function dep()
-    {
-        $sliders[1]=1;
-        $sliders[2]=2;
-        $sliders[3]=3;
-        $sliders[4]=4;
-        return view('about.dep')->with(['sliders'=>$sliders]);
-    }
-
     public function assets()
     {
         $sliders[1]=1;

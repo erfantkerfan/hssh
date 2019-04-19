@@ -12,8 +12,6 @@
     <!-- Links -->
     <link rel="icon" href="{{asset("/img/icon.gif")}}" type="image/gif">
     <link href="{{mix("/css/app.css")}}" rel="stylesheet" type="text/css">
-    {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>--}}
-    {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--}}
 
 </head>
 <body class="bg" style="font-family:'Font'">
@@ -81,11 +79,12 @@
 
                                 <a href="{{ route('about_goals') }}">اهداف <span style="color:green" class="glyphicon glyphicon-flag" aria-hidden="true"></span></a>
 
+                                {{--ToDo: get these routes updated--}}
 {{--                                <a href="{{ route('about_chart') }}">ساختار <span style="color:firebrick" class="glyphicon glyphicon-th" aria-hidden="true"></span></a>--}}
 
 {{--                                <a href="{{ route('about_staff') }}">کادر اجرایی <span style="color:brown" class="glyphicon glyphicon-briefcase" aria-hidden="true"></span></a>--}}
 
-{{--                                <a href="{{ route('about_dep') }}">کادر آموزشی <span style="color:black" class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>--}}
+                                <a href="{{ route('teachers') }}">کادر آموزشی <span style="color:black" class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
 
                                 <a href="{{ route('about_assets') }}">ویژگی ها <span style="color:yellow" class="glyphicon glyphicon-star" aria-hidden="true"></span></a>
 
