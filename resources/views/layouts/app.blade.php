@@ -13,6 +13,8 @@
     <link rel="icon" href="{{asset("/img/icon.gif")}}" type="image/gif">
     <link href="{{mix("/css/app.css")}}" rel="stylesheet" type="text/css">
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 <body class="bg" style="font-family:'Font'">
 

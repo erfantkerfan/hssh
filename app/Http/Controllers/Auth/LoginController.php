@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use http\Env\Request;
+use Illuminate\Http\Request;
+//use http\Env\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Hekmatinasser\Verta\Verta;
 
@@ -21,6 +22,16 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
+
+    protected function attemptLogin(Request $request)
+    {
+        $this->validate($request, [
+            'g-recaptcha-response' => 'required|captcha',
+        ]);
+        return $this->guard()->attempt(
+            $this->credentials($request), $request->filled('remember')
+        );
+    }
 
     public function username()
     {

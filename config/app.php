@@ -149,8 +149,10 @@ return [
         Hekmatinasser\Verta\VertaServiceProvider::class,
 
         /*
-         * Package Service Providers...
+         *  Service Providers...
          */
+        niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -160,8 +162,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
-        niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
     ],
 
     /*
@@ -211,6 +211,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // Packages
         'Verta' => Hekmatinasser\Verta\Verta::class,
         'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class,
     ],

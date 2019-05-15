@@ -39,13 +39,25 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> مرا در حالت ورود نگه دار
-                                        </label>
-                                    </div>
+                            {{--<div class="form-group">--}}
+                                {{--<div class="col-md-12 col-md-offset-4">--}}
+                                    {{--<div class="g-recaptcha" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>--}}
+                                    {{--@if ($errors->has('g-recaptcha-response'))--}}
+                                        {{--<span class="invalid-feedback" style="display: block;">--}}
+                                            {{--<strong>{{ $errors->first('g-recaptcha-response') }}</strong>--}}
+                                        {{--</span>--}}
+                                    {{--@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                                <label class="col-md-4 justify-content-center control-label">ربات نیستم</label>
+                                <div class="col-md-6 pull-center">
+                                    {!! app('captcha')->display() !!}
+                                    @if ($errors->has('g-recaptcha-response'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
 
@@ -54,7 +66,6 @@
                                     <button type="submit" class="btn btn-primary">
                                         ورود
                                     </button>
-
                                 </div>
                             </div>
                         </form>
