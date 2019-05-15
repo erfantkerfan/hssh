@@ -39,16 +39,6 @@
                                 </div>
                             </div>
 
-                            {{--<div class="form-group">--}}
-                                {{--<div class="col-md-12 col-md-offset-4">--}}
-                                    {{--<div class="g-recaptcha" data-sitekey="{{env('GOOGLE_RECAPTCHA_KEY')}}"></div>--}}
-                                    {{--@if ($errors->has('g-recaptcha-response'))--}}
-                                        {{--<span class="invalid-feedback" style="display: block;">--}}
-                                            {{--<strong>{{ $errors->first('g-recaptcha-response') }}</strong>--}}
-                                        {{--</span>--}}
-                                    {{--@endif--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
                             <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
                                 <label class="col-md-4 justify-content-center control-label">ربات نیستم</label>
                                 <div class="col-md-6 pull-center">

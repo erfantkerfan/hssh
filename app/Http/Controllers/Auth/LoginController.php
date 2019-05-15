@@ -29,7 +29,7 @@ class LoginController extends Controller
             'valid_captcha' => 'Wrong code. Try again please.'
         ];
         $this->validate($request, [
-            'g-recaptcha-response' => 'required',
+            'g-recaptcha-response' => 'required|captcha',
         ],$messages);
         return $this->guard()->attempt(
             $this->credentials($request), $request->filled('remember')

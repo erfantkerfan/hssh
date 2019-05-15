@@ -36,8 +36,8 @@ return [
     ],
 
     'captcha' => [
-        'NOCAPTCHA_SITEKEY' => env('NOCAPTCHA_SITEKEY', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'),
-        'NOCAPTCHA_SECRET' => env('NOCAPTCHA_SECRET', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'),
+        'NOCAPTCHA_SITEKEY' => env('NOCAPTCHA_SITEKEY', 'NOCAPTCHA_SITEKEY not found'),
+        'NOCAPTCHA_SECRET' => env('NOCAPTCHA_SECRET', 'NOCAPTCHA_SECRET not found'),
     ],
 
 ];
