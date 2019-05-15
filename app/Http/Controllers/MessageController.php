@@ -16,11 +16,16 @@ class MessageController extends Controller
 
     public function create(Request $request)
     {
+        $messages  = [
+            'valid_captcha' => 'Wrong code. Try again please.'
+        ];
+
         $this->Validate($request, [
             'name' => 'required|string',
             'email' => 'required|email',
             'text' => 'required|string',
-        ]);
+            'g-recaptcha-response' => 'required|captcha',
+        ],$messages);
 
         $message = new Message(array(
             'name' => $request['name'],
