@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'NOCAPTCHA_SECRET' =>env('NOCAPTCHA_SECRET', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'),
+    'NOCAPTCHA_SITEKEY' =>env('NOCAPTCHA_SITEKEY', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'),
 
     /*
     |--------------------------------------------------------------------------
