@@ -52,6 +52,7 @@
                             <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
                                 <label class="col-md-4 justify-content-center control-label">ربات نیستم</label>
                                 <div class="col-md-6 pull-center">
+                                    {{--<div data-sitekey="{{env('NOCAPTCHA_SECRET')}}" class="g-recaptcha"></div>--}}
                                     <div data-sitekey="{{env('NOCAPTCHA_SECRET')}}" class="g-recaptcha"></div>
                                     @if ($errors->has('g-recaptcha-response'))
                                         <span class="help-block">

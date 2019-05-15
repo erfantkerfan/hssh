@@ -25,9 +25,12 @@ class LoginController extends Controller
 
     protected function attemptLogin(Request $request)
     {
+        $messages  = [
+            'valid_captcha' => 'Wrong code. Try again please.'
+        ];
         $this->validate($request, [
-            'g-recaptcha-response' => 'required|captcha',
-        ]);
+            'g-recaptcha-response' => 'required',
+        ],$messages);
         return $this->guard()->attempt(
             $this->credentials($request), $request->filled('remember')
         );
