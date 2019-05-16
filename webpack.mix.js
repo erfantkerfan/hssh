@@ -15,9 +15,11 @@ mix.js('resources/assets/js/app.js', 'public/js');
 mix.combine([
     "public/js/app.js",
     "public/js/gtag.js",
+    // "public/js/jquery-1.6.1.min.js",
     "public/js/jquery-1.11.0.min.js",
     "public/js/jquery.min.3.3.1.js",
     "public/js/bootstrap.min.3.3.7.js",
+    "public/js/recaptcha.resizer.js",
 ],"public/js/app.js").version();
 
 mix.sass('resources/assets/sass/app.scss','public/css');

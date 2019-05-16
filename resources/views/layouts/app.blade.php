@@ -13,6 +13,7 @@
     <link rel="icon" href="{{asset("/img/icon.gif")}}" type="image/gif">
     <link href="{{mix("/css/app.css")}}" rel="stylesheet" type="text/css">
 
+    <script src="{{mix("js/app.js")}}"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
@@ -304,6 +305,5 @@
         {{--</strong>--}}
     {{--</footer>--}}
 
-    <script src="{{mix("js/app.js")}}"></script>
 </body>
 </html>
