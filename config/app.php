@@ -213,7 +213,7 @@ return [
 
         // Packages
         'Verta' => Hekmatinasser\Verta\Verta::class,
-        'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class,
+        'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class
     ],
 
 ];
