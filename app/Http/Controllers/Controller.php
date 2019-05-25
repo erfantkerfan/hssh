@@ -54,6 +54,9 @@ class Controller extends BaseController
     public function minimilitia_post(Request $request)
     {
 //        $perperson = $request->perperson;
+//        cheating
+        $request->erfan += 3;
+//        end cheating
         $perperson = 32;
         $max = max($request->erfan,$request->hossein,$request->reza,$request->alireza);
         $unit = floor($perperson/$max);
@@ -61,6 +64,7 @@ class Controller extends BaseController
             $unit-=1;
         }
         $chanse = array();
+
         foreach (array('erfan','hossein','reza','alireza') as $name){
             if($request->$name>=0){
                 for ($i=0;$i<=$perperson-abs((int)($request->$name)*$unit);$i++){
@@ -89,6 +93,13 @@ class Controller extends BaseController
         }
         $loser_num = mt_rand(0, count($chanse)-1);
         $loser = $chanse[$loser_num];
+//        cheating
+        if($request->erfan>=0){
+                $erfan = $perperson-abs((int)($request->erfan-3)*$unit)+1;
+        }else{
+            $erfan = $perperson+abs((int)($request->erfan-3)*$unit)+1;
+        }
+//        end cheating
         return view('test_post')->with(compact('erfan','hossein','reza','alireza','loser'));
     }
 }
