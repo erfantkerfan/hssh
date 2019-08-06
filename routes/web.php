@@ -35,6 +35,8 @@ Route::get('/educational/{type}/{id}','EducationalController@single')->name('edu
 Route::middleware('auth')->group(function () {
     Route::prefix('admin')->group(function () {
         Route::get('/panel', 'Controller@panel')->name('panel');
+        Route::get('password', 'Auth\PasswordController@showPasswordForm')->name('password');
+        Route::post('password', 'Auth\PasswordController@Password');
         Route::get('/preregister/delete/{id}','RegisterController@delete')->name('register_delete');
         Route::get('/news/form', 'NewsController@form')->name('news_form');
         Route::Post('/news', 'NewsController@create')->name('news_create');

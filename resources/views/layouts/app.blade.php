@@ -35,7 +35,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-left">
                     @guest
-                        <li class="different"><a href="{{ route('login') }}">ورود <span style="color: dodgerblue" class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+                        <li class="different"><a href="{{ route('login') }}">ورود <span style="color: dodgerblue" class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a></li>
                     @else
                         <li class="dropdown different">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
@@ -47,8 +47,13 @@
                                 <li class="text-center">
 
                                     <a class="dropdown-item" href="{{Route('panel')}}">
-                                    پنل ادمین
-                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                        پنل ادمین
+                                        <span style="color: deepskyblue" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    </a>
+
+                                    <a class="dropdown-item text-center" href="{{ route('password') }}">
+                                        تغییر رمز عبور
+                                        <span style="color: green" class="glyphicon glyphicon-lock" aria-hidden="true"></span>
                                     </a>
 
                                     <a class="dropdown-item" style="color: red;" href="{{ route('logout') }}"
