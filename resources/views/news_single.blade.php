@@ -29,7 +29,7 @@
                             <div id="myCarousel" data-interval="4000" class="carousel slide" data-ride="carousel">
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
-                                    @for ($i = 1; $i <= $news->files; $i++)
+                                    @for ($i = 0; $i < $news->files; $i++)
                                         <li data-target="#myCarousel" data-slide-to="{{$i}}"></li>
                                     @endfor
                                 </ol>
