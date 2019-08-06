@@ -127,9 +127,9 @@
                                     قرآن کریم و احکام
                                 </a>
 
-                                <a href="{{ route('news_category',['type'=>'405']) }}">
+                                <a href="{{ route('news_category',['type'=>'403']) }}">
                                     <span class="label label-success pull-left">
-                                        {{App\News::where('type','405')->count()}}
+                                        {{App\News::where('type','403')->count()}}
                                     </span>
                                     khamenei.ir
                                 </a>

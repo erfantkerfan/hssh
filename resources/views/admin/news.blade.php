@@ -48,18 +48,15 @@
                                         <select id="type" type="text" class="form-control" name="type" autofocus>
                                             <option value="" selected>انتخاب کنید</option>
                                             {{--<option value="201">خبر</option>--}}
-                                            <option value="301">گالری:اردو</option>
-                                            <option value="302">گالری:مراسم</option>
-                                            <option value="303">گالری:فوق برنامه</option>
-                                            <option value="304">گالری:جلسات</option>
-                                            <option value="305">گالری:سایر</option>
+                                            <option value="301">به روایت تصویر:اردو</option>
+                                            <option value="302">به روایت تصویر:مراسم</option>
+                                            <option value="303">به روایت تصویر:فوق برنامه</option>
+                                            <option value="304">به روایت تصویر:جلسات</option>
+                                            <option value="305">به روایت تصویر:سایر</option>
                                             <option value="401">پرورشی:خبردار</option>
-                                            <option value="402">پرورشی:قرآن کریم</option>
-                                            <option value="403">پرورشی:راه بندگی</option>
+                                            <option value="402">پرورشی:قرآن کریم و احکام</option>
+                                            <option value="403">پرورشی:khamenei.ir</option>
                                             <option value="404">پرورشی:همکلاسی آسمانی</option>
-                                            <option value="405">پرورشی:نوجوان</option>
-                                            <option value="406">پرورشی:مسابقه فرهنگی</option>
-                                            <option value="407">پرورشی:مسابقه علمی</option>
                                         </select>
 
                                         @if ($errors->has('type'))
