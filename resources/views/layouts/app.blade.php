@@ -119,14 +119,14 @@
                                     <span class="label label-success pull-left">
                                         {{App\News::where('type','402')->count()}}
                                     </span>
-                                    قرآن کریم
+                                    قرآن کریم و احکام
                                 </a>
 
-                                <a href="{{ route('news_category',['type'=>'403']) }}">
+                                <a href="{{ route('news_category',['type'=>'405']) }}">
                                     <span class="label label-success pull-left">
-                                        {{App\News::where('type','403')->count()}}
+                                        {{App\News::where('type','405')->count()}}
                                     </span>
-                                    راه بندگی
+                                    khamenei.ir
                                 </a>
 
                                 <a href="{{ route('news_category',['type'=>'404']) }}">
@@ -134,27 +134,6 @@
                                         {{App\News::where('type','404')->count()}}
                                     </span>
                                     همکلاسی آسمانی
-                                </a>
-
-                                <a href="{{ route('news_category',['type'=>'405']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\News::where('type','405')->count()}}
-                                    </span>
-                                    نوجوان
-                                </a>
-
-                                <a href="{{ route('news_category',['type'=>'406']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\News::where('type','406')->count()}}
-                                    </span>
-                                    مسابقه فرهنگی
-                                </a>
-
-                                <a href="{{ route('news_category',['type'=>'407']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\News::where('type','407')->count()}}
-                                    </span>
-                                    مسابقه علمی
                                 </a>
 
                             </li>
