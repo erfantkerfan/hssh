@@ -10,14 +10,15 @@ class NewsController extends Controller
 {
     public function category($type)
     {
-        $news = News::where('type','=',$type)->orderBy('date','desc')->paginate(20);
+        $news = News::where('type', '=', $type)->orderBy('date', 'desc')->paginate(20);
         $title = 'لیست مطالب';
-        return view('news')->with(['title'=>$title,'news'=>$news]);
+        return view('news')->with(['title' => $title, 'news' => $news]);
     }
-    public function single($type , $id)
+
+    public function single($type, $id)
     {
         $news = News::FindOrFail($id);
-        return view('news_single')->with(['news'=>$news]);
+        return view('news_single')->with(['news' => $news]);
     }
 
     public function delete($id)
@@ -25,12 +26,11 @@ class NewsController extends Controller
         $news = News::FindOrFail($id);
         $news->delete();
         $news->save();
-        $dirname = public_path('img/news/'.$news->id.'/');
+        $dirname = public_path('img/news/' . $news->id . '/');
         try {
             array_map('unlink', glob("$dirname/*.*"));
             rmdir($dirname);
-        }
-        finally {
+        } finally {
             return back();
         }
     }
@@ -51,7 +51,7 @@ class NewsController extends Controller
 
         if ($request->hasFile('img')) {
             $count = count($_FILES['img']['tmp_name']);
-        }else{
+        } else {
             $count = 0;
         }
 
@@ -64,14 +64,13 @@ class NewsController extends Controller
         ));
         $news->save();
 
-        if($count!=0)
-        {
+        if ($count != 0) {
             $files = $request->file('img');
 
-            $i =0;
+            $i = 0;
             foreach ($files as $file) {
                 $i++;
-                $file->move(public_path('img/news/'.$news->id.'/'), $i.'.jpg');
+                $file->move(public_path('img/news/' . $news->id . '/'), $i . '.jpg');
             }
         }
         return redirect('/');

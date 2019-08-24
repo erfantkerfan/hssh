@@ -31,7 +31,8 @@
                                     @endif
                                 @endforeach
                             </h4>
-                            <img class="col-md-4" src="{{asset('/img/teachers/'.$teacher->id.'.jpg')}}" onerror="this.src='{{asset('/img/teachers/default.png')}}'"/>
+                            <img class="col-md-4" src="{{asset('/img/teachers/'.$teacher->id.'.jpg')}}"
+                                 onerror="this.src='{{asset('/img/teachers/default.png')}}'"/>
 
                         </div>
                     </div>

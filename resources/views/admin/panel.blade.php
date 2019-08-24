@@ -31,7 +31,8 @@
                                         <th class="text-center">{{$message->IP}}</th>
                                         <th class="text-center">
                                             <a href="{{Route('message_delete',['id'=>$message->id])}}">
-                                                <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                                <span style="color: #d9534f" class="glyphicon glyphicon-trash"
+                                                      aria-hidden="true"></span>
                                             </a>
                                         </th>
                                     </tr>
@@ -94,7 +95,8 @@
                                             <th class="text-center">{{$student->in_touch}}</th>
                                             <th class="text-center">
                                                 <a href="{{Route('register_delete',['id'=>$student->id])}}">
-                                                    <span style="color: #d9534f" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                                    <span style="color: #d9534f" class="glyphicon glyphicon-trash"
+                                                          aria-hidden="true"></span>
                                                 </a>
                                             </th>
                                         </tr>
@@ -126,15 +128,15 @@
                                         <td class="text-center">
                                             @if ($user == Auth::user())
                                                 {{Verta::parse($user->last_login)->formatDifference(Verta::now())}}
-{{--                                                {{Verta::now()->formatDifference(verta($user->last_login))}}--}}
-{{--                                                {{str_after($user->last_login,' ')}}--}}
-                                                
-{{--                                                {{str_replace('-','/',str_before($user->last_login,' '))}}--}}
+                                                {{--                                                {{Verta::now()->formatDifference(verta($user->last_login))}}--}}
+                                                {{--                                                {{str_after($user->last_login,' ')}}--}}
+                                                    
+                                                {{--                                                {{str_replace('-','/',str_before($user->last_login,' '))}}--}}
                                             @else
                                                 {{Verta::parse($user->login)->formatDifference(Verta::now())}}
-{{--                                                {{str_after($user->login,' ')}}--}}
-                                                
-{{--                                                {{str_replace('-','/',str_before($user->login,' '))}}--}}
+                                                {{--                                                {{str_after($user->login,' ')}}--}}
+                                                    
+                                                {{--                                                {{str_replace('-','/',str_before($user->login,' '))}}--}}
                                             @endif
                                         </td>
                                     </tr>
@@ -183,7 +185,8 @@
                                             <form method="post" action="{{ route('slider') }}">
                                                 {{ csrf_field() }}
                                                 {{ method_field('delete') }}
-                                                <input type="hidden" class="form-control" name="id" id="id" value="{{$slider->id}}">
+                                                <input type="hidden" class="form-control" name="id" id="id"
+                                                       value="{{$slider->id}}">
                                                 <button type="submit" class="btn btn-sm btn-danger">حذف</button>
                                             </form>
                                         </td>
@@ -228,7 +231,8 @@
                                             </span>
                                         </span>
                                     @auth
-                                        <a href="{{route('news_delete',['id'=>$new->id])}}" onclick="return confirm('از حذف این خبر اطمینان دارید؟')">
+                                        <a href="{{route('news_delete',['id'=>$new->id])}}"
+                                           onclick="return confirm('از حذف این خبر اطمینان دارید؟')">
                                             <span class="label label-danger pull-left " dir="rtl">
                                                   حذف خبر
                                             </span>
@@ -277,7 +281,8 @@
                                             </span>
                                         </span>
                                     @auth
-                                        <a href="{{route('educational_delete',['id'=>$educational->id])}}" onclick="return confirm('از حذف این فایل اطمینان دارید؟')">
+                                        <a href="{{route('educational_delete',['id'=>$educational->id])}}"
+                                           onclick="return confirm('از حذف این فایل اطمینان دارید؟')">
                                             <span class="label label-danger pull-left " dir="rtl">
                                                   حذف فایل
                                             </span>

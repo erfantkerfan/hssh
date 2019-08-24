@@ -33,7 +33,8 @@
                                             </span>
                                         </span>
                                     @auth
-                                        <a href="{{route('news_delete',['id'=>$new->id])}}" onclick="return confirm('از حذف این خبر اطمینان دارید؟')">
+                                        <a href="{{route('news_delete',['id'=>$new->id])}}"
+                                           onclick="return confirm('از حذف این خبر اطمینان دارید؟')">
                                             <span class="label label-danger pull-left " dir="rtl">
                                                   حذف خبر
                                             </span>

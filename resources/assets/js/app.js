@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -22,6 +21,10 @@
 // });
 
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+
 gtag('js', new Date());
 gtag('config', 'UA-124216933-1');

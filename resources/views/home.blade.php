@@ -17,30 +17,32 @@
 
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
                             <label for="username" class="control-label text-center">نام کاربری</label>
-                                <input id="username" type="text" class="form-control text-center" name="username" required autofocus>
+                            <input id="username" type="text" class="form-control text-center" name="username" required
+                                   autofocus>
 
-                                @if ($errors->has('username'))
-                                    <span class="help-block">
+                            @if ($errors->has('username'))
+                                <span class="help-block">
                                     <strong>{{ $errors->first('username') }}</strong>
                                 </span>
-                                @endif
+                            @endif
 
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="control-label">گذرواژه</label>
-                                <input id="password" type="password" class="form-control text-center" name="password" required autofocus autocomplete="off">
+                            <input id="password" type="password" class="form-control text-center" name="password"
+                                   required autofocus autocomplete="off">
 
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
+                            @if ($errors->has('password'))
+                                <span class="help-block">
                                     <strong>{{ $errors->first('password') }}</strong>
                                 </span>
-                                @endif
+                            @endif
                         </div>
 
-                        <input  class="hidden" name="x_year" value="1398">
+                        <input class="hidden" name="x_year" value="1398">
 
-                        <input  class="hidden" name="submit" value="ورود به سامانه">
+                        <input class="hidden" name="submit" value="ورود به سامانه">
 
                         <div class="form-group">
                             <div>
@@ -65,21 +67,21 @@
                 <br>
 
                 <a href="http://www.khamenei.ir/">
-                    <img  class="col-md-12" alt="http://www.khamenei.ir/" src="/img/links/2.png">
+                    <img class="col-md-12" alt="http://www.khamenei.ir/" src="/img/links/2.png">
                 </a>
                 <br>
                 <br>
                 <br>
 
                 <a href="http://nojavan.khamenei.ir">
-                    <img  class="col-md-12" alt="http://nojavan.khamenei.ir" src="/img/links/1.png">
+                    <img class="col-md-12" alt="http://nojavan.khamenei.ir" src="/img/links/1.png">
                 </a>
                 <br>
                 <br>
                 <br>
 
                 <a href="http://beest.ir/">
-                    <img  class="col-md-12" alt="http://beest.ir/" src="/img/links/4.png">
+                    <img class="col-md-12" alt="http://beest.ir/" src="/img/links/4.png">
                 </a>
                 <br>
                 <br>
@@ -87,7 +89,7 @@
 
 
                 <a href="http://www.ayandehsazan.ir/">
-                    <img  class="col-md-12" alt="http://www.ayandehsazan.ir/" src="/img/links/3.png">
+                    <img class="col-md-12" alt="http://www.ayandehsazan.ir/" src="/img/links/3.png">
                 </a>
 
                 <div class="panel-body text-center row">
@@ -183,10 +185,10 @@
                                 <img src="/img/news/{{$gallery->id}}/1.jpg" style="width:100%;">
                             </a>
                             {{--<div class="carousel-caption d-none d-md-block">--}}
-                                {{--<a href="{{route('news_single',['id'=>$new->id])}}" style="text-decoration: none;color: yellow;font-size: 15px">--}}
-                                    {{--مشاهده--}}
-                                    {{--{{$new->title}}--}}
-                                {{--</a>--}}
+                            {{--<a href="{{route('news_single',['id'=>$new->id])}}" style="text-decoration: none;color: yellow;font-size: 15px">--}}
+                            {{--مشاهده--}}
+                            {{--{{$new->title}}--}}
+                            {{--</a>--}}
                             {{--</div>--}}
                         </div>
 

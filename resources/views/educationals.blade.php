@@ -32,7 +32,8 @@
                                             </span>
                                         </span>
                                     @auth
-                                        <a href="{{route('educational_delete',['id'=>$educational->id])}}" onclick="return confirm('از حذف این مطلب اطمینان دارید؟')">
+                                        <a href="{{route('educational_delete',['id'=>$educational->id])}}"
+                                           onclick="return confirm('از حذف این مطلب اطمینان دارید؟')">
                                             <span class="label label-danger pull-left " dir="rtl">
                                                   حذف مطلب
                                             </span>

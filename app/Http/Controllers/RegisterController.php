@@ -30,11 +30,11 @@ class RegisterController extends Controller
             'average' => 'required|string',
             'in_touch' => 'required|string',
         ]);
-        $check = Preregister::where('phone','=',$request->phone)->where('father_mobile','=',$request->father_mobile)
-        ->where('mother_mobile','=',$request->mother_mobile)->where('f_name','=',$request->f_name)->get();
-        if(count($check)>0){
-            $alert = 'ثبت نام اولیه'.
-                ' '. $request->f_name. ' '. $request->l_name. ' '.
+        $check = Preregister::where('phone', '=', $request->phone)->where('father_mobile', '=', $request->father_mobile)
+            ->where('mother_mobile', '=', $request->mother_mobile)->where('f_name', '=', $request->f_name)->get();
+        if (count($check) > 0) {
+            $alert = 'ثبت نام اولیه' .
+                ' ' . $request->f_name . ' ' . $request->l_name . ' ' .
                 'قبلا انجام شده است. لطفا از ثبت نام مجدد خودداری کنید. در صورت مشکل از بخش تماس با ما پیام ارسال بفرمایید.';
             Session::flash('alert', (string)$alert);
             return redirect()->route('home');
@@ -43,9 +43,9 @@ class RegisterController extends Controller
         $preregister = new Preregister($request->all());
         $preregister->save();
 
-        $alert = 'ثبت نام اولیه'.
-            ' '. $request->f_name. ' '. $request->l_name. ' '.
-         'با موفقیت انجام شد. برای تعیین زمان آزمون ورودی و مراحل بعدی ثبت نام از مدرسه با شما تماس گرفته خواهد شد.';
+        $alert = 'ثبت نام اولیه' .
+            ' ' . $request->f_name . ' ' . $request->l_name . ' ' .
+            'با موفقیت انجام شد. برای تعیین زمان آزمون ورودی و مراحل بعدی ثبت نام از مدرسه با شما تماس گرفته خواهد شد.';
         Session::flash('alert', (string)$alert);
 
         return redirect()->route('home');
@@ -61,16 +61,16 @@ class RegisterController extends Controller
 
     public function pdf($grade)
     {
-        if ($grade == 'دهم'){
-            $preregisters = Preregister::where('grade','=','دهم')->get();
-        }elseif($grade == 'یازدهم'){
-            $preregisters = Preregister::where('grade','=','یازدهم')->get();
-        }elseif($grade == 'دوازدهم'){
-            $preregisters = Preregister::where('grade','=','دوازدهم')->get();
-        }else{
+        if ($grade == 'دهم') {
+            $preregisters = Preregister::where('grade', '=', 'دهم')->get();
+        } elseif ($grade == 'یازدهم') {
+            $preregisters = Preregister::where('grade', '=', 'یازدهم')->get();
+        } elseif ($grade == 'دوازدهم') {
+            $preregisters = Preregister::where('grade', '=', 'دوازدهم')->get();
+        } else {
             abort(404);
         }
-        $pdf = PDF::loadView('pdf.preregister', compact('preregisters','grade'));
+        $pdf = PDF::loadView('pdf.preregister', compact('preregisters', 'grade'));
         return $pdf->stream('document.pdf');
     }
 }

@@ -16,7 +16,7 @@ class MessageController extends Controller
 
     public function create(Request $request)
     {
-        $messages  = [
+        $messages = [
             'valid_captcha' => 'Wrong code. Try again please.'
         ];
 
@@ -25,7 +25,7 @@ class MessageController extends Controller
             'email' => 'required|email',
             'text' => 'required|string',
             'g-recaptcha-response' => 'required|captcha',
-        ],$messages);
+        ], $messages);
 
         $message = new Message(array(
             'name' => $request['name'],

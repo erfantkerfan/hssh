@@ -37,8 +37,8 @@
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner">
                                     @for ($i = 1; $i <= $news->files; $i++)
-                                    {{--<div class="item {{ $loop->first ? ' active' : '' }}">--}}
-                                    <div class="item {{ $i == 1 ? ' active' : '' }}">
+                                        {{--<div class="item {{ $loop->first ? ' active' : '' }}">--}}
+                                        <div class="item {{ $i == 1 ? ' active' : '' }}">
                                             <img src="/img/news/{{$news->id}}/{{$i}}.jpg" style="width:100%;">
                                         </div>
                                     @endfor

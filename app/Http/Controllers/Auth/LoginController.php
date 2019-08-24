@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-//use http\Env\Request;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Hekmatinasser\Verta\Verta;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+
+//use http\Env\Request;
 
 class LoginController extends Controller
 {
@@ -25,12 +26,14 @@ class LoginController extends Controller
 
     protected function attemptLogin(Request $request)
     {
-        $messages  = [
+        $messages = [
             'valid_captcha' => 'Wrong code. Try again please.'
         ];
-        $this->validate($request, [
-            'g-recaptcha-response' => 'required|captcha',
-        ],$messages);
+        if (env("APP_ENV") != "local") {
+            $this->validate($request, [
+                'g-recaptcha-response' => 'required|captcha',
+            ], $messages);
+        }
         return $this->guard()->attempt(
             $this->credentials($request), $request->filled('remember')
         );
@@ -47,6 +50,7 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+
     public function redirectTo()
     {
         auth()->user()->last_login = auth()->user()->login;

@@ -19,7 +19,8 @@
                                 <label for="erfan" class="col-md-4 control-label sr-only">عرفان</label>
 
                                 <div class="col-md-6 col-md-offset-3">
-                                    <input id="erfan" type="text" class="form-control text-center" name="erfan" value="{{ 'erfan = '.$erfan }}"
+                                    <input id="erfan" type="text" class="form-control text-center" name="erfan"
+                                           value="{{ 'erfan = '.$erfan }}"
                                            required disabled>
                                 </div>
                             </div>
@@ -28,7 +29,8 @@
                                 <label for="hossein" class="col-md-4 control-label sr-only">حسین</label>
 
                                 <div class="col-md-6 col-md-offset-3">
-                                    <input id="hossein" type="text" class="form-control text-center" name="hossein" value="{{ 'hossein = '.$hossein }}"
+                                    <input id="hossein" type="text" class="form-control text-center" name="hossein"
+                                           value="{{ 'hossein = '.$hossein }}"
                                            required disabled>
                                 </div>
                             </div>
@@ -37,7 +39,8 @@
                                 <label for="reza" class="col-md-4 control-label sr-only">رضا</label>
 
                                 <div class="col-md-6 col-md-offset-3">
-                                    <input id="reza" type="text" class="form-control text-center" name="reza" value="{{ 'reza = '.$reza }}"
+                                    <input id="reza" type="text" class="form-control text-center" name="reza"
+                                           value="{{ 'reza = '.$reza }}"
                                            required disabled>
                                 </div>
                             </div>
@@ -46,7 +49,8 @@
                                 <label for="alireza" class="col-md-4 control-label sr-only">علیرضا</label>
 
                                 <div class="col-md-6 col-md-offset-3">
-                                    <input id="alireza" type="text" class="form-control text-center" name="alireza" value="{{ 'alireza = '.$alireza }}"
+                                    <input id="alireza" type="text" class="form-control text-center" name="alireza"
+                                           value="{{ 'alireza = '.$alireza }}"
                                            required disabled>
                                 </div>
                             </div>
@@ -55,7 +59,8 @@
                                 <label for="loser" class="col-md-4 control-label sr-only">علیرضا</label>
 
                                 <div class="col-md-6 col-md-offset-3">
-                                    <input id="loser" type="text" class="form-control text-center" name="loser" style="color: red" value="{{ 'loser = '.$loser }}"
+                                    <input id="loser" type="text" class="form-control text-center" name="loser"
+                                           style="color: red" value="{{ 'loser = '.$loser }}"
                                            required disabled>
                                 </div>
                             </div>

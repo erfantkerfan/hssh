@@ -11,12 +11,13 @@ class SliderController extends Controller
     {
         return view('admin.slider');
     }
+
     public function delete(Request $request)
     {
         $slider = Slider::FindOrFail($request->id);
-        $file_path = public_path('img/slider/').$slider->id.'.jpg';
+        $file_path = public_path('img/slider/') . $slider->id . '.jpg';
         @unlink($file_path);
-        $slider -> delete();
+        $slider->delete();
         return back();
     }
 
@@ -37,7 +38,7 @@ class SliderController extends Controller
 
         $slider->save();
 
-        $file_name = $slider->id .'.jpg';
+        $file_name = $slider->id . '.jpg';
         $request->file('file')->move(public_path('img/slider/'), $file_name);
 
         return redirect(route('panel'));

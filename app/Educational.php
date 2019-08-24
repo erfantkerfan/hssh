@@ -10,6 +10,6 @@ class Educational extends Model
     use SoftDeletes;
     protected $dates = ['deleted_at'];
     protected $fillable = [
-        'type','title','text','file','date'
+        'type', 'title', 'text', 'file', 'date'
     ];
 }

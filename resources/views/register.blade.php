@@ -17,7 +17,8 @@
                                 <label for="phone" class="col-md-4 control-label sr-only">شماره تماس ثابت</label>
 
                                 <div class="col-md-12">
-                                    <input id="phone" type="text" class="form-control" name="phone" value="{{ old('phone') }}"
+                                    <input id="phone" type="text" class="form-control" name="phone"
+                                           value="{{ old('phone') }}"
                                            required autofocus placeholder="شماره تماس ثابت 66666666">
 
                                     @if ($errors->has('phone'))
@@ -29,10 +30,12 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('father_mobile') ? ' has-error' : '' }}">
-                                <label for="father_mobile" class="col-md-4 control-label sr-only">شماره موبایل پدر</label>
+                                <label for="father_mobile" class="col-md-4 control-label sr-only">شماره موبایل
+                                    پدر</label>
 
                                 <div class="col-md-12">
-                                    <input id="father_mobile" type="text" class="form-control" name="father_mobile" value="{{ old('father_mobile') }}"
+                                    <input id="father_mobile" type="text" class="form-control" name="father_mobile"
+                                           value="{{ old('father_mobile') }}"
                                            required autofocus placeholder="شماره موبایل پدر 09120000000">
 
                                     @if ($errors->has('father_mobile'))
@@ -44,10 +47,12 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('mother_mobile') ? ' has-error' : '' }}">
-                                <label for="mother_mobile" class="col-md-4 control-label sr-only">شماره موبایل مادر</label>
+                                <label for="mother_mobile" class="col-md-4 control-label sr-only">شماره موبایل
+                                    مادر</label>
 
                                 <div class="col-md-12">
-                                    <input id="mother_mobile" type="text" class="form-control" name="mother_mobile" value="{{ old('mother_mobile') }}"
+                                    <input id="mother_mobile" type="text" class="form-control" name="mother_mobile"
+                                           value="{{ old('mother_mobile') }}"
                                            required autofocus placeholder="شماره موبایل مادر 09120000000">
 
                                     @if ($errors->has('mother_mobile'))
@@ -59,10 +64,12 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('mobile') ? ' has-error' : '' }}">
-                                <label for="mobile" class="col-md-4 control-label sr-only">شماره موبایل دانش آموز</label>
+                                <label for="mobile" class="col-md-4 control-label sr-only">شماره موبایل دانش
+                                    آموز</label>
 
                                 <div class="col-md-12">
-                                    <input id="mobile" type="text" class="form-control" name="mobile" value="{{ old('mobile') }}"
+                                    <input id="mobile" type="text" class="form-control" name="mobile"
+                                           value="{{ old('mobile') }}"
                                            autofocus placeholder="شماره موبایل دانش آموز (اختیاری)">
 
                                     @if ($errors->has('mobile'))
@@ -74,10 +81,12 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('in_touch') ? ' has-error' : '' }}">
-                                <label for="in_touch" class="col-md-4 control-label sr-only">نحوه آشنایی با مجموعه</label>
+                                <label for="in_touch" class="col-md-4 control-label sr-only">نحوه آشنایی با
+                                    مجموعه</label>
 
                                 <div class="col-md-12">
-                                    <input id="in_touch" type="text" class="form-control" name="in_touch" value="{{ old('in_touch') }}"
+                                    <input id="in_touch" type="text" class="form-control" name="in_touch"
+                                           value="{{ old('in_touch') }}"
                                            required autofocus placeholder="نحوه آشنایی با مجموعه">
 
                                     @if ($errors->has('in_touch'))
@@ -92,7 +101,8 @@
                                 <label for="filler" class="col-md-4 control-label sr-only">تکمیل کننده فرم</label>
 
                                 <div class="col-md-12">
-                                    <select id="filler" type="text" class="form-control" name="filler" required autofocus>
+                                    <select id="filler" type="text" class="form-control" name="filler" required
+                                            autofocus>
                                         <option value="" selected>تکمیل کننده فرم</option>
                                         <option value="مادر">مادر</option>
                                         <option value="پدر">پدر</option>
@@ -114,7 +124,8 @@
                                 <label for="f_name" class="col-md-4 control-label sr-only">نام</label>
 
                                 <div class="col-md-12">
-                                    <input id="f_name" type="text" class="form-control" name="f_name" value="{{ old('f_name') }}"
+                                    <input id="f_name" type="text" class="form-control" name="f_name"
+                                           value="{{ old('f_name') }}"
                                            required autofocus placeholder="نام به فارسی">
 
                                     @if ($errors->has('f_name'))
@@ -129,7 +140,8 @@
                                 <label for="l_name" class="col-md-4 control-label sr-only">نام خانوادگی</label>
 
                                 <div class="col-md-12">
-                                    <input id="l_name" type="text" class="form-control" name="l_name" value="{{ old('l_name') }}"
+                                    <input id="l_name" type="text" class="form-control" name="l_name"
+                                           value="{{ old('l_name') }}"
                                            required autofocus placeholder="نام خانوادگی به فارسی">
 
                                     @if ($errors->has('l_name'))
@@ -144,7 +156,8 @@
                                 <label for="district" class="col-md-4 control-label sr-only">منطقه محل سکونت</label>
 
                                 <div class="col-md-12">
-                                    <input id="district" type="text" class="form-control" name="district" value="{{ old('district') }}"
+                                    <input id="district" type="text" class="form-control" name="district"
+                                           value="{{ old('district') }}"
                                            required autofocus placeholder="منطقه محل سکونت">
 
                                     @if ($errors->has('district'))
@@ -156,10 +169,12 @@
                             </div>
 
                             <div class="form-group{{ $errors->has('school') ? ' has-error' : '' }}">
-                                <label for="school" class="col-md-4 control-label sr-only">دبیرستان فعلی محل تحصیل</label>
+                                <label for="school" class="col-md-4 control-label sr-only">دبیرستان فعلی محل
+                                    تحصیل</label>
 
                                 <div class="col-md-12">
-                                    <input id="school" type="text" class="form-control" name="school" value="{{ old('school') }}"
+                                    <input id="school" type="text" class="form-control" name="school"
+                                           value="{{ old('school') }}"
                                            required autofocus placeholder="دبیرستان فعلی محل تحصیل">
 
                                     @if ($errors->has('school'))
@@ -174,7 +189,8 @@
                                 <label for="average" class="col-md-4 control-label sr-only">معدل نیم سال اول</label>
 
                                 <div class="col-md-12">
-                                    <input id="average" type="text" class="form-control" name="average" value="{{ old('average') }}"
+                                    <input id="average" type="text" class="form-control" name="average"
+                                           value="{{ old('average') }}"
                                            required autofocus placeholder="معدل نیم سال اول">
 
                                     @if ($errors->has('average'))
@@ -190,7 +206,7 @@
 
                                 <div class="col-md-12">
                                     <select id="grade" type="text" class="form-control" name="grade" required autofocus>
-                                        <option value="" selected>پایه تحصیلی </option>
+                                        <option value="" selected>پایه تحصیلی</option>
                                         <option value="دهم">دهم</option>
                                         <option value="یازدهم">یازدهم</option>
                                         <option value="دوازدهم">دوازدهم</option>
@@ -209,7 +225,7 @@
 
                                 <div class="col-md-12">
                                     <select id="field" type="text" class="form-control" name="field" required autofocus>
-                                        <option value="" selected>رشته تحصیلی </option>
+                                        <option value="" selected>رشته تحصیلی</option>
                                         <option value="ریاضی">ریاضی</option>
                                         <option value="تجربی">تجربی</option>
                                     </select>
@@ -224,9 +240,9 @@
                         </div>
 
                         {{--<div class="col-md-12 text-center text-danger">--}}
-                            {{--در صورت ثبت نام موفق به صفحه اصلی باز خواهید گشت و از ثبت نام مجدد خودداری کنید.--}}
-                            {{--<br>--}}
-                            {{--<br>--}}
+                        {{--در صورت ثبت نام موفق به صفحه اصلی باز خواهید گشت و از ثبت نام مجدد خودداری کنید.--}}
+                        {{--<br>--}}
+                        {{--<br>--}}
                         {{--</div>--}}
 
                         <div class="form-group  col-md-12">

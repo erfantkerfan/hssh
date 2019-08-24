@@ -13,9 +13,10 @@
     <!-- Styles -->
     <style>
         @font-face {
-            font-family:'Font';
+            font-family: 'Font';
             src: url('/fonts/BTITRBOLD.ttf');
         }
+
         html, body {
             background-color: #fff;
             color: #636b6f;
@@ -65,15 +66,26 @@
         .m-b-md {
             margin-bottom: 30px;
         }
-        .number{letter-spacing:-10px;line-height:128px;font-size:128px;font-weight:300}
-        .font-red{display:inline-block;color:#ec8c8c;text-align:left}
+
+        .number {
+            letter-spacing: -10px;
+            line-height: 128px;
+            font-size: 128px;
+            font-weight: 300
+        }
+
+        .font-red {
+            display: inline-block;
+            color: #ec8c8c;
+            text-align: left
+        }
     </style>
 </head>
 <body style="font-family:'Font'">
 <div class="flex-center position-ref full-height">
     @if (Route::has('login'))
         <div class="top-right links">
-                <a href="{{ route('home') }}">صفحه اصلی</a>
+            <a href="{{ route('home') }}">صفحه اصلی</a>
         </div>
     @endif
 
@@ -81,7 +93,7 @@
         <div class="title m-b-md">
             این صفحه وجود ندارد
         </div>
-        <div class="number font-red"> 404 </div>
+        <div class="number font-red"> 404</div>
     </div>
 
 </div>

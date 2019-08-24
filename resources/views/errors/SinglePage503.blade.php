@@ -15,7 +15,7 @@
     <!-- Styles -->
     <style>
         @font-face {
-            font-family:'Font';
+            font-family: 'Font';
             src: url('/fonts/BTITRBOLD.ttf');
         }
 
@@ -60,24 +60,35 @@
         .m-b-md {
             margin-bottom: 30px;
         }
-        .number{letter-spacing:-10px;line-height:128px;font-size:128px;font-weight:300}
-        .font-red{display:inline-block;color:#ec8c8c;text-align:left}
+
+        .number {
+            letter-spacing: -10px;
+            line-height: 128px;
+            font-size: 128px;
+            font-weight: 300
+        }
+
+        .font-red {
+            display: inline-block;
+            color: #ec8c8c;
+            text-align: left
+        }
     </style>
 </head>
 <body style="font-family:'Font'">
-    <div class="container text-center flex-center full-height">
+<div class="container text-center flex-center full-height">
 
-        <div class="top-right links">
-            <a href="{{ route('home') }}">صفحه اصلی</a>
-        </div>
-
-        <div>
-            <img class="col-md-6" src="/img/maintenance boy.gif">
-            <div dir="rtl" class="col-md-6 title m-b-md">
-                این صفحه در حال بروزرسانی میباشد.
-            </div>
-            <div class="number font-red"> 503 </div>
-        </div>
+    <div class="top-right links">
+        <a href="{{ route('home') }}">صفحه اصلی</a>
     </div>
+
+    <div>
+        <img class="col-md-6" src="/img/maintenance boy.gif">
+        <div dir="rtl" class="col-md-6 title m-b-md">
+            این صفحه در حال بروزرسانی میباشد.
+        </div>
+        <div class="number font-red"> 503</div>
+    </div>
+</div>
 </body>
 </html>

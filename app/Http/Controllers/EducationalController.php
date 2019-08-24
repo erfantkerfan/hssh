@@ -10,19 +10,22 @@ class EducationalController extends Controller
 {
     public function category($type)
     {
-        $educationals = Educational::where('type','=',$type)->orderBy('date','desc')->paginate(20);
+        $educationals = Educational::where('type', '=', $type)->orderBy('date', 'desc')->paginate(20);
         $title = 'لیست مطالب';
-        return view('educationals')->with(['title'=>$title,'educationals'=>$educationals]);
+        return view('educationals')->with(['title' => $title, 'educationals' => $educationals]);
     }
-    public function single($type , $id)
+
+    public function single($type, $id)
     {
         $educational = Educational::FindOrFail($id);
-        return view('educational_single')->with(['educational'=>$educational]);
+        return view('educational_single')->with(['educational' => $educational]);
     }
+
     public function form()
     {
         return view('admin.educatinal');
     }
+
     public function delete($id)
     {
         $educatinal = Educational::FindOrFail($id);
@@ -32,6 +35,7 @@ class EducationalController extends Controller
         $educatinal->save();
         return back();
     }
+
     public function create(Request $request)
     {
         $this->Validate($request, [
@@ -40,9 +44,9 @@ class EducationalController extends Controller
             'type' => 'required|string',
         ]);
 
-        if($request->hasFile('file')){
+        if ($request->hasFile('file')) {
             $file = $request->file('file')->getClientOriginalExtension();
-        }else{
+        } else {
             $file = null;
         }
 
@@ -55,8 +59,8 @@ class EducationalController extends Controller
         ));
         $educatinal->save();
 
-        $file_name = $educatinal->id .'.'.$educatinal->file;
-        if($request->hasFile('file')) {
+        $file_name = $educatinal->id . '.' . $educatinal->file;
+        if ($request->hasFile('file')) {
             $request->file('file')->move(public_path('edu/'), $file_name);
         }
         return redirect(route('home'));
