@@ -13,10 +13,20 @@
         "axios": "^0.18.1",
         "bootstrap": "^4.0.0",
         "cross-env": "^5.2.1",
+        "eslint": "^6.3.0",
+        "fibers": "^4.0.1",
         "jquery": "^3.2",
         "laravel-mix": "^4.0.15",
         "lodash": "^4.17.15",
         "popper.js": "^1.12",
-        "vue": "^2.5.7"
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.23.0-module.beta.1",
+        "sass-loader": "^7.3.1",
+        "vue": "^2.5.7",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "node-sass": "^4.12.0",
+        "selfupdate": "^1.1.0"
     }
 }

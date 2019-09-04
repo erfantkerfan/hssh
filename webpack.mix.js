@@ -22,9 +22,9 @@ mix.combine([
     "public/js/recaptcha.resizer.js",
 ],"public/js/app.js").version();
 
-mix.sass('resources/assets/sass/app.scss','public/css');
+// mix.sass('resources/assets/sass/app.scss','public/css');
 mix.combine([
-    "public/css/app.css",
+    "public/css/handmade.css",
    "public/css/bootstrap.3.3.7.css",
    "public/css/googleapis.css",
    "public/css/font-awesome.min.css",
