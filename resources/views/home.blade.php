@@ -18,7 +18,7 @@
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
                             <label for="username" class="control-label text-center">نام کاربری</label>
                             <input id="username" type="text" class="form-control text-center" name="username" required
-                                   autofocus>
+                                   autofocus value="">
 
                             @if ($errors->has('username'))
                                 <span class="help-block">
@@ -40,13 +40,13 @@
                             @endif
                         </div>
 
-                        <input class="hidden" name="x_year" value="1398">
+                        <input id="salTahsili" class="hidden" name="x_year" value="1398">
 
                         <input class="hidden" name="submit" value="ورود به سامانه">
 
                         <div class="form-group">
                             <div>
-                                <button name="online_payment" value="1" type="submit" class="btn btn-primary">
+                                <button name="login" type="submit" class="btn btn-primary" value=" ورود به سامانه">
                                     ورود
                                 </button>
                             </div>
