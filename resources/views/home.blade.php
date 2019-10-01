@@ -182,7 +182,7 @@
                     @foreach($galleries as $gallery)
                         <div class="item {{ $loop->first ? ' active' : '' }}">
                             <a href="{{route('news_single',['type'=>$gallery->type,'id'=>$gallery->id])}}">
-                                <img src="/img/news/{{$gallery->id}}/1.webp" onerror="this.onerror=null;this.src='/img/news/{{$gallery->id}}.jpg';" style="width:100%;">
+                                <img src="/img/news/{{$gallery->id}}/1.webp" onerror="this.onerror=null;this.src='/img/news/{{$gallery->id}}/1.jpg';" style="width:100%;">
                             </a>
                             {{--<div class="carousel-caption d-none d-md-block">--}}
                             {{--<a href="{{route('news_single',['id'=>$new->id])}}" style="text-decoration: none;color: yellow;font-size: 15px">--}}
