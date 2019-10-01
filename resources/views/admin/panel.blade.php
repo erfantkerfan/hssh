@@ -177,7 +177,7 @@
                                         <td class="text-center">{{$slider->head}}</td>
                                         <td class="text-center">{{$slider->body}}</td>
                                         <td class="text-center">
-                                            <a href="/img/slider/{{$slider->id}}.jpg">
+                                            <a href="/img/slider/{{$slider->id}}.webp" >
                                                 <button type="submit" class="btn btn-sm btn-success">مشاهده</button>
                                             </a>
                                         </td>
