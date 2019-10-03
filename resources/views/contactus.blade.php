@@ -33,7 +33,7 @@
                         <br>
                     </h4>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9163.39773905597!2d51.343288998879025!3d35.70776085261836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dff96f3a028e9%3A0x7ef61f3805d2abef!2z2K_YqNuM2LHYs9iq2KfZhiDYrdi22LHYqiDYs9uM2K8g2KfZhNi02YfYr9in2LnZhNuM2Ycg2KfZhNiz2YTYp9mFIC0g2K_ZiNix2Ycg2K_ZiNmF!5e0!3m2!1sen!2sus!4v1537965334222"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5448.517938528335!2d51.34771491302115!3d35.70879892289547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7e4a4a6858f3cc34!2z2K_YqNuM2LHYs9iq2KfZhiDYs9uM2K_Yp9mE2LTZh9iv2KcgKCDYuSkg2YXYqtmI2LPYt9mHINiv2YjZhQ!5e0!3m2!1sen!2sus!4v1570090668979!5m2!1sen!2sus"
                         width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
 
