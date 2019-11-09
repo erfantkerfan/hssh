@@ -15,9 +15,9 @@
                                 <div class="text-center col-md-3">
                                     <a href="{{route('teacher',['teacher'=>$teacher->id])}}">
                                         <img class="col-md-12" src="{{asset('/img/teachers/'.$teacher->id.'.webp')}}"
-                                             onerror="this.onerror=null;this.src='/img/teachers/{{$teacher->id}}.jpg';"
+                                             {{--onerror="this.onerror=null;this.src='/img/teachers/{{$teacher->id}}.jpg';"--}}
                                              {{--TODO: fix this--}}
-                                             {{--onerror="this.src='{{asset('/img/teachers/default.png')}}'"--}}
+                                             onerror="this.src='{{asset('/img/teachers/default.webp')}}'"
                                         />
                                     </a>
                                     <h4>
