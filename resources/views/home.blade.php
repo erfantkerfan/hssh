@@ -67,21 +67,21 @@
                 <br>
 
                 <a href="http://www.khamenei.ir/">
-                    <img class="col-md-12" alt="http://www.khamenei.ir/" src="/img/links/2.png">
+                    <img class="col-md-12" alt="http://www.khamenei.ir/" src="/img/links/2.webp">
                 </a>
                 <br>
                 <br>
                 <br>
 
                 <a href="http://nojavan.khamenei.ir">
-                    <img class="col-md-12" alt="http://nojavan.khamenei.ir" src="/img/links/1.png">
+                    <img class="col-md-12" alt="http://nojavan.khamenei.ir" src="/img/links/1.webp">
                 </a>
                 <br>
                 <br>
                 <br>
 
                 <a href="http://beest.ir/">
-                    <img class="col-md-12" alt="http://beest.ir/" src="/img/links/4.png">
+                    <img class="col-md-12" alt="http://beest.ir/" src="/img/links/4.webp">
                 </a>
                 <br>
                 <br>
@@ -89,7 +89,7 @@
 
 
                 <a href="http://www.ayandehsazan.ir/">
-                    <img class="col-md-12" alt="http://www.ayandehsazan.ir/" src="/img/links/3.png">
+                    <img class="col-md-12" alt="http://www.ayandehsazan.ir/" src="/img/links/3.webp">
                 </a>
 
                 <div class="panel-body text-center row">
