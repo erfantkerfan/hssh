@@ -28,9 +28,9 @@ class Controller extends BaseController
         $news = News::orderBy('date', 'desc')->paginate(6, ['*'], 'news');
         $educationals = Educational::orderBy('date', 'desc')->paginate(6, ['*'], 'edu');
         $messages = Message::orderBy('date', 'desc')->paginate(6, ['*'], 'messages');
-        $r10s = Preregister::where('grade', '=', 'دهم')->reverse()->get();
-        $r11s = Preregister::where('grade', '=', 'یازدهم')->reverse()->get();
-        $r12s = Preregister::where('grade', '=', 'دوازدهم')->reverse()->get();
+        $r10s = Preregister::where('grade', '=', 'دهم')->get()->reverse();
+        $r11s = Preregister::where('grade', '=', 'یازدهم')->get()->reverse();
+        $r12s = Preregister::where('grade', '=', 'دوازدهم')->get()->reverse();
         $preregisters =
             (object)array(
                 (object)array('garde' => 'دهم', 'value' => $r10s),
