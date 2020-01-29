@@ -62,11 +62,11 @@ class RegisterController extends Controller
     public function pdf($grade)
     {
         if ($grade == 'دهم') {
-            $preregisters = Preregister::where('grade', '=', 'دهم')->get();
+            $preregisters = Preregister::where('grade', '=', 'دهم')->reverse()->get();
         } elseif ($grade == 'یازدهم') {
-            $preregisters = Preregister::where('grade', '=', 'یازدهم')->get();
+            $preregisters = Preregister::where('grade', '=', 'یازدهم')->reverse()->get();
         } elseif ($grade == 'دوازدهم') {
-            $preregisters = Preregister::where('grade', '=', 'دوازدهم')->get();
+            $preregisters = Preregister::where('grade', '=', 'دوازدهم')->reverse()->get();
         } else {
             abort(404);
         }

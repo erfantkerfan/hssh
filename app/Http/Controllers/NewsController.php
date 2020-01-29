@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\News;
 use Hekmatinasser\Verta\Verta;
 use Illuminate\Http\Request;
+use Symfony\Component\Process\Process;
 
 class NewsController extends Controller
 {
@@ -71,6 +72,13 @@ class NewsController extends Controller
             foreach ($files as $file) {
                 $i++;
                 $file->move(public_path('img/news/' . $news->id . '/'), $i . '.jpg');
+                try {
+                    $command = "cwebp -quiet -mt -m 6 -q 80 -sharp_yuv -alpha_filter best -pass 10 -segments 4 -af ".public_path('img/news/' . $news->id . '/').$i . '.jpg'. " -o ".public_path('img/news/' . $news->id . '/').$i.".webp";
+                    $process = new Process($command);
+                    $process->run();
+                } finally {
+                    $x = "Ok";
+                }
             }
         }
         return redirect('/');
