@@ -16,6 +16,14 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
+        $messages = [
+            'valid_captcha' => 'Wrong code. Try again please.'
+        ];
+        if (env("APP_ENV") != "local") {
+            $this->validate($request, [
+                'g-recaptcha-response' => 'required|captcha',
+            ], $messages);
+        }
         $this->Validate($request, [
             'f_name' => 'required|string',
             'l_name' => 'required|string',
