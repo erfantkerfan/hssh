@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Slider;
 use Illuminate\Http\Request;
-use Symfony\Component\Process\Process;
 
 class SliderController extends Controller
 {
@@ -41,13 +40,7 @@ class SliderController extends Controller
 
         $file_name = $slider->id . '.jpg';
         $request->file('file')->move(public_path('img/slider/'), $file_name);
-        try {
-            $command = "cwebp -quiet -mt -m 6 -q 80 -sharp_yuv -alpha_filter best -pass 10 -segments 4 -af ".public_path('img/slider/').$file_name. " -o ".public_path('img/slider/').$slider->id.".webp";
-            $process = new Process($command);
-            $process->run();
-        } finally {
-            $x = "Ok";
-        }
+        cwebp(public_path('img/slider/').$file_name,public_path('img/slider/').$slider->id);
 
         return redirect(route('panel'));
     }

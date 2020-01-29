@@ -39,7 +39,7 @@
                                     @for ($i = 1; $i <= $news->files; $i++)
                                         {{--<div class="item {{ $loop->first ? ' active' : '' }}">--}}
                                         <div class="item {{ $i == 1 ? ' active' : '' }}">
-                                            <img src="/img/news/{{$news->id}}/{{$i}}.webp" onerror="this.onerror=null;this.src='/img/news/{{$news->id}}/{{$i}}.jpg';" style="width:100%;">
+                                            <img src="/img/news/{{$news->id}}/{{$i}}.webp" style="width:100%;">
                                         </div>
                                     @endfor
                                 </div>

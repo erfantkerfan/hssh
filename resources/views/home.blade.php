@@ -114,7 +114,7 @@
                 <div class="carousel-inner">
                     @foreach($sliders as $slider)
                         <div class="item {{ $loop->first ? ' active' : '' }}">
-                            <img src="/img/slider/{{$slider->id}}.webp" onerror="this.onerror=null;this.src='/img/slider/{{$slider->id}}.jpg';" style="width:100%;">
+                            <img src="/img/slider/{{$slider->id}}.webp" style="width:100%;">
                             <div class="carousel-caption d-md-block">
                                 <h5 style="mix-blend-mode: difference">{{$slider->head}}</h5>
                                 <p style="mix-blend-mode: difference">{{$slider->body}}</p>
@@ -182,7 +182,7 @@
                     @foreach($galleries as $gallery)
                         <div class="item {{ $loop->first ? ' active' : '' }}">
                             <a href="{{route('news_single',['type'=>$gallery->type,'id'=>$gallery->id])}}">
-                                <img src="/img/news/{{$gallery->id}}/1.webp" onerror="this.onerror=null;this.src='/img/news/{{$gallery->id}}/1.jpg';" style="width:100%;">
+                                <img src="/img/news/{{$gallery->id}}/1.webp" style="width:100%;">
                             </a>
                             {{--<div class="carousel-caption d-none d-md-block">--}}
                             {{--<a href="{{route('news_single',['id'=>$new->id])}}" style="text-decoration: none;color: yellow;font-size: 15px">--}}
