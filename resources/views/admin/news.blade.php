@@ -53,6 +53,7 @@
                                     <select id="type" type="text" class="form-control" name="type" autofocus>
                                         <option value="" selected>انتخاب کنید</option>
                                         {{--<option value="201">خبر</option>--}}
+                                        <option value="307">به روایت تصویر:علمی</option>
                                         <option value="301">به روایت تصویر:اردو</option>
                                         <option value="302">به روایت تصویر:مراسم</option>
                                         <option value="306">به روایت تصویر:جهادی</option>
