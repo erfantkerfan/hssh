@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/img/news
+/public/img/teachers
 /public/edu
 /storage/*.key
 /vendor

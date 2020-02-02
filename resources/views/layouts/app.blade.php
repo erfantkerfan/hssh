@@ -133,12 +133,12 @@
 
                         <li class="text-center">
 
-                            <a href="{{ route('news_category',['type'=>'401']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\News::where('type','401')->count()}}
-                                    </span>
-                                ...خبردار
-                            </a>
+                            {{--<a href="{{ route('news_category',['type'=>'401']) }}">--}}
+                                    {{--<span class="label label-success pull-left">--}}
+                                        {{--{{App\News::where('type','401')->count()}}--}}
+                                    {{--</span>--}}
+                                {{--...خبردار--}}
+                            {{--</a>--}}
 
                             <a href="{{ route('news_category',['type'=>'402']) }}">
                                     <span class="label label-success pull-left">

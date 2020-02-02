@@ -60,7 +60,7 @@
                                         <option value="303">به روایت تصویر:فوق برنامه</option>
                                         <option value="304">به روایت تصویر:جلسات</option>
                                         <option value="305">به روایت تصویر:سایر</option>
-                                        <option value="401">پرورشی:خبردار</option>
+                                        {{--<option value="401">پرورشی:خبردار</option>--}}
                                         <option value="402">پرورشی:قرآن کریم و احکام</option>
                                         <option value="403">پرورشی:khamenei.ir</option>
                                         <option value="404">پرورشی:همکلاسی آسمانی</option>
