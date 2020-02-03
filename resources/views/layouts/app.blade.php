@@ -178,7 +178,7 @@
                                     <span class="label label-success pull-left pull-left">
                                         {{App\News::where('type','307')->count()}}
                                     </span>
-                                علمی
+                                آموزشی
                             </a>
 
                             <a href="{{ route('news_category',['type'=>'301']) }}">
