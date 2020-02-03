@@ -116,6 +116,9 @@
                         <div class="item {{ $loop->first ? ' active' : '' }}">
                             <a href="{{route('news_single',['type'=>$gallery->type,'id'=>$gallery->id])}}">
                                 <img src="/img/news/{{$gallery->id}}/1.webp" style="width:100%;">
+                                <div class="carousel-caption d-md-block">
+                                    <h5 style="mix-blend-mode: difference">{{$gallery->title}}</h5>
+                                </div>
                             </a>
                         </div>
 
