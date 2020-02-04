@@ -30,7 +30,7 @@
                             <span class="fa fa-telegram" aria-hidden="true"></span>
                             کانال ما در تلگرام:
                         </b>
-                        <a href="https://t.me/hsshohada2">hsshohada2@</a>
+                        <a href="tg://resolve?domain=hsshohada2">hsshohada2@</a>
                         <br>
                         <br>
 
