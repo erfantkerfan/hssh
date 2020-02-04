@@ -183,17 +183,13 @@
                 <div class="carousel-inner">
                     @foreach($sliders as $slider)
                         <div class="item {{ $loop->first ? ' active' : '' }}">
-                            @if(isset($slider->link))
-                                <a href="{{$slider->link}}">
-                            @endif
+                            <a href="{{$slider->link}}">
                                 <img src="/img/slider/{{$slider->id}}.webp" style="width:100%;">
                                 <div class="carousel-caption d-md-block">
                                     <h5 style="mix-blend-mode: difference">{{$slider->head}}</h5>
                                     <p style="mix-blend-mode: difference">{{$slider->body}}</p>
                                 </div>
-                            @if(isset($slider->link))
-                                </a>
-                            @endif
+                            </a>
                         </div>
                     @endforeach
                 </div>
