@@ -27,7 +27,7 @@ class SliderController extends Controller
             'name' => 'required|string',
             'body' => 'nullable|string',
             'head' => 'nullable|string',
-            'link' => 'nullable|url',
+            'link' => 'nullable|string',
             'file' => 'required|image|mimes:jpeg',
         ]);
 
