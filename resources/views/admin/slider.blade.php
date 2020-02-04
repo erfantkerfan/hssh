@@ -58,6 +58,20 @@
                                 </div>
                             </div>
 
+                            <div class="form-group{{ $errors->has('link') ? ' has-error' : '' }}">
+                                <label for="link" class="col-md-2 control-label pull-right">لینک بنر:</label>
+                                <div class="col-md-9 col-md-offset-1">
+                                    <textarea dir="rtl" style="resize: none" class="form-control form-group pull-left"
+                                              name="link" rows="2" autofocus>{{ old('link') }}</textarea>
+
+                                    @if ($errors->has('link'))
+                                        <span class="help-block">
+                                    <strong>{{ $errors->first('link') }}</strong>
+                                </span>
+                                    @endif
+                                </div>
+                            </div>
+
                             <div class="form-group{{ $errors->has('file') ? ' has-error' : '' }}">
                                 <label for="file" class="col-md-5 control-label pull-right">
                                     آپلود عکس:

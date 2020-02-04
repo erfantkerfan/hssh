@@ -102,7 +102,7 @@
 
         {{-- BANNER --}}
         <div class="col-md-7">
-            <div id="myCarousel2" data-interval="2500" class="carousel slide" data-ride="carousel">
+            <div id="myCarousel2" data-interval="4000" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     @foreach($galleries as $gallery)
@@ -171,7 +171,7 @@
             </div>
 
             {{-- GALLERY --}}
-            <div id="myCarousel" data-interval="4000" class="carousel slide" data-ride="carousel">
+            <div id="myCarousel" data-interval="3000" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     @foreach($sliders as $slider)
@@ -183,11 +183,17 @@
                 <div class="carousel-inner">
                     @foreach($sliders as $slider)
                         <div class="item {{ $loop->first ? ' active' : '' }}">
-                            <img src="/img/slider/{{$slider->id}}.webp" style="width:100%;">
-                            <div class="carousel-caption d-md-block">
-                                <h5 style="mix-blend-mode: difference">{{$slider->head}}</h5>
-                                <p style="mix-blend-mode: difference">{{$slider->body}}</p>
-                            </div>
+                            @if(isset($slider->link))
+                                <a href="{{$slider->link}}">
+                            @endif
+                                <img src="/img/slider/{{$slider->id}}.webp" style="width:100%;">
+                                <div class="carousel-caption d-md-block">
+                                    <h5 style="mix-blend-mode: difference">{{$slider->head}}</h5>
+                                    <p style="mix-blend-mode: difference">{{$slider->body}}</p>
+                                </div>
+                            @if(isset($slider->link))
+                                </a>
+                            @endif
                         </div>
                     @endforeach
                 </div>

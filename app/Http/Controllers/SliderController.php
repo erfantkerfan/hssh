@@ -27,6 +27,7 @@ class SliderController extends Controller
             'name' => 'required|string',
             'body' => 'nullable|string',
             'head' => 'nullable|string',
+            'link' => 'nullable|url',
             'file' => 'required|image|mimes:jpeg',
         ]);
 
@@ -34,6 +35,7 @@ class SliderController extends Controller
             'name' => $request['name'],
             'body' => $request['body'],
             'head' => $request['head'],
+            'link' => $request['link'],
         ));
 
         $slider->save();
