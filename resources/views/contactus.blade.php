@@ -17,6 +17,7 @@
                         خیابان شهید درویش وند، پلاک 30
                         <br>
                         <br>
+
                         <b style="color: #3C763D">
                             <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
                             شماره تماس مدرسه: 
@@ -24,11 +25,20 @@
                         66008864-021
                         <br>
                         <br>
-                        <b style="color: #3C763D">
-                            <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+
+                        <b style="color: #2EA1D8">
+                            <span class="fa fa-telegram" aria-hidden="true"></span>
                             کانال ما در تلگرام:
                         </b>
                         <a href="https://t.me/hsshohada2">hsshohada2@</a>
+                        <br>
+                        <br>
+
+                        <b style="color: #D92B85">
+                            <span class="fa fa-instagram" aria-hidden="true"></span>
+                            صفحه ما در اینستاگرام:
+                        </b>
+                        <a href="https://www.instagram.com/hsshohada/">hsshohada</a>
                         <br>
                         <br>
                     </h4>
