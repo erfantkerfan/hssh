@@ -61,7 +61,7 @@
                             <div class="form-group{{ $errors->has('link') ? ' has-error' : '' }}">
                                 <label for="link" class="col-md-2 control-label pull-right">لینک بنر:</label>
                                 <div class="col-md-9 col-md-offset-1">
-                                    <textarea dir="rtl" style="resize: none" class="form-control form-group pull-left"
+                                    <textarea style="resize: none" class="form-control form-group pull-left"
                                               name="link" rows="2" autofocus>{{ old('link') }}</textarea>
 
                                     @if ($errors->has('link'))
