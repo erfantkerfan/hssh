@@ -71,7 +71,7 @@ class NewsController extends Controller
             foreach ($files as $file) {
                 $i++;
                 $file->move(public_path('img/news/' . $news->id . '/'), $i . '.jpg');
-//                cwebp(public_path('img/news/' . $news->id . '/').$i.'.jpg',public_path('img/news/' . $news->id . '/').$i);
+                cwebp(public_path("img/news/$news->id/$i"), public_path("img/news/$news->id/$i"));
             }
         }
         return redirect('/');
