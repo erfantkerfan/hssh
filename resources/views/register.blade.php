@@ -239,19 +239,19 @@
                             </div>
                         </div>
 
-                        @if(env("APP_ENV")!="local")
-                            <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
-                                <label class="justify-content-center control-label sr-only">ربات نیستم</label>
-                                <div class="col-md-10 justify-content-center">
-                                    <div data-sitekey="{{ config('services.captcha.NOCAPTCHA_SITEKEY') }}" class="g-recaptcha"></div>
-                                    @if ($errors->has('g-recaptcha-response'))
-                                        <span class="help-block">
-                                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                                            </span>
-                                    @endif
-                                </div>
-                            </div>
-                        @endif
+                        {{--@if(env("APP_ENV")!="local")--}}
+                            {{--<div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">--}}
+                                {{--<label class="justify-content-center control-label sr-only">ربات نیستم</label>--}}
+                                {{--<div class="col-md-10 justify-content-center">--}}
+                                    {{--<div data-sitekey="{{ config('services.captcha.NOCAPTCHA_SITEKEY') }}" class="g-recaptcha"></div>--}}
+                                    {{--@if ($errors->has('g-recaptcha-response'))--}}
+                                        {{--<span class="help-block">--}}
+                                                {{--<strong>{{ $errors->first('g-recaptcha-response') }}</strong>--}}
+                                            {{--</span>--}}
+                                    {{--@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--@endif--}}
 
                         <div class="form-group  col-md-12">
                             <button type="submit" class="btn btn-success">
