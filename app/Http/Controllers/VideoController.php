@@ -9,7 +9,7 @@ class VideoController extends Controller
 {
     public function index()
     {
-        $videos = Video::all()->chunk(3);
+        $videos = Video::all()->reverse()->chunk(3);
         return view('videos',compact('videos'));
     }
 }
