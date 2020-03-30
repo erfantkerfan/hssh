@@ -11,7 +11,7 @@
                     <div class="panel-heading text-center">
                         فایل های ویدئویی
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" dir="rtl">
                         @foreach($videos as $chunk)
                             <div class="row">
                                 @foreach($chunk as $video)
