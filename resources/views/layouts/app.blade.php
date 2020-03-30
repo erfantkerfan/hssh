@@ -234,6 +234,13 @@
 
                         <li class="text-center">
 
+                            <a href="{{ route('video') }}">
+                                    <span class="label label-success pull-left">
+                                        {{App\Video::all()->count()}}
+                                    </span>
+                                فایل های ویدئویی
+                            </a>
+
                             <a href="{{ route('educational_category',['type'=>'501']) }}">
                                     <span class="label label-success pull-left">
                                         {{App\Educational::where('type','501')->count()}}

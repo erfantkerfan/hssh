@@ -54,6 +54,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/register', 'RegisterController@form')->name('register_form');
 Route::post('/register', 'RegisterController@register')->name('register');
 Route::get('pdf/preregister/{id}', 'RegisterController@pdf')->name('pdf');
+// Video:
+Route::get('/videos', 'VideoController@index')->name('video');
 // Test:
 Route::get('/minimilitia', 'Controller@minimilitia')->name('minimilitia');
 Route::post('/minimilitia', 'Controller@minimilitia_post');

@@ -3,6 +3,7 @@
 /public/storage
 /public/img/news
 /public/img/teachers
+/public/video/
 /public/edu
 /storage/*.key
 /vendor
