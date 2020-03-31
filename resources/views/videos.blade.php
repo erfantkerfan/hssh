@@ -18,9 +18,10 @@
                                     <div class="text-center">
                                         {{$video->title}}
                                     </div>
-                                    <video controls width="100%" height="100%" preload="none">
+                                    <video controls width="100%" height="100%" preload={{($loop->parent->iteration<=$show) ? "metadata" : "none"}}>
                                         <source src="{{'/video/'.$video->file}}" type="video/mp4">
                                         Your browser does not support the video tag.
+                                        مرورگر شما این ویدئو را پشتیبانی نمیکند.
                                     </video>
                                 </div>
                             @endforeach

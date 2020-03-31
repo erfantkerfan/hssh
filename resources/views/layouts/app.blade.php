@@ -269,6 +269,27 @@
                                 نمونه سوالات تجربی یازدهم
                             </a>
 
+                            <a href="{{ route('educational_category',['type'=>'507']) }}">
+                                    <span class="label label-success pull-left">
+                                        {{App\Educational::where('type','507')->count()}}
+                                    </span>
+                                نمونه سوالات ریاضی دوازدهم
+                            </a>
+
+                            <a href="{{ route('educational_category',['type'=>'508']) }}">
+                                    <span class="label label-success pull-left">
+                                        {{App\Educational::where('type','508')->count()}}
+                                    </span>
+                                نمونه سوالات تجربی دوازدهم
+                            </a>
+
+                            <a href="{{ route('educational_category',['type'=>'509']) }}">
+                                    <span class="label label-success pull-left">
+                                        {{App\Educational::where('type','509')->count()}}
+                                    </span>
+                                نمونه سوالات آزمون ورودی
+                            </a>
+
                             <a href="{{ route('educational_category',['type'=>'502']) }}">
                                     <span class="label label-success pull-left">
                                         {{App\Educational::where('type','502')->count()}}

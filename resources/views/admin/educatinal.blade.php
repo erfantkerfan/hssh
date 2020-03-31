@@ -56,6 +56,9 @@
                                         <option value="504">نمونه سوالات تجربی دهم</option>
                                         <option value="505">نمونه سوالات ریاضی یازدهم</option>
                                         <option value="506">نمونه سوالات تجربی یازدهم</option>
+                                        <option value="507">نمونه سوالات ریاضی دوازدهم</option>
+                                        <option value="508">نمونه سوالات تجربی دوازدهم</option>
+                                        <option value="509">نمونه سوالات آزمون ورودی</option>
                                         <option value="502">مشاوره</option>
                                         <option value="503">برنامه نویسی</option>
                                     </select>
