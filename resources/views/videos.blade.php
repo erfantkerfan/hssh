@@ -18,7 +18,7 @@
                                     <div class="text-center">
                                         {{$video->title}}
                                     </div>
-                                    <video controls width="100%" height="100%" preload="metadata">
+                                    <video controls width="100%" height="100%" preload="none">
                                         <source src="{{'/video/'.$video->file}}" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
