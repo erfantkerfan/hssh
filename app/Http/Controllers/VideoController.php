@@ -10,7 +10,7 @@ class VideoController extends Controller
     public function index(Request $request, $type)
     {
         $videos = Video::where('type',$type)->get()->reverse()->chunk(3);
-        $show = $request->get('show') ? $request->get('show') : 3;
+        $show = $request->get('show') ? $request->get('show') : 2;
         return view('videos', compact('videos', 'show'));
     }
     public function form()
