@@ -128,15 +128,8 @@
                                         <td class="text-center">
                                             @if ($user == Auth::user())
                                                 {{Verta::parse($user->last_login)->formatDifference(Verta::now())}}
-                                                {{--                                                {{Verta::now()->formatDifference(verta($user->last_login))}}--}}
-                                                {{--                                                {{str_after($user->last_login,' ')}}--}}
-                                                    
-                                                {{--                                                {{str_replace('-','/',str_before($user->last_login,' '))}}--}}
                                             @else
                                                 {{Verta::parse($user->login)->formatDifference(Verta::now())}}
-                                                {{--                                                {{str_after($user->login,' ')}}--}}
-                                                    
-                                                {{--                                                {{str_replace('-','/',str_before($user->login,' '))}}--}}
                                             @endif
                                         </td>
                                     </tr>
@@ -296,6 +289,48 @@
                             @endforeach
                         </div>
                         <div class="text-center"> {{$educationals->links()}} </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <a href="{{Route('video_form')}}">
+                            <button type="button" class="btn btn-sm btn-success">
+                                درج محتوا ویدئویی
+                            </button>
+                        </a>
+                             تمام محتواهای ویدئویی
+                    </div>
+                    <div class="panel-body">
+                        <div class="tab-content">
+                            @foreach($videos as $video)
+                                <div class="text-right" dir="rtl">
+                                    {{$video->title}}
+                                    <span class="label label-warning " dir="ltr">
+                                            <span style="color:#2c2c2d">
+                                                @if($video->file)
+                                                    {{$video->file}}
+                                                @else
+                                                    بدون فایل
+                                                @endif
+                                            </span>
+                                        </span>
+                                    @auth
+                                        <a href="{{route('video_delete',['id'=>$video->id])}}"
+                                           onclick="return confirm('از حذف این فایل اطمینان دارید؟')">
+                                            <span class="label label-danger pull-left " dir="rtl">
+                                                  حذف فایل
+                                            </span>
+                                        </a>
+                                    @endauth
+                                    @if(!$loop->last)
+                                        <hr style="background-color:darkseagreen; height:2px;">
+                                    @endif
+                                </div>
+
+                            @endforeach
+                        </div>
+                        <div class="text-center"> {{$videos->links()}} </div>
                     </div>
                 </div>
 

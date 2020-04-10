@@ -8,6 +8,7 @@ use App\News;
 use App\Preregister;
 use App\Slider;
 use App\User;
+use App\Video;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -27,6 +28,7 @@ class Controller extends BaseController
     {
         $news = News::orderBy('date', 'desc')->paginate(6, ['*'], 'news');
         $educationals = Educational::orderBy('date', 'desc')->paginate(6, ['*'], 'edu');
+        $videos = Video::orderBy('id', 'desc')->paginate(6, ['*'], 'video');
         $messages = Message::orderBy('date', 'desc')->paginate(6, ['*'], 'messages');
         $r10s = Preregister::where('grade', '=', 'دهم')->get()->reverse();
         $r11s = Preregister::where('grade', '=', 'یازدهم')->get()->reverse();
@@ -40,7 +42,7 @@ class Controller extends BaseController
         $users = User::get();
         $sliders = Slider::all();
         return view('admin.panel')->with(
-            compact('news', 'preregisters', 'messages', 'users', 'educationals', 'sliders')
+            compact('news', 'preregisters', 'messages', 'users', 'educationals', 'sliders','videos')
         );
     }
 

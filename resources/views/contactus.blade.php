@@ -1,6 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
+    <style>
+        .fa {
+
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: grey;
+            color: white;
+            text-align: center;
+        }
+    </style>
     <div class="container">
         <div class="col-md-12">
 
@@ -130,5 +149,53 @@
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <footer class="footer">
+        <strong>
+            طراحی توسط
+            <span class="glyphicon glyphicon-copyright-mark"></span>
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#Erfan_Gholizade">
+                عرفان قلی زاده
+            </button>
+            1397
+        </strong>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="Erfan_Gholizade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">تماس با من</h4>
+                </div>
+                <div class="modal-body">
+                    <a style="text-decoration: none" href="tg://resolve?domain=erfantkerfan">
+                        <p>
+                            <span class="fa fa-telegram"
+                                  style="padding: 20px; font-size: 30px; width: 30px; text-align: center; text-decoration: none; margin: 10px 10px; border-radius: 50%;background: white; color: #55ACEE;"></span>
+                                                تلگرام       
+                                    erfantkerfan
+                        </p>
+                    </a>
+
+                    <a style="text-decoration: none" href="mailto:erfantkerfan@yahoo.com?subject=طراحی سایت">
+                        <p>
+                        <span class="fa fa-yahoo"
+                              style="padding: 20px; font-size: 30px; width: 30px; text-align: center; text-decoration: none; margin: 10px 10px; border-radius: 50%;background: white; color: #430297;"></span>
+                                                ایمیل       
+                                    erfantkerfan@yahoo.com
+                        </p>
+                    </a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </div>
 @endsection

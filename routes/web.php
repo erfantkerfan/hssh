@@ -31,6 +31,7 @@ Route::get('/news/{type}/{id}', 'NewsController@single')->name('news_single');
 Route::post('/message', 'MessageController@create')->name('message_create');
 Route::get('/educational/{type}', 'EducationalController@category')->name('educational_category');
 Route::get('/educational/{type}/{id}', 'EducationalController@single')->name('educational_single');
+Route::get('/videos/{type}', 'VideoController@index')->name('video');
 // Admin:
 Route::middleware('auth')->group(function () {
     Route::prefix('admin')->group(function () {
@@ -48,14 +49,15 @@ Route::middleware('auth')->group(function () {
         Route::get('/slider', 'SliderController@show_form')->name('slider');
         Route::Post('/slider', 'SliderController@create');
         Route::delete('/slider', 'SliderController@delete');
+        Route::get('/videos/form', 'VideoController@form')->name('video_form');
+        Route::Post('/videos', 'VideoController@create')->name('video_create');
+        Route::get('/videos/delete/{id}', 'VideoController@delete')->name('video_delete');
     });
 });
 // Preregister:
 Route::get('/register', 'RegisterController@form')->name('register_form');
 Route::post('/register', 'RegisterController@register')->name('register');
 Route::get('pdf/preregister/{id}', 'RegisterController@pdf')->name('pdf');
-// Video:
-Route::get('/videos', 'VideoController@index')->name('video');
 // Test:
 Route::get('/minimilitia', 'Controller@minimilitia')->name('minimilitia');
 Route::post('/minimilitia', 'Controller@minimilitia_post');

@@ -132,28 +132,28 @@
                         <li class="text-center">
 
                             {{--<a href="{{ route('news_category',['type'=>'401']) }}">--}}
-                                    {{--<span class="label label-success pull-left">--}}
-                                        {{--{{App\News::where('type','401')->count()}}--}}
-                                    {{--</span>--}}
-                                {{--...خبردار--}}
+                            {{--<span class="label label-success pull-left panel-title">--}}
+                            {{--{{App\News::where('type','401')->count()}}--}}
+                            {{--</span>--}}
+                            {{--...خبردار--}}
                             {{--</a>--}}
 
                             <a href="{{ route('news_category',['type'=>'402']) }}">
-                                    <span class="label label-success pull-left">
+                                    <span class="label label-success pull-left panel-title">
                                         {{App\News::where('type','402')->count()}}
                                     </span>
                                 قرآن کریم و احکام
                             </a>
 
                             <a href="{{ route('news_category',['type'=>'403']) }}">
-                                    <span class="label label-success pull-left">
+                                    <span class="label label-success pull-left panel-title">
                                         {{App\News::where('type','403')->count()}}
                                     </span>
                                 khamenei.ir
                             </a>
 
                             <a href="{{ route('news_category',['type'=>'404']) }}">
-                                    <span class="label label-success pull-left">
+                                    <span class="label label-success pull-left panel-title">
                                         {{App\News::where('type','404')->count()}}
                                     </span>
                                 همکلاسی آسمانی
@@ -172,50 +172,57 @@
 
                         <li class="text-center">
 
+                            <a href="{{ route('video',['type'=>'99']) }}">
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Video::where('type','99')->count()}}
+                                </div>
+                                ویدئو ها
+                            </a>
+
                             <a href="{{ route('news_category',['type'=>'307']) }}">
-                                    <span class="label label-success pull-left pull-left">
+                                    <span class="label label-success pull-left panel-title">
                                         {{App\News::where('type','307')->count()}}
                                     </span>
                                 آموزشی
                             </a>
 
                             <a href="{{ route('news_category',['type'=>'301']) }}">
-                                    <span class="label label-success pull-left pull-left">
+                                    <span class="label label-success pull-left panel-title">
                                         {{App\News::where('type','301')->count()}}
                                     </span>
                                 اردوها
                             </a>
 
                             <a href="{{ route('news_category',['type'=>'302']) }}">
-                                    <span class="label label-success pull-left">
+                                    <span class="label label-success pull-left panel-title">
                                         {{App\News::where('type','302')->count()}}
                                     </span>
                                 مراسم
                             </a>
 
                             <a href="{{ route('news_category',['type'=>'306']) }}">
-                                    <span class="label label-success pull-left">
+                                    <span class="label label-success pull-left panel-title">
                                         {{App\News::where('type','306')->count()}}
                                     </span>
                                 جهادی
                             </a>
 
                             <a href="{{ route('news_category',['type'=>'303']) }}">
-                                    <span class="label label-success pull-left">
+                                    <span class="label label-success pull-left panel-title">
                                         {{App\News::where('type','303')->count()}}
                                     </span>
                                 فوق برنامه
                             </a>
 
                             <a href="{{ route('news_category',['type'=>'304']) }}">
-                                    <span class="label label-success pull-left">
+                                    <span class="label label-success pull-left panel-title">
                                         {{App\News::where('type','304')->count()}}
                                     </span>
                                 جلسات
                             </a>
 
                             <a href="{{ route('news_category',['type'=>'305']) }}">
-                                    <span class="label label-success pull-left">
+                                    <span class="label label-success pull-left panel-title">
                                         {{App\News::where('type','305')->count()}}
                                     </span>
                                 سایر
@@ -234,73 +241,96 @@
 
                         <li class="text-center">
 
-                            <a href="{{ route('video') }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\Video::all()->count()}}
-                                    </span>
-                                فایل های ویدئویی
-                            </a>
-
                             <a href="{{ route('educational_category',['type'=>'501']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\Educational::where('type','501')->count()}}
-                                    </span>
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Educational::where('type','501')->count()}}
+                                </div>
                                 نمونه سوالات ریاضی دهم
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'504']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\Educational::where('type','504')->count()}}
-                                    </span>
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Educational::where('type','504')->count()}}
+                                </div>
                                 نمونه سوالات تجربی دهم
                             </a>
 
+                            <a href="{{ route('video',['type'=>'10']) }}">
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Video::where('type','10')->count()}}
+                                </div>
+                                فایل های ویدئویی دهم
+                            </a>
+
                             <a href="{{ route('educational_category',['type'=>'505']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\Educational::where('type','505')->count()}}
-                                    </span>
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Educational::where('type','505')->count()}}
+                                </div>
                                 نمونه سوالات ریاضی یازدهم
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'506']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\Educational::where('type','506')->count()}}
-                                    </span>
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Educational::where('type','506')->count()}}
+                                </div>
                                 نمونه سوالات تجربی یازدهم
                             </a>
 
+                            <a href="{{ route('video',['type'=>'11']) }}">
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Video::where('type','11')->count()}}
+                                </div>
+                                ویدئو های یازدهم
+                            </a>
+
                             <a href="{{ route('educational_category',['type'=>'507']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\Educational::where('type','507')->count()}}
-                                    </span>
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Educational::where('type','507')->count()}}
+                                </div>
                                 نمونه سوالات ریاضی دوازدهم
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'508']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\Educational::where('type','508')->count()}}
-                                    </span>
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Educational::where('type','508')->count()}}
+                                </div>
                                 نمونه سوالات تجربی دوازدهم
                             </a>
 
+                            <a href="{{ route('video',['type'=>'12']) }}">
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Video::where('type','12')->count()}}
+                                </div>
+                                       
+                                فایل های ویدئویی دوازدهم
+                                                
+                            </a>
+
                             <a href="{{ route('educational_category',['type'=>'509']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\Educational::where('type','509')->count()}}
-                                    </span>
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Educational::where('type','509')->count()}}
+                                </div>
                                 نمونه سوالات آزمون ورودی
                             </a>
 
+                            <a href="{{ route('video',['type'=>'9']) }}">
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Video::where('type','9')->count()}}
+                                </div>
+                                فایل های ویدئویی آزمون ورودی
+                            </a>
+
                             <a href="{{ route('educational_category',['type'=>'502']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\Educational::where('type','502')->count()}}
-                                    </span>
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Educational::where('type','502')->count()}}
+                                </div>
                                 مشاوره
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'503']) }}">
-                                    <span class="label label-success pull-left">
-                                        {{App\Educational::where('type','503')->count()}}
-                                    </span>
+                                <div class="label label-success pull-left panel-title">
+                                    {{App\Educational::where('type','503')->count()}}
+                                </div>
                                 برنامه نویسی
                             </a>
 

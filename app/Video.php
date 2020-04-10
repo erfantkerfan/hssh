@@ -9,7 +9,7 @@ class Video extends Model
 {
     use SoftDeletes;
     protected $fillable = [
-        'title', 'file'
+        'title', 'file','type'
     ];
     protected $dates = ['deleted_at'];
 }
