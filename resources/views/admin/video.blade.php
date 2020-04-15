@@ -39,7 +39,7 @@
                                 </label>
 
                                 <div class="col-md-7 col-md-offset-1">
-                                    <textarea dir="rtl" style="resize: none"
+                                    <textarea dir="ltr" style="resize: none"
                                               class="form-control form-group pull-left" name="file" rows="2" required
                                               autofocus>{{ old('file') }}</textarea>
 
