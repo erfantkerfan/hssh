@@ -61,6 +61,12 @@
                                           aria-hidden="true"></span>
                                 </a>
 
+                                <a class="dropdown-item text-center" href="/phpmyadmin">
+                                    دیتابیس
+                                    <span style="color: mediumpurple" class="glyphicon glyphicon-file"
+                                          aria-hidden="true"></span>
+                                </a>
+
                                 <a class="dropdown-item" style="color: red;" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -280,7 +286,7 @@
                                 <div class="label label-success pull-left panel-title">
                                     {{App\Video::where('type','11')->count()}}
                                 </div>
-                                ویدئو های یازدهم
+                                فایل های ویدئویی یازدهم
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'507']) }}">
