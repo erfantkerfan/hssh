@@ -9,11 +9,6 @@ use Illuminate\Support\Facades\Session;
 
 class MessageController extends Controller
 {
-    public function form()
-    {
-        return view('message_form');
-    }
-
     public function create(Request $request)
     {
         $messages = [
