@@ -42,7 +42,7 @@ class Controller extends BaseController
         $users = User::get();
         $sliders = Slider::all();
         return view('admin.panel')->with(
-            compact('news', 'preregisters', 'messages', 'users', 'educationals', 'sliders','videos')
+            compact('news', 'preregisters', 'messages', 'users', 'educationals', 'sliders', 'videos')
         );
     }
 
