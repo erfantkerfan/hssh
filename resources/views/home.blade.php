@@ -66,31 +66,41 @@
 
                 <br>
 
-                <a href="http://www.khamenei.ir/">
-                    <img class="col-md-12" alt="http://www.khamenei.ir/" src="/img/links/2.webp">
+                <a href="https://khamenei.ir">
+                    <img class="col-md-12" alt="khamenei.ir" src="/img/links/khamenei.webp">
                 </a>
                 <br>
                 <br>
                 <br>
 
                 <a href="http://nojavan.khamenei.ir">
-                    <img class="col-md-12" alt="http://nojavan.khamenei.ir" src="/img/links/1.webp">
+                    <img class="col-md-12" alt="nojavan.khamenei.ir" src="/img/links/nojavan.webp">
                 </a>
                 <br>
                 <br>
                 <br>
 
-                <a href="http://beest.ir/">
-                    <img class="col-md-12" alt="http://beest.ir/" src="/img/links/4.webp">
+                <a href="http://beest.ir">
+                    <img class="col-md-12" alt="beest.ir" src="/img/links/basij.webp">
                 </a>
                 <br>
                 <br>
                 <br>
 
 
-                <a href="http://www.ayandehsazan.ir/">
-                    <img class="col-md-12" alt="http://www.ayandehsazan.ir/" src="/img/links/3.webp">
+                <a href="http://ayandehsazan.ir">
+                    <img class="col-md-12" alt="ayandehsazan.ir" src="/img/links/ayandehsazan.webp">
                 </a>
+                <br>
+                <br>
+                <br>
+
+                <a href="https://monta.ir">
+                    <img class="col-md-12" alt="monta.ir" src="/img/links/monta.webp">
+                </a>
+                <br>
+                <br>
+                <br>
 
                 <div class="panel-body text-center row">
 
