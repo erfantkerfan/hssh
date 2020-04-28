@@ -266,6 +266,7 @@
                                     {{App\Video::where('type','10')->count()}}
                                 </div>
                                 فایل های ویدئویی دهم
+                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'505']) }}">
@@ -287,6 +288,7 @@
                                     {{App\Video::where('type','11')->count()}}
                                 </div>
                                 فایل های ویدئویی یازدهم
+                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'507']) }}">
@@ -309,6 +311,7 @@
                                 </div>
                                        
                                 فایل های ویدئویی دوازدهم
+                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
                                                 
                             </a>
 
@@ -324,6 +327,7 @@
                                     {{App\Video::where('type','9')->count()}}
                                 </div>
                                 فایل های ویدئویی آزمون ورودی
+                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'502']) }}">
