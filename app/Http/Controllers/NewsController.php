@@ -64,16 +64,19 @@ class NewsController extends Controller
         ));
         $news->save();
 
-        if ($count != 0) {
-            $files = $request->file('img');
+        if ($count == 0) {
+            return redirect('/');
 
-            $i = 0;
-            foreach ($files as $file) {
-                $i++;
-                $file->move(public_path('img/news/' . $news->id . '/'), $i . '.jpg');
-                cwebp(public_path("img/news/$news->id/$i"), public_path("img/news/$news->id/$i"));
-            }
         }
+        $files = $request->file('img');
+
+        $i = 0;
+        foreach ($files as $file) {
+            $i++;
+            $file->move(public_path('img/news/' . $news->id . '/'), $i . '.jpg');
+            cwebp(public_path("img/news/$news->id/$i"), public_path("img/news/$news->id/$i"));
+        }
+
         return redirect('/');
 
     }
