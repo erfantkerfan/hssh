@@ -14,7 +14,7 @@
             <div class="carousel-inner">
                 @foreach($sliders as $slider)
                     <div class="item {{ $loop->first ? ' active' : '' }}">
-                        <img src="/img/slider/about/assets/{{$slider}}.webp" style="width:100%;">
+                        <img loading="lazy" src="/img/slider/about/assets/{{$slider}}.webp" style="width:100%;">
                     </div>
                 @endforeach
             </div>

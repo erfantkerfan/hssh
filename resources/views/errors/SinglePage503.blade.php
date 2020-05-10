@@ -83,7 +83,7 @@
     </div>
 
     <div>
-        <img class="col-md-6" src="/img/maintenance boy.gif">
+        <img loading="lazy" class="col-md-6" src="/img/maintenance boy.gif">
         <div dir="rtl" class="col-md-6 title m-b-md">
             این صفحه در حال بروزرسانی میباشد.
         </div>

@@ -62,7 +62,7 @@
                         <br>
                     </h4>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5448.517938528335!2d51.34771491302115!3d35.70879892289547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7e4a4a6858f3cc34!2z2K_YqNuM2LHYs9iq2KfZhiDYs9uM2K_Yp9mE2LTZh9iv2KcgKCDYuSkg2YXYqtmI2LPYt9mHINiv2YjZhQ!5e0!3m2!1sen!2sus!4v1570090668979!5m2!1sen!2sus"
+                <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5448.517938528335!2d51.34771491302115!3d35.70879892289547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7e4a4a6858f3cc34!2z2K_YqNuM2LHYs9iq2KfZhiDYs9uM2K_Yp9mE2LTZh9iv2KcgKCDYuSkg2YXYqtmI2LPYt9mHINiv2YjZhQ!5e0!3m2!1sen!2sus!4v1570090668979!5m2!1sen!2sus"
                         width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
 

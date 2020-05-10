@@ -67,21 +67,21 @@
                 <br>
 
                 <a href="https://khamenei.ir">
-                    <img class="col-md-12" alt="khamenei.ir" src="/img/links/khamenei.webp">
+                    <img class="col-md-12" loading="lazy" alt="khamenei.ir" src="/img/links/khamenei.webp">
                 </a>
                 <br>
                 <br>
                 <br>
 
                 <a href="http://nojavan.khamenei.ir">
-                    <img class="col-md-12" alt="nojavan.khamenei.ir" src="/img/links/nojavan.webp">
+                    <img class="col-md-12" loading="lazy" alt="nojavan.khamenei.ir" src="/img/links/nojavan.webp">
                 </a>
                 <br>
                 <br>
                 <br>
 
                 <a href="http://beest.ir">
-                    <img class="col-md-12" alt="beest.ir" src="/img/links/basij.webp">
+                    <img class="col-md-12" loading="lazy" alt="beest.ir" src="/img/links/basij.webp">
                 </a>
                 <br>
                 <br>
@@ -89,14 +89,14 @@
 
 
                 <a href="http://ayandehsazan.ir">
-                    <img class="col-md-12" alt="ayandehsazan.ir" src="/img/links/ayandehsazan.webp">
+                    <img class="col-md-12" loading="lazy" alt="ayandehsazan.ir" src="/img/links/ayandehsazan.webp">
                 </a>
                 <br>
                 <br>
                 <br>
 
                 <a href="https://monta.ir">
-                    <img class="col-md-12" alt="monta.ir" src="/img/links/monta.webp">
+                    <img class="col-md-12" loading="lazy" alt="monta.ir" src="/img/links/monta.webp">
                 </a>
                 <br>
                 <br>
@@ -125,7 +125,7 @@
                     @foreach($galleries as $gallery)
                         <div class="item {{ $loop->first ? ' active' : '' }}">
                             <a href="{{route('news_single',['type'=>$gallery->type,'id'=>$gallery->id])}}">
-                                <img src="/img/news/{{$gallery->id}}/1.webp" style="width:100%;">
+                                <img loading="lazy" src="/img/news/{{$gallery->id}}/1.webp" style="width:100%;">
                                 <div class="carousel-caption d-md-block">
                                     <h5 style="mix-blend-mode: difference">{{$gallery->title}}</h5>
                                 </div>
@@ -194,7 +194,7 @@
                     @foreach($sliders as $slider)
                         <div class="item {{ $loop->first ? ' active' : '' }}">
                             <a href="{{$slider->link}}">
-                                <img src="/img/slider/{{$slider->id}}.webp" style="width:100%;">
+                                <img loading="lazy" src="/img/slider/{{$slider->id}}.webp" style="width:100%;">
                                 <div class="carousel-caption d-md-block">
                                     <h5 style="mix-blend-mode: difference">{{$slider->head}}</h5>
                                     <p style="mix-blend-mode: difference">{{$slider->body}}</p>
