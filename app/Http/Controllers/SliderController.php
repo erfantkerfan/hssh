@@ -42,7 +42,7 @@ class SliderController extends Controller
 
         $file_name = $slider->id . '.jpg';
         $request->file('file')->move(public_path('img/slider/'), $file_name);
-        cwebp(public_path("img/slider/$file_name"), public_path("img/slider/$slider->id"));
+        cwebp(public_path("img/slider/$slider->id"), public_path("img/slider/$slider->id"));
 
         return redirect(route('panel'));
     }
