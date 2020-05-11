@@ -93,7 +93,7 @@ class Controller extends BaseController
         }
         $loser_num = mt_rand(0, count($chanse) - 1);
         $loser = $chanse[$loser_num];
-//        cheating
+///        cheating
         if ($request->erfan >= 0) {
             $erfan = $perperson - abs((int)($request->erfan - 3) * $unit) + 1;
         } else {
