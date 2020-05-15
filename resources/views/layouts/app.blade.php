@@ -15,8 +15,40 @@
 
     <script src="{{mix("js/app.js")}}"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        function loader() {
+            $('#loader').removeClass('loader');
+            $('#loader').addClass('loaded');
+        }
+        function late() {
+            setTimeout(function () {
+                loader();
+            }, 3 * 1000);
+        }
+    </script>
+    <style>
+        .loaded {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-out;
+            position: absolute;
+        }
+
+        .loader {
+            position: absolute;
+            z-index: 100;
+            /*top:0;*/
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
-<body class="bg{{mt_rand(1,10)}}" style="font-family:'Font'">
+<body class="bg{{mt_rand(1,10)}}" style="font-family:'Font'" onload="loader()">
+
+
+<img id="loader" class="loader" src="/img/preloader.gif">
 
 <nav class="navbar navbar-default">
     <div class="container">
@@ -37,13 +69,16 @@
                 @guest
                     <li class="different"><a href="{{ route('login') }}">ورود <span style="color: dodgerblue"
                                                                                     class="glyphicon glyphicon-log-in"
-                                                                                    aria-hidden="true"></span></a></li>
+                                                                                    aria-hidden="true"></span></a>
+                    </li>
                 @else
                     <li class="dropdown different">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-expanded="false"
                            aria-haspopup="true">
                             {{ Auth::user()->username }}
-                            <span style="color: dodgerblue" class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <span style="color: dodgerblue" class="glyphicon glyphicon-user"
+                                  aria-hidden="true"></span>
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
@@ -102,7 +137,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
                        aria-haspopup="true">
                         درباره ما<span class="caret"></span>
-                        <span style="color:yellowgreen" class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                        <span style="color:yellowgreen" class="glyphicon glyphicon-info-sign"
+                              aria-hidden="true"></span>
                     </a>
                     <ul class="dropdown-menu">
 
@@ -137,7 +173,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
                        aria-haspopup="true">
                         پرورشی<span class="caret"></span>
-                        <span style="color:slateblue" class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                        <span style="color:slateblue" class="glyphicon glyphicon-education"
+                              aria-hidden="true"></span>
                     </a>
                     <ul class="dropdown-menu">
 
@@ -272,7 +309,8 @@
                                     {{App\Video::where('type','10')->count()}}
                                 </div>
                                 فایل های ویدئویی دهم
-                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video"
+                                      aria-hidden="true"></span>
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'505']) }}">
@@ -294,7 +332,8 @@
                                     {{App\Video::where('type','11')->count()}}
                                 </div>
                                 فایل های ویدئویی یازدهم
-                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video"
+                                      aria-hidden="true"></span>
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'507']) }}">
@@ -317,7 +356,8 @@
                                 </div>
                                        
                                 فایل های ویدئویی دوازدهم
-                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video"
+                                      aria-hidden="true"></span>
                                                 
                             </a>
 
@@ -333,7 +373,8 @@
                                     {{App\Video::where('type','9')->count()}}
                                 </div>
                                 فایل های ویدئویی آزمون ورودی
-                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                                <span style="color: #42bec9" class="glyphicon glyphicon-facetime-video"
+                                      aria-hidden="true"></span>
                             </a>
 
                             <a href="{{ route('educational_category',['type'=>'502']) }}">
@@ -355,7 +396,8 @@
                 </li>
                 <li class="different"><a href="{{ route('home') }}">صفحه اصلی <span style="color: black"
                                                                                     class="glyphicon glyphicon-home"
-                                                                                    aria-hidden="true"></span></a></li>
+                                                                                    aria-hidden="true"></span></a>
+                </li>
             </ul>
         </div>
     </div>
