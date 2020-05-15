@@ -206,7 +206,7 @@
 
                                 <div class="col-md-12">
                                     <select id="grade" type="text" class="form-control" name="grade" required autofocus>
-                                        <option value="" selected>پایه تحصیلی</option>
+                                        <option value="" selected>پایه تحصیلی درخواست ثبت نام</option>
                                         <option value="دهم">دهم</option>
                                         <option value="یازدهم">یازدهم</option>
                                         <option value="دوازدهم">دوازدهم</option>
@@ -225,7 +225,7 @@
 
                                 <div class="col-md-12">
                                     <select id="field" type="text" class="form-control" name="field" required autofocus>
-                                        <option value="" selected>رشته تحصیلی</option>
+                                        <option value="" selected>رشته تحصیلی درخواست ثبت نام</option>
                                         <option value="ریاضی">ریاضی</option>
                                         <option value="تجربی">تجربی</option>
                                     </select>

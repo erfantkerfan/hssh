@@ -62,7 +62,13 @@
                                 </a>
 
                                 <a class="dropdown-item text-center" href="/phpmyadmin">
-                                    دیتابیس
+                                    ورود به دیتابیس
+                                    <span style="color: mediumpurple" class="glyphicon glyphicon-file"
+                                          aria-hidden="true"></span>
+                                </a>
+
+                                <a class="dropdown-item text-center" href="{{ route('backup') }}">
+                                    دانلود پشتیبان دیتابیس
                                     <span style="color: mediumpurple" class="glyphicon glyphicon-file"
                                           aria-hidden="true"></span>
                                 </a>

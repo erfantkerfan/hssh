@@ -26,12 +26,14 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->call(function () {
-            $tables = ['educationals', 'messages', 'news', 'preregisters', 'sliders',];
+            $tables = ['educationals', 'messages', 'news', 'preregisters', 'sliders', 'teachers', 'videos', 'users'];
             foreach ($tables as $table) {
-                $query = 'delete from '.$table.' where deleted_at IS NOT NULL';
+                $query = 'delete from ' . $table . ' where deleted_at IS NOT NULL';
                 DB::delete($query);
             }
-        })->hourly();
+        })->everyTenMinutes()->timezone('Asia/Tehran');
+        $schedule->command('backup:mysql-dump hsshohada')
+            ->everyTenMinutes('2:00')->timezone('Asia/Tehran');
     }
 
     /**

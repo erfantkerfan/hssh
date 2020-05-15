@@ -52,6 +52,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/videos/form', 'VideoController@form')->name('video_form');
         Route::Post('/videos', 'VideoController@create')->name('video_create');
         Route::get('/videos/delete/{id}', 'VideoController@delete')->name('video_delete');
+        Route::get('/backup', 'BackupController@download')->name('backup');
     });
 });
 // Preregister:

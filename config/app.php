@@ -153,6 +153,7 @@ return [
          */
         niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        Backup\BackupServiceProvider::class,
 
         /*
          * Application Service Providers...
